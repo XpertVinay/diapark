@@ -1,0 +1,58 @@
+
+div#overlay {
+	position: absolute;
+	display:none;
+	top: 0;
+	left: 0;
+	z-index:996;
+	background-color:#000;
+	filter:alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+    z-index: 10;
+	height:3800px;
+	width:100%;
+	margin:0px;
+	padding:0px;
+}
+* html div#overlay { /* ie6 hack */
+     position: absolute;
+     height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+
+#loading {
+    display: none;
+    height: 100px;
+    left: 45%;
+    position: fixed;
+    top: 35%;
+    width: 100px;
+    z-index: 995;
+}
+
+#overlaywindows{
+	width:938px;
+	height:1000px;
+	position:absolute;
+	z-index:1000;
+	display:none;
+}
+
+div.calendararea div#calendaroverlay{
+	display:none;
+	position:absolute;
+	top: 53px;
+	left: 0;
+	z-index:996;
+	background-color:#FFFFFF;
+	filter:alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+    z-index: 10;
+	width:606px;
+	height:645px;
+	margin:0px;
+	padding:0px;
+	padding-top:200px;
+	text-align:center;
+}

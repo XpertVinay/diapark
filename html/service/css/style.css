@@ -1,0 +1,103 @@
+/*
+	style.css
+	----------------------------------------------------------
+	
+
+
+-------------------------------------------------------------------------------*/
+
+
+/* headding
+-------------------------------------------------------------------------------*/
+#contentsHeader #serviceH1{
+	background:url(../image/service_h1_bg001.jpg) no-repeat 50% 0;
+}
+#contentsHeader #serviceH1 h1{
+	text-indent:-9999px;
+	height:60px;
+	padding:30px 10px 0 10px;
+	background:url(../image/service_h1001.png) no-repeat 10px 30px;
+}
+span.free{
+	font-size:70%;
+	letter-spacing:0.1em;
+	font-weight:normal;
+	padding:3px 10px;
+	border:1px solid #D6D1C8;
+}
+
+
+/* contents
+-------------------------------------------------------------------------------*/
+div.outline{
+	width:800px;
+	padding:0 0 10px 0;
+	margin:0 auto;
+}
+div.outline p.txt{
+	margin:0 0 20px 0;
+}
+
+
+/* serviceList
+-------------------------------------------------------------------------------*/
+div.contentList div.exp{
+	margin-bottom:30px;
+}
+div.serviceHor{
+	width:868px;
+	margin:0 auto;
+	padding:36px 0 40px 0;
+}
+div.serviceHor div.txtBox {
+width: 564px;
+float: right;
+}
+div.serviceHor div.imgBox {
+width: 280px;
+margin:4px 0 0 0;
+float: left;
+}
+div.serviceVer{
+	width:868px;
+	margin:0 auto;
+	padding:36px 0 40px 0;
+}
+div.serviceVer div.txtBox{
+	clear:both;
+}
+div.serviceVer div.imgOut:before, div.serviceVer div.imgOut:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+div.serviceVer div.imgOut:after { clear: both; } 
+div.serviceVer div.imgOut { zoom: 1; }
+div.serviceVer div.imgOut{
+	margin:0 0 20px 0;
+}
+div.serviceVer div.imgBox{
+	width:280px;
+	margin:0 14px 0 0;
+	float:left;
+}
+div.serviceVer div.right{
+	margin:0 0 0 0;
+	float:right;
+}
+div.serviceHor div.open{
+	width:564px;
+	padding:30px 0 0 0;
+	float:right;
+}
+div.serviceVer div.open{
+	width:564px;
+}
+body.service p.noteService{
+	font-size: 90%;
+	padding:10px 0 0 10px;
+}
+.colL{
+	width:420px !important;
+	float:left;
+}
+.colR{
+	width:420px !important;
+	float:right;
+}

@@ -1,0 +1,125 @@
+/*
+	style.css
+	----------------------------------------------------------
+	
+
+
+-------------------------------------------------------------------------------*/
+
+
+/* headding
+-------------------------------------------------------------------------------*/
+#contentsHeader #roomH1{
+	background:url(../image/room_h1_bg001.jpg) no-repeat 50% 0;
+}
+#contentsHeader #roomH1 h1{
+	text-indent:-9999px;
+	height:60px;
+	padding:30px 10px 0 10px;
+	background:url(../image/room_h1002.png) no-repeat 10px 35px;
+}
+
+
+/* tab
+-------------------------------------------------------------------------------*/
+#tab #tabRoomList a{
+	background:url(../../common/image/tab001.gif) no-repeat 0 0;
+}
+#tab #tabRoomList a.current,
+#tab #tabRoomList a:hover{
+	background:url(../../common/image/tab001.gif) no-repeat 0 -58px;
+}
+#tab #tabPlanList a{
+	background:url(../../common/image/tab001.gif) no-repeat -182px 0;
+}
+#tab #tabPlanList a.current,
+#tab #tabPlanList a:hover{
+	background:url(../../common/image/tab001.gif) no-repeat -182px -58px;
+}
+
+
+/* contents
+-------------------------------------------------------------------------------*/
+div.outline{
+	width:840px;
+	padding:0 0 10px 0;
+	margin:0 auto;
+}
+div.outline p.txt{
+	margin:0 0 20px 0;
+}
+div.outline dl.notes:before, div.outline dl.notes:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+div.outline dl.notes:after { clear: both; } 
+div.outline dl.notes { zoom: 1; }
+
+div.outline dl{
+	font-size:80%;
+	margin:0 auto 20px auto;
+
+}
+div.outline dl dt {
+clear: both;
+display: table-cell;
+width: 1.2em;
+padding: 0 0 5px 3px;
+float: left;
+}
+div.outline dl dd {
+display: table-cell;
+padding: 0 0 5px 0;
+}
+
+/* roomList
+-------------------------------------------------------------------------------*/
+div.roomList{
+	width:714px;
+	margin:0 auto;
+	padding:36px 0 40px 0;
+}
+div.roomList div.imgOut:before, div.roomList div.imgOut:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+div.roomList div.imgOut:after { clear: both; } 
+div.roomList div.imgOut { zoom: 1; }
+div.roomList div.imgOut{
+	margin:0 0 20px 0;
+}
+div.roomList div.imgBox{
+	width:340px;
+	float:left;
+}
+div.roomList div.right{
+	float:right;
+}
+
+
+/* planList
+-------------------------------------------------------------------------------*/
+div.planList{
+	width:798px;
+	margin:0 auto;
+	padding:36px 0 40px 0;
+}
+div.planList div.txtBox {
+width: 480px;
+float: left;
+}
+div.planList div.imgBox {
+width: 280px;
+margin:4px 0 0 0;
+float: right;
+}
+p.calendarBt{
+	clear:both;
+	margin:0 auto 50px auto;
+}
+p.calendarBt,
+p.calendarBt a{
+	display:block;
+	text-indent:-9999px;
+	line-height:0;
+	width:347px;
+	height:41px;
+	background:url(../image/room_calendar_bt001.gif) no-repeat 0 0;
+}
+p.calendarBt a:hover{
+	background:url(../image/room_calendar_bt001.gif) no-repeat 0 -41px;
+}
