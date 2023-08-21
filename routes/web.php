@@ -136,7 +136,8 @@ Route::get('/dashboard', [App\Http\Controllers\Admin\DashbaordController::class,
     Route::get('staff/removestaff/{id}', 'App\Http\Controllers\Staff\DashboardController@removestaff');
     Route::post('staff/editstaff', 'App\Http\Controllers\Staff\DashboardController@editstaff')->name('staff.editstaff.submit');
     Route::get('staff/tablereservation', 'App\Http\Controllers\Staff\TableReservationController@tablereservation');
-    Route::get('staff/approve/{id}/{name}', 'App\Http\Controllers\Staff\TableReservationController@approve');
+    // Route::get('staff/approve/{id}/{name}', 'App\Http\Controllers\Staff\TableReservationController@approve');
+    Route::post('staff/approve/', 'App\Http\Controllers\Staff\TableReservationController@approve');
 
     Route::get('staff/deletereservation/{id}', 'App\Http\Controllers\Staff\TableReservationController@deletereservation');
 // });

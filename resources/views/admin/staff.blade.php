@@ -21,6 +21,12 @@
                                     <button type="button" class="close pl-4" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 </div>
                                 @endif
+				@if(session('erraddstaff'))
+                                <div class="alert alert-danger h3" id="msg">
+                                    {{session('erraddstaff')}}
+                                    <button type="button" class="close pl-4" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                @endif
 
                                 @if(session('deletestaff'))
                                 <div class="alert alert-success h3" id="msg">

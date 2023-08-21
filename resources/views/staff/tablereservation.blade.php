@@ -64,7 +64,7 @@
                                                     <td>
                                                         <a id="approve"  class="btn btn-info" data-toggle="modal" data-target="#enditreservation{{ $reservation->id }}">Approve</a>
                                                         {{-- <a href='{{url("/approve/{$reservation->id}/Approved")}}' class="btn btn-success m-1">Approve</a> --}}
-                                                        <a href='{{url("/deletereservation/{$reservation->id}")}}' class="btn btn-md btn-danger m-1">Cancel</a>
+                                                        <a href='{{url("/staff/deletereservation/{$reservation->id}")}}' class="btn btn-md btn-danger m-1">Cancel</a>
                                                     </td>
 <!-- STUFF MODAL -->
 <div class="modal fade" id="enditreservation{{ $reservation->id }}">
@@ -74,7 +74,7 @@
                 <h5 class="modal-title">Approve</h5>
                 <button class="close text-light" data-dismiss="modal"><span>&times;</span></button>
             </div>
-            <form method="POST" action="{{url("/approve")}}">
+            <form method="POST" action="{{url("/staff/approve")}}">
                 @csrf
                 <div class="modal-body">
                     <div class="form-group">

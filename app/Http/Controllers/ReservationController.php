@@ -30,8 +30,8 @@ class ReservationController extends Controller
     		'phone' => $request->phone,
     		'restaurantid' => $request->restaurantid,
     		'occasion' => $request->occasion,
-    		'starttime' => $request->date,
-    		'endtime' => $request->time,
+    		'starttime' => $request->starttime,
+    		'endtime' => $request->endtime,
     		'male' => $request->male,
     		'female' => $request->female,
     		'child' => $request->child,
@@ -39,7 +39,7 @@ class ReservationController extends Controller
             'created_at' => date('Y:m:d h:i:s'),
             'updated_at' => date('Y:m:d h:i:s')
     	);
-
+	// print_r($data); exit;
         $reservation = \DB::table('reservations')->insert($data);
         $reservationId = \DB::getPdo()->lastInsertId();
         $staff = Staffs::where('id', '=', $request->restaurantid)->first();
@@ -66,12 +66,15 @@ class ReservationController extends Controller
                 'view' => 'content.staff',
                 'sms' => "Hi $staff->name, New booking request recieved. Please take action on this booking id {$reservationId}",
                 'whatsapp' => 'Hi $staff->name, New booking request recieved. Please take action on this booking id {$reservationId}.',
-                'replacements' => $request->all(),
+                'replacements' => array_merge($request->all(), ['staff_name' => $staff->name, 'restaurantName' => $restaurant->name]),
                 'type' => ['email', 'whatsapp']
             ];
         if ($mailToCustomer['email']) {
             Event::dispatch(new SendNotification($mailToCustomer));
         }
+ 	if ($mailToRestaurantStaff['email']) {
+	   Event::dispatch(new SendNotification($mailToRestaurantStaff));
+	}
         // Event::dispatch(new SendNotification($mailToRestaurantStaff));
         /*if(false){
             $mailToCustomer = [

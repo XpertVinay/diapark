@@ -39,6 +39,10 @@ class StaffController extends Controller
 	    	'address' => $request->address,
 	    	'password' => Hash::make($request->password)
     	);
+	$staff = \DB::table('staffs')->where('restaurantid', $request->restaurantid)->get();
+	if(!empty($staff)){
+		return redirect('/staff')->with("erraddstaff", "Staff already exists for this restaurant.");
+	}
     	\DB::table('staffs')->insert($data);
     	return redirect('/staff')->with("addstaff", "Staff details is succesfully saved.");
     }

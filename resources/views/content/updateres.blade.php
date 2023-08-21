@@ -333,7 +333,7 @@
     </style>
   </head>
   <body>
-    <span class="preheader">Hi {{$name}}, Thank you for your booking.</span>
+    <span class="preheader">Hi {{$name}}, Congratulations, Your booking has been approved.</span>
     <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
       <tr>
         <td>&nbsp;</td>
@@ -350,7 +350,7 @@
                     <tr>
                       <td>
                         <p>Hi {{$name}},</p>
-                        <p>Thank you for your booking. You will get an update after restaurant manager updates the status of your booking.</p>
+                        <p>Congratulations, your booking has been approved from {{$restaurantName}} on {{date('d M Y, H:i:s', strtotime($sstart))}} to {{date('d M Y, H:i:s', strtotime($send))}}</p>
                       </td>
                     </tr>
                   </table>
@@ -380,3 +380,4 @@
     </table>
   </body>
 </html>
+

@@ -26,6 +26,7 @@ class SendNotificationFired
     private function sendMail ($data) {
         try{
             Mail::to($data['email'])->send(new SendMail($data));  
+	    // echo "Times    ";
         } catch (\Exception $e) {
             dd($e->getMessage());
             return;
@@ -46,7 +47,7 @@ class SendNotificationFired
     private function sendWhatsApp ($data) {
         // whatsapp api integration
         try{
-            
+	//
         } catch (\Exception $e) {
             return;
         }
@@ -74,7 +75,8 @@ class SendNotificationFired
                     break;
                 default:
                     break;
-            }   
+            }
         }
+	// dd('print');
     }
 }

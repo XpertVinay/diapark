@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Staff;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Reservations;
+use App\Models\Restaurants;
+use App\Events\SendNotification;
+use Event;
 
 class TableReservationController extends Controller
 {
@@ -23,8 +26,8 @@ class TableReservationController extends Controller
 
     public function tablereservation(Request $request)
     {
-        $reservations = Reservations::select('reservations.*', 'res.name as restaurantName')
-                            ->join('restaurants as res', function($join)
+        $reservations = \DB::table('reservations')->select('reservations.*', 'res.name as restaurantName')
+                            ->join('restaurants as res', function($join) use ($request)
                             {
                               $join->on('res.id', '=', 'reservations.restaurantid');
                               $join->where('res.deleted_at', '=', NULL);
@@ -53,9 +56,38 @@ class TableReservationController extends Controller
             'child' => $request->child,
         );
 
-        // notifications only email
+	 // notifications only email
+        $reservation = Reservations::where('id', $id)->first();
+        $reservation->starttime = $request->starttime;
+        $reservation->endtime = $request->endtime;
+        $reservation->status = $name;
+        $reservation->male = $request->male;
+        $reservation->female = $request->female;
+        $reservation->child = $request->child;
+        $reservation->save();
 
-      	Reservations::where('id', $id)->update($data);
+        $restaurant = Restaurants::where('id', $reservation->restaurantid)->first();
+
+        $mailToCustomer = [
+            'title' => 'Update on your recent booking from '.$restaurant->name,
+            'email' => $reservation->email,
+            'phone' => $reservation->phone,
+            'restaurantName' => $restaurant->name,
+            'body' => 'This is the body of test email.',
+            'view' => 'content.updateres',
+            'sms' => 'Congratulations!, your booking has been approved for '.$restaurant->name.' on '.$request->starttime.'. Please arrive on the scheduled time. Thank',
+	    'whatsapp' => 'Thank you for booking. We will shortly inform you about the confirmation of your table.',
+            'replacements' => array_merge($request->all(), ['restaurantName'=>$restaurant->name, 'sstart'=>$request->starttime, 'send'=>$request->endtime, 'name'=>$reservation->name]),
+	    'type' => ['sms', 'email', 'whatsapp']
+        ];
+	// dd($mailToCustomer);
+        // notifications only email
+	//dd($reservation);
+	if($reservation->email){
+		Event::dispatch(new SendNotification($mailToCustomer));
+	}
+
+      	// Reservations::where('id', $id)->update($data);
       	return redirect('/staff/tablereservation')->with('tableapprove', "Resevation is Approved.");
     }
 

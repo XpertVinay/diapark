@@ -6,7 +6,7 @@
     RewriteEngine On
     
     RewriteCond     %{SERVER_PORT} ^80$
-    RewriteRule     ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
+    #RewriteRule     ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
@@ -25,3 +25,15 @@
     Redirect 301 /html/dining/index.html /food-service
     #Redirect 301 /index.html /
 </IfModule>
+
+<Files "log.txt">  
+  Require all denied
+</Files>
+
+<Files ".env">  
+  Require all denied
+</Files>
+
+<Files ".env.*">  
+  Require all denied
+</Files>
