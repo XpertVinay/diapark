@@ -10,7 +10,6 @@ use App\Mail\SendMail;
 use Mail;
 
 use App\SMS\SendSMS;
-use App\SMS\WhatsApp;
 
 class SendNotificationFired
 {
@@ -26,9 +25,10 @@ class SendNotificationFired
 
     private function sendMail ($data) {
         try{
-            Mail::to($data['email'])->send(new SendMail($data));
+            Mail::to($data['email'])->send(new SendMail($data));  
+	    // echo "Times    ";
         } catch (\Exception $e) {
-            // dd($e->getMessage());
+            dd($e->getMessage());
             return;
         }
     }
@@ -39,7 +39,7 @@ class SendNotificationFired
             $sendSMS = new SendSMS($data);
             $sendSMS->sendSMSInfo();
         } catch (\Exception $e) {
-            // dd($e->getMessage());
+            dd($e->getMessage());
             return;
         }
     }
@@ -47,8 +47,7 @@ class SendNotificationFired
     private function sendWhatsApp ($data) {
         // whatsapp api integration
         try{
-            $whatsApp = new WhatsApp($data);
-            $whatsApp->sendWhatsAppInfo();
+	//
         } catch (\Exception $e) {
             return;
         }
@@ -62,6 +61,7 @@ class SendNotificationFired
      */
     public function handle(SendNotification $event)
     {
+        // dd($event->data);
         forEach($event->data['type'] as $type){
             switch ($type) {
                 case 'email':
@@ -77,6 +77,6 @@ class SendNotificationFired
                     break;
             }
         }
-	    dd('print');
+	// dd('print');
     }
 }

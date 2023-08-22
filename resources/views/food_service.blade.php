@@ -3,8 +3,6 @@
 
 <html lang="en">
 
-<!-- Mirrored from www.diapark.jp/english/dining/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Sep 2022 06:06:33 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="utf-8">
 <title>Food Services | Dia Park Premier, a four-star business hotel in a suburb of New Delhi, India</title>

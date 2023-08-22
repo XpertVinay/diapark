@@ -28,7 +28,7 @@
 <div class="hdInner">
 <div class="hdLogo">
 <p class="tagline">A four-star hotel in a suburb of New Delhi, India</p>
-<p class="logo"><a href="index.html">Dia Park Premier</a></p>
+<p class="logo"><a href="/">Dia Park Premier</a></p>
 </div>
 <div class="hdUtility">
 <div class="hdLink">
@@ -161,15 +161,15 @@
       </div>
 
       <div class="item">
-        <img src="html/image/home_main_img106.jpg" alt="Chania" width="460" height="345">
+        <img src="html/image/home_01.jpg" alt="Chania" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="html/image/home_main_img106.jpg" alt="Flower" width="460" height="345">
+        <img src="html/image/home_02.jpg" alt="Flower" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="html/image/home_main_img106.jpg" alt="Flower" width="460" height="345">
+        <img src="html/image/home_03.jpg" alt="Flower" width="460" height="345">
         <!-- <div class="carousel-caption">
           <h3>Flowers</h3>
           <p>Beautiful flowers in Kolymbari, Crete.</p>
