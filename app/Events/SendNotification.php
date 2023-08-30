@@ -31,13 +31,13 @@ class SendNotification
      *
      * @return \Illuminate\Broadcasting\Channel|array
      */
-    public function broadcastOn()
-    {
-        return new PrivateChannel('notification');
-    }
+    // public function broadcastOn()
+    // {
+    //     return new PrivateChannel('notification');
+    // }
 
-    public function broadcastWith()
-    {
-        return @$this->data->toArray();
-    }
+    // public function broadcastWith()
+    // {
+    //     return @$this->data->toArray();
+    // }
 }

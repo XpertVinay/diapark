@@ -9,7 +9,7 @@ use App\Staffs;
 use Mail;
 use App\Mail\SendMail;
 use Config;
-use App\Events\SendNotification;
+use App\Notification\Notifications;
 use Event;
 
 class ReservationController extends Controller
@@ -43,60 +43,47 @@ class ReservationController extends Controller
         $reservation = \DB::table('reservations')->insert($data);
         $reservationId = \DB::getPdo()->lastInsertId();
         $staff = Staffs::where('id', '=', $request->restaurantid)->first();
+
 	if(empty($staff)){ return redirect('/food-service/?success=1')->with('addreservation', 'No manager available for this restaurant.');
  }
         // dd($staff);
         $restaurant = Restaurants::where('id', $request->restaurantid)->first();
-        // trigger notifications Email, sms, whatsapp etc
+        // trigger notificationss Email, sms, whatsapp etc
         $mailToCustomer = [
-            'title' => 'Thank you for your reservation on '.config('app.name'),
+            'title' => 'Thank you for your reservation on '. $restaurant->name . ' - ' .config('app.name'),
             'email' => $request->email,
             'phone' => $request->phone,
             'restaurantName' => $restaurant->name,
             'body' => 'This is the body of test email.',
             'view' => 'content.reservation',
-            'sms' => 'Thank you for booking. We will shortly inform you about the confirmation of your table.',
-            'whatsapp' => 'Thank you for booking. We will shortly inform you about the confirmation of your table.',
+            'sms' => 'Thank you for booking with {ref id - '.$reservationId.'}. We will shortly inform you about the confirmation of your table.',
+            'whatsapp' => 'Thank you for booking with {ref id - '.$reservationId.'}. We will shortly inform you about the confirmation of your table.',
             'replacements' => $request->all(),
             'type' => ['sms', 'email', 'whatsapp']
         ];
+        // print_r("Customer>>>>>>>>>>>>");
+        if ($mailToCustomer['email']) {
+            Event::dispatch(new Notifications($mailToCustomer));
+        }
+        // print_r("Customer End >>>>>>>>>>>");
         $mailToRestaurantStaff = [
-                'title' => 'You have received a new booking request '.config('app.name'),
+                'title' => 'You have received a new booking request ' . $restaurant->name . ' - ' .config('app.name'),
                 'email' => $staff->email,
                 'phone' => $staff->phone,
                 'restaurantName' => $restaurant->name,
                 'body' => 'This is the body of test email.',
                 'view' => 'content.staff',
-                'sms' => "Hi $staff->name, New booking request recieved. Please take action on this booking id {$reservationId} ".url('/food-service').".",
-                'whatsapp' => "Hi $staff->name, New booking request recieved. Please take action on this booking id {$reservationId} ".url('/food-service').".",
+                'sms' => "Hi $staff->name, New booking request recieved with {ref id - $reservationId }. Please take action on this booking id {$reservationId} ".url('/staff/login').".",
+                'whatsapp' => "Hi $staff->name, New booking request recieved with {ref id - $reservationId }. Please take action on this booking id {$reservationId} ".url('/staff/login').".",
                 'replacements' => array_merge($request->all(), ['staff_name' => $staff->name, 'restaurantName' => $restaurant->name]),
                 'type' => ['email', 'whatsapp']
             ];
-        if ($mailToCustomer['email']) {
-            Event::dispatch(new SendNotification($mailToCustomer));
+            // print_r("staff");
+        if ($mailToRestaurantStaff['email']) {
+            Event::dispatch(new Notifications($mailToRestaurantStaff));
         }
- 	if ($mailToRestaurantStaff['email']) {
-	   Event::dispatch(new SendNotification($mailToRestaurantStaff));
-	}
-        // Event::dispatch(new SendNotification($mailToRestaurantStaff));
-        /*if(false){
-            $mailToCustomer = [
-                'title' => 'Thank you for your reservation on '.config('app.name'),
-                'body' => 'This is the body of test email.',
-                'view' => 'content.reservation',
-                'replacements' => $request->all()
-            ];
-    
-            $mailToRestaurantStaff = [
-                'title' => 'You received a booking request'.config('app.name'),
-                'body' => 'This is the body of test email.',
-                'view' => 'content.staff',
-                'replacements' => $request->all()
-            ];
-    
-            Mail::to($request->email)->send(new SendMail($mailToCustomer));
-            Mail::to($staff->email)->send(new SendMail($mailToRestaurantStaff));   
-        }*/
+
+        // dd('print');
 
     	// Reservations::create($data);
     	return redirect('/food-service/?success=1')->with('addreservation', 'Thank you for your booking. Please wait for approval and check your Email for confirmation');

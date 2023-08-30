@@ -7,8 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Reservations;
 use App\Models\Restaurants;
 use App\Staffs;
-use App\Events\SendNotification;
 use Event;
+use App\Notification\Notifications;
 
 class TableReservationController extends Controller
 {
@@ -48,14 +48,6 @@ class TableReservationController extends Controller
     public function approve(Request $request){
         $id = $request->id;
         $name = $request->name;
-    //    $data = array(
-    //         'starttime' => $request->starttime,
-    //         'endtime' => $request->endtime,
-    //         'status' => $name,
-    //         'male' => $request->male,
-    //         'female' => $request->female,
-    //         'child' => $request->child,
-    //     );
 
 	 // notifications only email
         $reservation = Reservations::where('id', $id)->first();
@@ -77,16 +69,16 @@ class TableReservationController extends Controller
             'restaurantName' => $restaurant->name,
             'body' => 'This is the body of test email.',
             'view' => 'content.updateres',
-            'sms' => "Dear ".$reservation->name .",\n Your booking (Booking id - ".$reservation->id.") for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been approved, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
-            'whatsapp' => "Dear ".$reservation->name .",\n Your booking ".$reservation->id." for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been approved, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
+            'sms' => "Dear ".$reservation->name .",\n Your booking ( ref if - ".$reservation->id.") for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been approved, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
+            'whatsapp' => "Dear ".$reservation->name .",\n Your booking ( ref if - ".$reservation->id.") for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been approved, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
             'replacements' => array_merge($request->all(), ['restaurantName'=>$restaurant->name, 'sstart'=>$request->starttime, 'send'=>$request->endtime, 'name'=>$reservation->name]),
 	        'type' => ['sms', 'email', 'whatsapp']
         ];
         // notifications only email
-	//dd($reservation);
-	if($reservation->email){
-		Event::dispatch(new SendNotification($mailToCustomer));
-	}
+        //dd($reservation);
+        if($reservation->email){
+            Event::dispatch(new Notifications($mailToCustomer));
+        }
 
       	// Reservations::where('id', $id)->update($data);
       	return redirect('/staff/tablereservation')->with('tableapprove', "Resevation is Approved.");

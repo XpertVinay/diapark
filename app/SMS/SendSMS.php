@@ -1,9 +1,11 @@
 <?php
 
 namespace App\SMS;
+use Illuminate\Notifications\Notification;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
 
-class SendSMS
+class SendSMS extends Notification implements ShouldQueue
 {
 
     protected $content;

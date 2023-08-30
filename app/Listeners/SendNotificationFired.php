@@ -2,9 +2,8 @@
 
 namespace App\Listeners;
 
-use App\Events\SendNotification;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Notifications\Notification;
 
 use App\Mail\SendMail;
 use Mail;
@@ -12,7 +11,9 @@ use Mail;
 use App\SMS\SendSMS;
 use App\WhatsApp\SendWhatsApp;
 
-class SendNotificationFired
+use App\Notification\Notifications;
+
+class SendNotificationFired extends Notification implements ShouldQueue
 {
     /**
      * Create the event listener.
@@ -26,7 +27,8 @@ class SendNotificationFired
 
     private function sendMail ($data) {
         try{
-            Mail::to($data['email'])->send(new SendMail($data));  
+            Mail::to($data['email'])->send(new SendMail($data)); 
+            // print_r('print1'); 
         } catch (\Exception $e) {
             print_r($e->getMessage());
             return;
@@ -38,6 +40,7 @@ class SendNotificationFired
         try{
             $sendSMS = new SendSMS($data);
             $sendSMS->sendSMSInfo();
+            // print_r('print2');
 	    return;
         } catch (\Exception $e) {
              dd($e->getMessage());
@@ -48,8 +51,9 @@ class SendNotificationFired
     private function sendWhatsApp ($data) {
         // whatsapp api integration
         try{
-	   $whatsApp = new SendWhatsApp($data);
+            $whatsApp = new SendWhatsApp($data);
             $whatsApp->sendWhatsAppInfo();
+            // print_r('print3');
         } catch (\Exception $e) {
   	    print_r($e->getMessage());
             return;
@@ -59,28 +63,31 @@ class SendNotificationFired
     /**
      * Handle the event.
      *
-     * @param  \App\Events\SendNotification  $event
+     * @param  \App\Events\Notifications  $event
      * @return void
      */
-    public function handle(SendNotification $event)
+    public function handle(Notifications $event)
     {
-        // dd($event->data);
-	// echo "<pre>";
+        // echo "<pre>";
+        // print_r($event->data);
         forEach($event->data['type'] as $type){
             switch ($type) {
                 case 'email':
                     $this->sendMail($event->data);
+                    // echo "\nEMAIL\n";
                     break;
                 case 'sms':
                     $this->sendSMS($event->data);
+                    // echo "\nSMS\n";
                     break;
                 case 'whatsapp':
                     $this->sendWhatsApp($event->data);
+                    // echo "\nWHATSAPP\n";
                     break;
                 default:
                     break;
             }
         }
-	// dd('print');
+	    // dd('print');
     }
 }

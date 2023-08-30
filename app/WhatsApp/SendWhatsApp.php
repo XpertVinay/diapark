@@ -1,8 +1,10 @@
 <?php
 
 namespace App\WhatsApp;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Notifications\Notification;
 
-class SendWhatsApp
+class SendWhatsApp extends Notification implements ShouldQueue
 {
 
     protected $content;

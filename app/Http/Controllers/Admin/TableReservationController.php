@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Reservations;
 use App\Models\Restaurants;
 use App\Staffs;
-use App\Events\SendNotification;
+use App\Notification\Notifications;
 use Event;
 
 class TableReservationController extends Controller
@@ -33,54 +33,9 @@ class TableReservationController extends Controller
     	return view('admin.tablereservation', ['reservations'=>$reservations]);
     }
 
-
-    public function approve22(Request $request){
-        $id = $request->id;
-        $name = $request->name;
-       $data = array(
-            'starttime' => $request->starttime,
-            'endtime' => $request->endtime,
-            'status' => $name,
-            'male' => $request->male,
-            'female' => $request->female,
-            'child' => $request->child,
-        );
-
-        // notifications only email
-        if(false){
-            $mailToCustomer = [
-                'title' => 'Thank you for your reservation on '.config('app.name'),
-                'body' => 'This is the body of test email.',
-                'view' => 'content.reservation',
-                'replacements' => $request->all()
-            ];
-    
-            $mailToRestaurantStaff = [
-                'title' => 'You received a booking request'.config('app.name'),
-                'body' => 'This is the body of test email.',
-                'view' => 'content.staff',
-                'replacements' => $request->all()
-            ];
-    
-            Mail::to($request->email)->send(new SendMail($mailToCustomer));
-            Mail::to($staff->email)->send(new SendMail($mailToRestaurantStaff));   
-        }
-
-      	Reservations::where('id', $id)->update($data);
-      	return redirect('/tablereservation')->with('tableapprove', "Resevation is Approved.");
-    }
-
     public function approve(Request $request){
         $id = $request->id;
         $name = $request->name;
-    //    $data = array(
-    //         'starttime' => $request->starttime,
-    //         'endtime' => $request->endtime,
-    //         'status' => $name,
-    //         'male' => $request->male,
-    //         'female' => $request->female,
-    //         'child' => $request->child,
-    //     );
 
 	 // notifications only email
         $reservation = Reservations::where('id', $id)->first();
@@ -102,14 +57,14 @@ class TableReservationController extends Controller
             'restaurantName' => $restaurant->name,
             'body' => 'This is the body of test email.',
             'view' => 'content.updateres',
-            'sms' => "Dear ".$reservation->name .",\n Your booking (Booking id - ".$reservation->id.") for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been approved, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
-            'whatsapp' => "Dear ".$reservation->name .",\n Your booking ".$reservation->id." for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been approved, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
+            'sms' => "Dear ".$reservation->name .",\n Your booking (Booking id - ".$reservation->id.") for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been confirmed, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
+            'whatsapp' => "Dear ".$reservation->name .",\n Your booking ".$reservation->id." for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been confirmed, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
             'replacements' => array_merge($request->all(), ['restaurantName'=>$restaurant->name, 'sstart'=>$request->starttime, 'send'=>$request->endtime, 'name'=>$reservation->name]),
 	        'type' => ['sms', 'email', 'whatsapp']
         ];
         // notifications only email
 	if($reservation->email){
-		Event::dispatch(new SendNotification($mailToCustomer));
+		Event::dispatch(new Notifications($mailToCustomer));
 	}
 
       	// Reservations::where('id', $id)->update($data);
