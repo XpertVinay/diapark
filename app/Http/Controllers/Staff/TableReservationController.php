@@ -82,7 +82,6 @@ class TableReservationController extends Controller
             'replacements' => array_merge($request->all(), ['restaurantName'=>$restaurant->name, 'sstart'=>$request->starttime, 'send'=>$request->endtime, 'name'=>$reservation->name]),
 	        'type' => ['sms', 'email', 'whatsapp']
         ];
-	    dd($mailToCustomer);
         // notifications only email
 	//dd($reservation);
 	if($reservation->email){
