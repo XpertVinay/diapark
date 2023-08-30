@@ -48,14 +48,14 @@ class TableReservationController extends Controller
     public function approve(Request $request){
         $id = $request->id;
         $name = $request->name;
-       $data = array(
-            'starttime' => $request->starttime,
-            'endtime' => $request->endtime,
-            'status' => $name,
-            'male' => $request->male,
-            'female' => $request->female,
-            'child' => $request->child,
-        );
+    //    $data = array(
+    //         'starttime' => $request->starttime,
+    //         'endtime' => $request->endtime,
+    //         'status' => $name,
+    //         'male' => $request->male,
+    //         'female' => $request->female,
+    //         'child' => $request->child,
+    //     );
 
 	 // notifications only email
         $reservation = Reservations::where('id', $id)->first();
@@ -68,7 +68,7 @@ class TableReservationController extends Controller
         $reservation->save();
 
         $restaurant = Restaurants::where('id', $reservation->restaurantid)->first();
-	$staff = Staffs::where('id', $reservation->restaurantid)->first();
+	    $staff = Staffs::where('id', $reservation->restaurantid)->first();
 
         $mailToCustomer = [
             'title' => 'Update on your recent booking from '.$restaurant->name,
@@ -77,12 +77,12 @@ class TableReservationController extends Controller
             'restaurantName' => $restaurant->name,
             'body' => 'This is the body of test email.',
             'view' => 'content.updateres',
-            'sms' => 'Dear '.$restaurant->name.' your booking for '.$restaurant->name.' on '.date('d M Y, H:i:s', strtotime($request->starttime)).' has been approved, for any update and change please contact '.$staff->name.' ' . $staff->phone . ' Thank you for your booking !!',
-	    'whatsapp' => 'Thank you for booking. We will shortly inform you about the confirmation of your table.',
+            'sms' => "Dear ".$reservation->name .",\n Your booking (Booking id - ".$reservation->id.") for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been approved, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
+            'whatsapp' => "Dear ".$reservation->name .",\n Your booking ".$reservation->id." for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been approved, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
             'replacements' => array_merge($request->all(), ['restaurantName'=>$restaurant->name, 'sstart'=>$request->starttime, 'send'=>$request->endtime, 'name'=>$reservation->name]),
-	    'type' => ['sms', 'email', 'whatsapp']
+	        'type' => ['sms', 'email', 'whatsapp']
         ];
-	// dd($mailToCustomer);
+	    dd($mailToCustomer);
         // notifications only email
 	//dd($reservation);
 	if($reservation->email){
