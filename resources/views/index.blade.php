@@ -8,17 +8,17 @@
 <meta name="description" content="It takes nearly 20 minutes&#39; drive from Delhi International Airport.If visiting for business trip to India this hotel is perfect. We offer the authentic Japanese cuisine as well as the Japanese style bath and we also offer all the support to our guest to have a luxurious stay in India.">
 <meta name="author" content="Dia Park Premier">
 <meta name="viewport" content="width=1024">
-<link rel="shortcut icon" href="html/favicon.ico">
+<link rel="shortcut icon" href="english/favicon.ico">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="html/common/css/import7fa1.css?up=170911">
-<link rel="stylesheet" href="html/css/dropkick.css">
-<link rel="stylesheet" href="html/css/style7fa1.css?up=170911">
-<link rel="stylesheet" href="html/common/css/print.css" media="print" id="printcss">
-<link rel="stylesheet" href="html/common/css/humanity/jquery-ui-1.8.23.custom.css">
+<link rel="stylesheet" href="english/common/css/import7fa1.css?up=170911">
+<link rel="stylesheet" href="english/css/dropkick.css">
+<link rel="stylesheet" href="english/css/style7fa1.css?up=170911">
+<link rel="stylesheet" href="english/common/css/print.css" media="print" id="printcss">
+<link rel="stylesheet" href="english/common/css/humanity/jquery-ui-1.8.23.custom.css">
 <!--[if lt IE 9]>
-<script src="html/common/js/html5shiv.js" type="text/javascript"></script>
+<script src="english/common/js/html5shiv.js" type="text/javascript"></script>
 <![endif]-->
 </head>
 
@@ -126,13 +126,13 @@
 </div>
 </div>
 <ul id="gnavi">
-<li id="room"><a href="html/room/index.html">Guest Rooms</a></li>
-<li id="meal"><a href="html/dining/index.html">Food Services</a></li>
-<li id="service"><a href="html/service/index.html">Services &amp; Facilities</a></li>
-<li id="news"><a href="html/news/index.html">News</a></li>
-<li id="access"><a href="html/access/index.html">Access</a></li>
+<li id="room"><a href="english/room/index.html">Guest Rooms</a></li>
+<li id="meal"><a href="english/dining/index.html">Food Services</a></li>
+<li id="service"><a href="english/service/index.html">Services &amp; Facilities</a></li>
+<li id="news"><a href="english/news/index.html">News</a></li>
+<li id="access"><a href="english/access/index.html">Access</a></li>
 <li id="booking"><a href="https://gc.synxis.com/rez.aspx?Hotel=80472&amp;Chain=22924&amp;locale=en-US">Room Reservations</a></li>
-<li id="contact"><a href="html/contact/index.html">Inquiries</a></li>
+<li id="contact"><a href="english/contact/index.html">Inquiries</a></li>
 </ul>
 <style>
   .carousel-inner > .item > img,
@@ -157,19 +157,19 @@
     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
-        <img src="html/image/home_main_img106.jpg" alt="Chania" width="460" height="345">
+        <img src="english/image/home_main_img106.jpg" alt="Chania" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="html/image/home_01.jpg" alt="Chania" width="460" height="345">
+        <img src="english/image/home_01.jpg" alt="Chania" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="html/image/home_02.jpg" alt="Flower" width="460" height="345">
+        <img src="english/image/home_02.jpg" alt="Flower" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="html/image/home_03.jpg" alt="Flower" width="460" height="345">
+        <img src="english/image/home_03.jpg" alt="Flower" width="460" height="345">
         <!-- <div class="carousel-caption">
           <h3>Flowers</h3>
           <p>Beautiful flowers in Kolymbari, Crete.</p>
@@ -180,127 +180,7 @@
   </div>
 <!--/mainBg-->
 
-    <div class="raw">
-    <!--<center> <button class="btn btn-info btn-lg" id="booking" data-toggle="modal" data-target="#reservationBooking">Book a Table</button> </center>-->
-    <center> <a class="btn btn-info btn-lg" id="booking" href="/food-service?book=1">Book a Table</a> </center>
-</div>
-
-<!-- Modal -->
-<div id="reservationBooking" class="modal fade" role="dialog">
-  <div class="modal-dialog modal-lg">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h2 class="modal-title">Table Reservation</h2>
-      </div>
-      <div class="modal-body">
-        <div class="">
-            @if(session('deletereservationtable'))
-            <div class="alert alert-success" role="alert">
-                {{session('deletereservationtable')}}
-            </div>
-            @endif
-                <div class="card my-5" style="">
-                    <div class="card-body col-md-12">
-                        <form action="{{route('doreservation.submit')}}" method="POST" id="reservationForm">
-                            @csrf
-                            <div class="form-group">
-                                <label for="name2" class="col-3 col-form-label">Name</label>
-                                <div class="col-9">
-                                    <input type="text" name="name" class="form-control" id="name2" placeholder="Name" required="true">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email2" class="col-3 col-form-label">Email</label>
-                                <div class="col-9">
-                                    <input type="email" name="email" class="form-control" id="email2" placeholder="Email" required="true">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone" class="col-3 col-form-label">Phone</label>
-                                <div class="col-9">
-                                    <input type="number" name="phone" class="form-control" id="phone" placeholder="Phone" required="true">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="occasion" class="col-3 col-form-lable">Occasion</label>
-                                <div class="col-9">
-                                    <select class="form-control" name="occasion" id="occasion" required="true">
-                                        <option>-- Select Option --</option>
-                                        <option value="Corporate Party">Corporate Party</option>
-                                        <option value="Kitty Party">Kitty Party</option>
-                                        <option value="Bachelor Party">Bachelor Party</option>
-                                        <option value="Birthday">Birthday</option>
-                                        <option value="Anniversary">Anniversary</option>
-                                        <option value="Sympathy">Sympathy</option>
-                                        <option value="Christmas">Christmas</option>
-                                        <option value="New Baby">New Baby</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="restaurantid" class="col-3 col-form-lable">Reserve For</label>
-                                <div class="col-9">
-                                    <select class="form-control" name="restaurantid" id="restaurantid" required="true">
-                                        <option>-- Select Option --</option>
-                                        @if(!empty($restaurants))
-                                            @foreach($restaurants as $restaurant)
-                                                <option value="{{$restaurant->id}}">{{$restaurant->name}}</option>
-                                            @endforeach
-                                        @endif
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-3 col-form-label">Planned Arival</label>
-                                <div class="col">
-                                    <input type="datetime-local" name="starttime" class="form-control" placeholder="On which date" required="true" value="">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-3 col-form-label">Planned Departure</label>
-                                <div class="col">
-                                    <input type="datetime-local" name="endtime" class="form-control" placeholder="On which date" required="true" value="">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="guest" class="col-md-3 col-form-label">No of Guest</label>
-                                <div class="col-md-3">
-                                    <input type="number" name="male" class="form-control" id="male" placeholder="Male Guest">
-                                </div>
-                                <div class="col-md-3">
-                                    <input type="number" name="female" class="form-control" id="female" placeholder="Female Guest">
-                                </div>
-                                <div class="col-md-3">
-                                    <input type="number" name="child" class="form-control" id="child" placeholder="Child Guest">
-                                </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-md-2">
-                                    <input type="checkbox" name="whatsapp" class="form-control" id="whatsapp">
-                                </div>
-                                <div class="col-md-9">
-                                    I agree to contacted via whatsapp.
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-10">
-                                    <center><button type="submit" id="reserve" class="btn btn-info">Book Your Table</button></center>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-      </div>
-    </div>
-
-  </div>
-
+    
 <div class="wrapper">
 
 <div class="outlineArea">
@@ -308,12 +188,12 @@
 <!--================================= outline ===================================-->
 <div class="outline">
 <ul>
-<li class="near"><img src="html/image/home_outline_tx005.gif" width="311" height="28" alt="Authentic Japanese Dishes"></li>
-<li class="safe"><img src="html/image/home_outline_tx006.gif" width="310" height="28" alt="Japanese Concierge Services (Japan Concierge)"></li>
-<li class="net"><img src="html/image/home_outline_tx007.gif" width="625" height="28" alt="Japanese-Style Services (Large Communal Bathroom and Bodywork Salon)"></li>
+<li class="near"><img src="english/image/home_outline_tx005.gif" width="311" height="28" alt="Authentic Japanese Dishes"></li>
+<li class="safe"><img src="english/image/home_outline_tx006.gif" width="310" height="28" alt="Japanese Concierge Services (Japan Concierge)"></li>
+<li class="net"><img src="english/image/home_outline_tx007.gif" width="625" height="28" alt="Japanese-Style Services (Large Communal Bathroom and Bodywork Salon)"></li>
 </ul>
-<p class="wellcome"><img src="html/image/home_outline_tx010.gif" width="415" height="22" alt="Enjoy Japanese-style hospitality in India."></p>
-<p class="copy"><img src="html/image/home_outline_tx012.gif" width="612" height="94" alt="Located 20 minutes’drive from the Delhi International Airport, this Hotel with its clean and neat atmosphere is quite suitable for the business trip if you visit India.  Our Hotel staff will surely support your stay in India with the full-fledged Japanese breakfast on complimentary basis, two big community baths (one for men and the other for women) and other Japanese tasted comfortableness and pleasantness."></p>
+<p class="wellcome"><img src="english/image/home_outline_tx010.gif" width="415" height="22" alt="Enjoy Japanese-style hospitality in India."></p>
+<p class="copy"><img src="english/image/home_outline_tx012.gif" width="612" height="94" alt="Located 20 minutes’drive from the Delhi International Airport, this Hotel with its clean and neat atmosphere is quite suitable for the business trip if you visit India.  Our Hotel staff will surely support your stay in India with the full-fledged Japanese breakfast on complimentary basis, two big community baths (one for men and the other for women) and other Japanese tasted comfortableness and pleasantness."></p>
 </div>
 <!--/outline-->
 
@@ -393,8 +273,8 @@ New Year Special Package</a></dd>
 <ul class="serviceListTop">
 <li class="dinner">
 <h3 id="dinnerH3">Tasty Japanese Dishes</h3>
-<p class="img"><a href="dining/index.html"><img src="html/image/home_service_ph016.jpg" width="286" height="118" alt="Image&#65533;�Tasty Japanese Dishes"></a></p>
-<p class="txt">Authentic Japanese dishes are available at the Japanese restaurants Raifu and Raifu-tei�c&#65533;(private room)�c&#65533;. Our accommodation packages include the option of a Japanese breakfast.</p>
+<p class="img"><a href="dining/index.html"><img src="english/image/home_service_ph016.jpg" width="286" height="118" alt="Image&#65533; Tasty Japanese Dishes"></a></p>
+<p class="txt">Authentic Japanese dishes are available at the Japanese restaurants Raifu and Raifu-tei c&#65533;(private room) c&#65533;. Our accommodation packages include the option of a Japanese breakfast.</p>
 <dl class="note txtSmall">
 <dt> T</dt>
 <dd>The breakfast will be served at the Cafe &amp; Restaurant Honey on the ground floor.</dd>
@@ -404,14 +284,14 @@ New Year Special Package</a></dd>
 
 <li class="desk">
 <h3 id="deskH3">Japan Concierge</h3>
-<p class="img"><a href="service/index.html#deskH2"><img src="html/image/home_service_ph019.jpg" width="286" height="118" alt="Image&#65533;�Japan Concierge"></a></p>
+<p class="img"><a href="service/index.html#deskH2"><img src="english/image/home_service_ph019.jpg" width="286" height="118" alt="Image&#65533; Japan Concierge"></a></p>
 <p class="txt">At this information desk, hotel staff members help customers have an enjoyable stay. Services are also available in Japanese. Please feel free to contact this desk if you have any problems.</p>
 <p class="serviceBt"><a href="service/index.html#deskH2">More</a></p>
 </li>
 
 <li class="rooms">
 <h3 id="roomsH3">Clean, Comfortable Guest Rooms</h3>
-<p class="img"><a href="room/index.html"><img src="html/image/home_service_ph002.jpg" width="286" height="118" alt="Image&#65533;�Clean, Comfortable Guest Rooms"></a></p>
+<p class="img"><a href="room/index.html"><img src="english/image/home_service_ph002.jpg" width="286" height="118" alt="Image&#65533; Clean, Comfortable Guest Rooms"></a></p>
 <p class="txt">Our Japanese-style hospitality and services are also reflected in our clean, secure, comfortable guest rooms, which offer the optimal relaxation. Rooms range from Deluxe Rooms with reasonable room rates to the best Executive Rooms (with bathtubs).  <br>
 Fully installed Air purifiers, Washlet and hand showers in all the guest rooms will present you the further relaxation.</p>
 <dl class="note txtSmall">
@@ -428,14 +308,14 @@ Fully installed Air purifiers, Washlet and hand showers in all the guest rooms w
 <ul class="serviceListBottom">
 <li class="bath">
 <h3 id="bathH3">Large Japanese-Style Communal Bathroom</h3>
-<p class="img"><a href="service/index.html#bathH2"><img src="html/image/home_service_ph009.jpg" width="286" height="118" alt="Image&#65533;�Large Japanese-Style Communal Bathroom"></a></p>
+<p class="img"><a href="service/index.html#bathH2"><img src="english/image/home_service_ph009.jpg" width="286" height="118" alt="Image&#65533; Large Japanese-Style Communal Bathroom"></a></p>
 <p class="txt">If you are tired from a long flight or work, we recommend our Japanese-style communal bathroom. The large bathtub helps you relax by allowing you to comfortably stretch out your legs.</p>
 <p class="serviceBt"><a href="service/index.html#bathH2">More</a></p>
 </li>
 
 <li class="care">
 <h3 id="careH3">Wellness Centre & Spa Hasu no Shizuk</h3>
-<p class="img"><a href="service/index.html#careH2"><img src="html/image/home_service_ph017.jpg" width="286" height="118" alt="Image&#65533;�Wellness Centre & Spa Hasu no Shizuk"></a></p>
+<p class="img"><a href="service/index.html#careH2"><img src="english/image/home_service_ph017.jpg" width="286" height="118" alt="Image&#65533; Wellness Centre & Spa Hasu no Shizuk"></a></p>
 <p class="txt">We offer an Indian traditional medicine that emphasizes preventive medicine Ayurvedic treatments
 in accordance with the constitution and individual conditions of Japanese people, as well as Momihogushi Dry massages,
 which are preferred by Japanese people.
@@ -445,8 +325,8 @@ which are preferred by Japanese people.
 
 <li class="banquet">
 <h3 id="banquetH3">Banquet Rooms (Conferences and Events)</h3>
-<p class="img"><a href="service/index.html#banquetH2"><img src="html/image/home_service_ph014.jpg" width="286" height="118" alt="Image&#65533;�Banquet Rooms (Conferences and Events)"></a></p>
-<p class="txt">The hotel has a variety of banquet rooms, which can accommodate 20�&#65533;150 people. These are ideal venues for business meetings and conferences, etc.</p>
+<p class="img"><a href="service/index.html#banquetH2"><img src="english/image/home_service_ph014.jpg" width="286" height="118" alt="Image&#65533; Banquet Rooms (Conferences and Events)"></a></p>
+<p class="txt">The hotel has a variety of banquet rooms, which can accommodate 20 &#65533;150 people. These are ideal venues for business meetings and conferences, etc.</p>
 <dl class="note txtSmall">
 <dt> T</dt>
 <dd>Photo: A large conference room
@@ -459,7 +339,7 @@ which are preferred by Japanese people.
 <ul class="serviceListBottom">
 <li class="traveldesk">
 <h3 id="traveldeskH3">Travel Desk (Sakura Holidays)</h3>
-<p class="img"><a href="service/index.html#loungeH2"><img src="html/image/home_service_ph018.jpg" width="286" height="118" alt="photo&#65533;�Travel Desk (Sakura Holidays)"></a></p>
+<p class="img"><a href="service/index.html#loungeH2"><img src="english/image/home_service_ph018.jpg" width="286" height="118" alt="photo&#65533; Travel Desk (Sakura Holidays)"></a></p>
 <p class="txt">We are waiting with a placard to pick you up at the airport.</p>
 <p class="serviceBt"><a href="service/index.html#loungeH2">More</a></p>
 </li>
@@ -531,10 +411,10 @@ which are preferred by Japanese people.
 <h5>Payment Methods</h5>
 <p>Please pay at the front desk when you check out. You can pay by cash or credit card (Visa, MasterCard, American Express, or JCB).</p>
 <ul>
-<li><img src="html/plan/image/card_logo_visa_s.gif" alt="visa" /></li>
-<li><img src="html/plan/image/card_logo_master_s.gif" alt="master" /></li>
-<li><img src="html/plan/image/card_logo_amcexp_s.gif" alt="American Express" /></li>
-<li><img src="html/plan/image/card_logo_jcb_s.gif" alt="JCB" /></li>
+<li><img src="english/plan/image/card_logo_visa_s.gif" alt="visa" /></li>
+<li><img src="english/plan/image/card_logo_master_s.gif" alt="master" /></li>
+<li><img src="english/plan/image/card_logo_amcexp_s.gif" alt="American Express" /></li>
+<li><img src="english/plan/image/card_logo_jcb_s.gif" alt="JCB" /></li>
 </ul>
 </div>
 </div>
@@ -562,9 +442,9 @@ var google_remarketing_only = true;
 
 <!--/siteFooter-->
 <p id="pageTop"><a href="#siteHeader">Go to Page Top</a></p>
-<script src="html/common/js/functions.js"></script>
-<script src="html/common/js/checkcalendar1bf33.js?180427"></script>
-<script src="html/common/js/dropkick.js"></script>
+<script src="english/common/js/functions.js"></script>
+<script src="english/common/js/checkcalendar1bf33.js?180427"></script>
+<script src="english/common/js/dropkick.js"></script>
 <script type="text/javascript">
 $(function() {
 	$('.selectdate').dropkick();

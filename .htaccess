@@ -22,9 +22,17 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
     
-    Redirect 301 /html/dining/index.html /food-service
-    #Redirect 301 /index.html /
+    Redirect /dining/index.html /food-service-jp
+    Redirect /english/dining/index.html /food-service
+    Redirect /english/index.html /en
+
+    #RewriteRule ^/english/(.*)\.html$ /html/$1
+    #RewriteRule ^/english/index.html /html/index.hml
+    Redirect /index.html /home
 </IfModule>
+
+# Disable index view
+Options -Indexes
 
 <Files "log.txt">  
   Require all denied
@@ -36,13 +44,4 @@
 
 <Files ".env.*">  
   Require all denied
-</Files>
-
-# Disable index view
-Options -Indexes
-
-# Hide a specific file
-<Files .env>
-    Order allow,deny
-    Deny from all
 </Files>

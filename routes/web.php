@@ -16,21 +16,24 @@ use App\Http\Controllers\Staff\DashboardController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+   // return view('welcome');
+// });
 
 
 Auth::routes();
 
-Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
+// Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
 /*================================================================================
                             FRONTEND PAGE ROUTING
 =================================================================================*/
 
 Route::get('/', 'App\Http\Controllers\IndexHomeController@index');
+Route::get('/en', 'App\Http\Controllers\IndexHomeController@index2');
+Route::get('/home', 'App\Http\Controllers\IndexHomeController@index');
 Route::get('/food-service', 'App\Http\Controllers\IndexHomeController@foodNService');
+Route::get('/food-service-jp', 'App\Http\Controllers\IndexHomeController@foodNServiceJp');
 Route::get('/about', 'App\Http\Controllers\AboutController@about');
 Route::get('/menu', 'App\Http\Controllers\MenuController@menu');
 Route::get('/order', 'App\Http\Controllers\OrderController@order');

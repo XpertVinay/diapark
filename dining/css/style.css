@@ -1,0 +1,179 @@
+/*
+	style.css
+	----------------------------------------------------------
+	
+
+
+-------------------------------------------------------------------------------*/
+
+
+/* headding
+-------------------------------------------------------------------------------*/
+#contentsHeader #diningH1{
+	background:url(../image/dining_h1_bg001.jpg) no-repeat 50% 0;
+}
+#contentsHeader #diningH1 h1{
+	text-indent:-9999px;
+	height:60px;
+	padding:30px 10px 0 10px;
+	background:url(../image/dining_h1001.png) no-repeat 10px 30px;
+}
+
+span.free{
+	font-size:70%;
+	letter-spacing:0.1em;
+	font-weight:normal;
+	padding:3px 10px;
+	border:1px solid #D6D1C8;
+}
+
+/* contents
+-------------------------------------------------------------------------------*/
+div.outline{
+	width:800px;
+	padding:0 0 10px 0;
+	margin:0 auto;
+}
+div.outline p.txt{
+	margin:0 0 20px 0;
+}
+
+div.outline dl.notes:before, div.outline dl.notes:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+div.outline dl.notes:after { clear: both; } 
+div.outline dl.notes { zoom: 1; }
+
+div.outline dl{
+	font-size:80%;
+	margin:0 auto 20px auto;
+
+}
+div.outline dl dt {
+clear: both;
+display: table-cell;
+width: 1.2em;
+padding: 0 0 5px 3px;
+float: left;
+}
+div.outline dl dd {
+display: table-cell;
+padding: 0 0 5px 0;
+}
+
+
+/* diningList
+-------------------------------------------------------------------------------*/
+
+
+/* planList
+-------------------------------------------------------------------------------*/
+div.contentList div.contentBoxIn {
+padding: 36px 0 0 0;
+}
+div.diningHor:before, div.diningHor:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+div.diningHor:after { clear: both; } 
+div.diningHor { zoom: 1; }
+div.diningHor{
+	clear:both;
+	width:868px;
+	margin:0 auto 30px auto ;
+}
+div.diningHor div.txtBox {
+width: 564px;
+float: right;
+}
+div.diningHor div.imgBox {
+width: 280px;
+float: left;
+}
+div.diningVer{
+	width:868px;
+	margin:0 auto 30px auto ;
+}
+div.diningVer div.txtBox{
+	clear:both;
+}
+div.diningVer div.imgOut:before, div.diningVer div.imgOut:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+div.diningVer div.imgOut:after { clear: both; } 
+div.diningVer div.imgOut { zoom: 1; }
+div.diningVer div.imgOut{
+}
+div.diningVer div.imgBox{
+	width:280px;
+	margin:0 14px 0 0;
+	float:left;
+}
+div.diningVer div.right{
+	margin:0 0 0 0;
+	float:right;
+}
+div.diningHor div.open{
+	width:564px;
+	float:right;
+}
+div.diningVer div.open{
+	width:330px;
+	padding:0 0 0 10px;
+	float:right;
+	border-left:1px solid #d6d1c8;
+}
+div.diningVer div.noline{
+	padding:0 0 0 0;
+	border-left:none;
+}
+div.contentList div.menu h3{
+	margin:0 0 5px 0;
+	padding:13px 0 8px 23px;
+	text-indent:-9999px;
+	background:url(../../common/image/contents_bg005.gif) no-repeat 0 0;
+}
+div.contentList div.menu h3 span.h3In{
+	display:block;
+	width:78px;
+	height:13px;
+	background:url(../image/dining_h3001.gif) no-repeat 0 0;
+}
+div.diningVer div.menu{
+	width:517px;
+	padding:0 10px 0 0;
+	border-right:1px solid #d6d1c8;
+	float:left;
+}
+div.contentList dl.menuList{
+	padding:0 0 0 10px;
+}
+div.contentList dl.menuList dt{
+	font-weight:bold;
+	margin:0 0 2px 0;
+}
+div.contentList dl.menuList dd{
+	margin:0 0 10px 0;
+}
+div.contentList p.menuPdf{
+	padding:24px 0 0 0;
+	border-top:1px solid #d6d1c8;
+}
+div.contentList p.breakfastTitle{
+	text-indent:-9999px;
+	width: 868px;
+	height:18px;
+	background:url(../image/dining_tl003.gif) no-repeat 0 0;
+	margin:0 auto 20px auto;
+}
+div.contentList p.lunchTitle{
+	text-indent:-9999px;
+	width: 868px;
+	height:18px;
+	background:url(../image/dining_tl001.gif) no-repeat 0 0;
+	margin:0 auto 20px auto;
+}
+div.contentList p.diningTitle{
+	text-indent:-9999px;
+	width: 868px;
+	height:18px;
+	background:url(../image/dining_tl002.gif) no-repeat 0 0;
+	margin:0 auto 20px auto;
+}
+div.border{
+border-bottom: 1px solid #d6d1c8;
+padding:0 0 36px 0;
+}

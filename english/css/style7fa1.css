@@ -1,0 +1,560 @@
+/*
+	style.css
+	----------------------------------------------------------
+	
+
+
+-------------------------------------------------------------------------------*/
+
+
+/* 1.main
+-------------------------------------------------------------------------------*/
+div.mainBg{
+	background:url(../image/home_main_bg001.gif) repeat-x 0 0;
+}
+
+#main{
+	height:375px;
+	background:url(../image/home_main_img106.jpg) no-repeat 50% 0;
+	margin:0 0 46px 0;
+}
+div.mainImg{
+	width:968px;
+	height:375px;
+	margin:0 auto;
+	position:relative;
+}
+.home #siteHeader div.hdLink{
+		padding:4px 0 0 0;
+}
+#siteHeader .hdSearch{
+	float:right;
+	width:689px;
+	padding:0 0 6px;
+	background:url(../image/home_search_bg005.jpg) no-repeat 0 0;
+}
+#siteHeader .hdSearch .searchInner{
+	float:left;
+	padding-top:25px;
+	padding-left:20px;
+	padding-bottom:9px;
+}
+#siteHeader .hdSearch .searchInner > div{
+	float:left;
+}
+#siteHeader .hdSearch p.calendar{
+	float:left;
+	padding-top:2px;
+}
+#siteHeader .hdSearch div.checkIn,#siteHeader .hdSearch div.checkOut{
+	width:204px;
+
+}
+#siteHeader .hdSearch div.checkIn,
+#siteHeader .hdSearch div.checkOut{
+	width: 196px;
+}
+#siteHeader .hdSearch div.checkIn > div:first-of-type,
+#siteHeader .hdSearch div.checkOut > div:first-of-type{
+	width: 61px;
+	float:left;
+	margin-right:5px;
+	font-size:12px;
+}
+#siteHeader .hdSearch div.checkIn > div:last-of-type,
+#siteHeader .hdSearch div.checkOut > div:last-of-type{
+	width: 93px;
+	float:left;
+	margin-right:5px;
+	font-size:12px;
+}
+#siteHeader .hdSearch div.slPerson{
+	padding:0 8px 0 0;
+	width:58px;
+	font-size:12px;
+}
+#siteHeader .hdSearch div.slRooms{
+	padding:0 6px 0 0;
+	width:58px;
+	font-size:12px;
+}
+#siteHeader .hdSearch div.slPerson .dk-select,
+#siteHeader .hdSearch div.slRooms .dk-select{
+	width:58px;
+}
+#siteHeader .hdSearch div.slPerson .dk_toggle,
+#siteHeader .hdSearch div.slRooms .dk_toggle{
+	width:32px!important;
+}
+#siteHeader .hdSearch select{
+	margin:0 3px 0 0;
+}
+#siteHeader .hdSearch input.searchBt{
+	display:block;
+	text-indent:-9999px;
+	width:73px;
+	height:35px;
+	margin:16px 0 0 0;
+	background:url(../image/home_search_bt008.gif) no-repeat 0 0;
+	border:none;
+	float:left;
+	cursor:pointer;
+}
+#siteHeader .hdSearch input.searchBt:hover{
+	background:url(../image/home_search_bt008.gif) no-repeat 0 -35px;
+}
+
+
+body.home div.search div.searchLink{
+	width:104px;
+	margin:20px 0 0 0;
+	float:right;
+}
+body.home div.search div.searchLink p.planBt{
+	margin:0 0 7px 0;
+}
+body.home div.search div.searchLink p.planBt,
+body.home div.search div.searchLink p.planBt a{
+	display:block;
+	text-indent:-9999px;
+	width:66px;
+	height:18px;
+	background:url(../image/home_search_bt002.gif) no-repeat 0 0;
+}
+body.home div.search div.searchLink p.planBt a:hover{
+	background:url(../image/home_search_bt002.gif) no-repeat 0 -18px;
+}
+body.home div.search div.searchLink p.editBt,
+body.home div.search div.searchLink p.editBt a{
+	display:block;
+	text-indent:-9999px;
+	width:104px;
+	height:17px;
+	background:url(../image/home_search_bt003.gif) no-repeat 0 0;
+}
+body.home div.search div.searchLink p.editBt a:hover{
+	background:url(../image/home_search_bt003.gif) no-repeat 0 -17px;
+}
+
+.dk-select,
+.dk-select-multi {
+	cursor: pointer;
+  	background:url(../common/image/bt_select.gif) no-repeat 100% 100%;
+	background-color: white;
+  	padding: 2px 20px 2px 3px;
+	border:#a9a7a0 2px inset;
+	border-right-color:#4e453e;
+	border-right-width:1px;
+	border-bottom-color:#4e453e;
+	border-bottom-width:1px;
+}
+.dk-selected {
+	background-color: transparent;
+  	border: none;
+  	border-radius: 0.4em;
+  	padding:0;
+}
+.dk-selected:before,.dk-selected:after {
+	display:none;
+}
+.dk-option-selected,
+.dk-select-options .dk-option-highlight{
+	background-color: #201801;
+}
+.dk-select-open-up .dk-selected,
+.dk-select-open-down .dk-selected,
+.dk-select-open-up .dk-select-options,
+.dk-select-open-down .dk-select-options,
+.dk-select-multi:focus .dk-select-options,
+.dk-selected:hover,
+.dk-selected:focus{
+	border-color: #201801; 
+}
+.dk-select-open-up .dk-selected:before,
+.dk-select-open-down .dk-selected:before {
+  border-bottom-color: #3297fd; }
+.dk-select-open-up .dk-selected:after,
+.dk-select-open-down .dk-selected:after {
+  border-left-color: #3297fd; }
+.dk-selected:hover:before,
+.dk-selected:focus:before {
+border-top-color: #201801; }
+.dk-selected:hover:after,
+.dk-selected:focus:after {
+border-left-color: #201801; }
+
+
+/* 1.outline
+-------------------------------------------------------------------------------*/
+div.outlineArea:before, div.outlineArea:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+div.outlineArea:after { clear: both; } 
+div.outlineArea { zoom: 1; } 
+
+div.outlineArea{
+	width:960px;
+	margin:0 auto 46px auto;
+}
+div.outline{
+	width:625px;
+	float:left;
+}
+div.outline ul:before, div.outline ul:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+div.outline ul:after { clear: both; } 
+div.outline ul { zoom: 1; } 
+div.outline ul{
+	margin:0 0 44px 0;
+}
+div.outline ul li{
+}
+div.outline ul li.near{
+	width:311px;
+	height:28px;
+	margin:0 4px 4px 0;
+	float:left;
+
+}
+div.outline ul li.safe{
+	width:310px;
+	height:28px;
+	margin:0 0 4px 0;
+	float:right;
+}
+div.outline ul li.net{
+	clear:both;
+	text-indent:-9999px;
+	width:625px;
+	height:28px;
+	margin:0 0 0 0;
+	background:url(../image/home_outline_tx007.gif) no-repeat 0 0;
+}
+div.outline p.wellcome{
+	height:22px;
+	margin:0 0 20px 0;
+}
+div.outline p.copy{
+}
+
+
+/* 1.news
+-------------------------------------------------------------------------------*/
+div.news{
+	width:292px;
+	float:right;
+}
+
+div.news div.newsTitle:before, div.news div.newsTitle:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+div.news div.newsTitle:after { clear: both; } 
+div.news div.newsTitle { zoom: 1; } 
+
+div.news div.newsTitle{
+	margin:0 0 17px 0;
+	padding:0 0 11px 0;
+	border-bottom:#8e8883 1px solid;
+}
+
+div.news #newsH2{
+	text-indent:-9999px;
+	width:69px;
+	height:14px;
+	background:url(../image/home_news_h2001.gif) no-repeat 0 0;
+	float:left;
+}
+div.news p.newsLink{
+	width:72px;
+	height:11px;
+	float:right;
+}
+div.news p.newsLink a{
+	display:block;
+	text-indent:-9999px;
+	width:72px;
+	height:11px;
+	background:url(../image/home_news_bt001.gif) no-repeat 0 0;
+}
+div.news p.newsLink a:hover{
+	background:url(../image/home_news_bt001.gif) no-repeat 0 -11px;
+}
+div.news div.newsInner{
+	width:292px;
+	height:185px;
+	overflow-y:scroll;
+}
+div.news div.newsInner dl{
+	padding:0 10px 0 0;
+}
+div.news div.newsInner dl dt{
+	font-size:85%;
+	font-weight:bold;
+	color:#9c0018;
+}
+div.news div.newsInner dl dd{
+	font-size:90%;
+	margin:0 0 14px 0;
+}
+div.news div.newsInner dl dd a{
+	color:#25200F;
+}
+
+
+/* 1.service
+-------------------------------------------------------------------------------*/
+div.service{
+	padding:19px 0 52px 0;
+	background:url(../common/image/line001.gif) repeat-x 0 0;
+}
+div.service #serviceH2{
+	text-indent:-9999px;
+	width:285px;
+	height:77px;
+	margin:0 0 16px 0;
+	background:url(../image/home_service_h2001.gif) no-repeat 0 0;
+}
+div.service ul:before, div.service ul:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+div.service ul:after { clear: both; } 
+div.service ul { zoom: 1; } 
+
+div.service ul.serviceListTop{
+	padding:0 0 48px 0;
+	width: 103%;
+}
+div.service ul.serviceListBottom{
+	padding:0 0 34px 0;
+	width: 103%;
+}
+div.service ul li{
+	width:290px;
+	margin:0 45px 0 0;
+ 	float:left;
+}
+div.service ul li.rooms,
+div.service ul li.banquet{
+	margin:0 0 0 0;
+	float:right;
+}
+div.service h3{
+	text-indent:-9999px;
+	height:18px;
+	padding:0 0 10px 0;
+	margin:0 0 18px 0;
+	border-bottom: #D6D1C8 1px solid;
+}
+div.service #deskH3{
+	background:url(../image/home_service_h3001.gif) no-repeat 0 0;
+}
+div.service #roomsH3{
+	background:url(../image/home_service_h3002.gif) no-repeat 0 0;
+}
+div.service #dinnerH3{
+	background:url(../image/home_service_h3003.gif) no-repeat 0 0;
+}
+div.service #bathH3{
+	background:url(../image/home_service_h3004.gif) no-repeat 0 0;
+}
+div.service #careH3{
+	background:url(../image/home_service_h3008.gif) no-repeat 0 0;
+}
+div.service #banquetH3{
+	background:url(../image/home_service_h3006.gif) no-repeat 0 0;
+}
+div.service #loungeH3 {
+    background: url(../image/home_service_h3007.gif) no-repeat 0 0;
+}
+div.service #traveldeskH3{
+	background:url(../image/home_service_h3009.gif) no-repeat 0 0;
+}
+div.service p.img{
+	line-height:0;
+	margin:0 0 16px 0;
+	padding:1px;
+	border:#d6d1c8 1px solid;
+}
+div.service p.txt{
+	margin:0 0 8px 0;
+}
+div.service p.memberBn{
+	line-height:0;
+}
+div.service p.serviceBt a{
+	display:block;
+	width:64px;
+	height:25px;
+	margin:5px 0 0 0;
+	text-indent:-9999px;
+	background:url(../image/home_service_bt001.gif) no-repeat 0 0;
+	float:right;
+}
+div.service p.serviceBt a:hover{
+	background:url(../image/home_service_bt001.gif) no-repeat 0 -25px;
+}
+
+/* youtube and google indoor view
+-------------------------------------------------------------------------------*/
+div.youtube_etc{
+	width:100%;
+	height:291px;
+	padding:60px 0;
+	background:url(../common/image/line001.gif) repeat-x 0 0;
+}
+div.youtube_etc div:nth-of-type(2n+1){
+	width:50%;
+	float:left;
+}
+div.youtube_etc div:nth-of-type(2n){
+	width:50%;
+	float:right;
+}
+div.youtube_etc h3{
+	text-indent:-9999px;
+	height:18px;
+	margin:0 0 8px 0;
+}
+div.youtube_etc div.youtube h3{
+	background:url(../image/home_youtube_h3001.gif) no-repeat 0 0;
+}
+div.youtube_etc div.indoor_view h3{
+	background:url(../image/home_youtube_h3002.gif) no-repeat 0 0;
+}
+
+/* 1.searchBottom
+-------------------------------------------------------------------------------*/
+div.searchBottom{
+	padding:19px 0 0 0;
+	background:url(../common/image/line001.gif) repeat-x 0 0;
+}
+div.searchBottom #searchH2{
+	text-indent:-9999px;
+	width:292px;
+	height:77px;
+	margin: 0 0 40px 0;
+	background:url(../image/home_search_h2001.gif) no-repeat 0 0;
+}
+div.searchBottom div.searchBottomInner:before, div.searchBottom div.searchBottomInner:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+div.searchBottom div.searchBottomInner:after { clear: both; } 
+div.searchBottom div.searchBottomInner { zoom: 1; }
+
+div.searchBottom div.searchBottomLeft{
+	width:638px;
+	padding:42px 30px 28px 30px;
+	border: #D6D1C8 solid 1px;
+	background:url(../image/home_searchbottom_bg001.gif) no-repeat #f9f8f6 30px 24px;
+	float:left;	
+}
+div.searchBottom div.searchBottomTop:before, div.searchBottom div.searchBottomTop:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+div.searchBottom div.searchBottomTop:after { clear: both; } 
+div.searchBottom div.searchBottomTop { zoom: 1; }
+div.searchBottom div.searchBottomTop{
+	margin:0 0 20px 0;
+}
+body.home div.searchBottom div.checkIn{
+	padding:0 10px 0 0;
+	float:left;
+}
+body.home div.searchBottom div.checkOut{
+	padding:0 20px 0 0;
+	float:left;
+}
+
+body.home div.searchBottom div.slPerson,
+body.home div.searchBottom div.slRooms{
+	padding:0 10px 0 0;
+	float:left;
+}
+body.home div.searchBottom select{
+	margin:0 3px 0 0;
+	float: left;
+}
+body.home div.searchBottom p.calendar{
+	float:left;
+}
+body.home div.searchBottom p.aux {
+margin: 4px 10px 0 0;
+float: left;
+}
+body.home div.searchBottom input.searchBottomBt{
+	display:block;
+	text-indent:-9999px;
+	line-height:0;
+	width: 217px;
+	height: 44px;
+	margin: 0 auto ;
+	background: url(../plan/image/bt_search001.gif) no-repeat 0 0;
+	border:none;
+	cursor:pointer;
+}
+body.home div.searchBottom input.searchBottomBt:hover{
+	background: url(../plan/image/bt_search001.gif) no-repeat 0 -44px;
+}
+body.home div.searchBottom div.searchBottomLink{
+	width:245px;
+	float:right;
+}
+body.home div.searchBottom div.searchBottomLink p.planBt{
+	margin:0 0 4px 0;
+}
+body.home div.searchBottom div.searchBottomLink p.planBt,
+body.home div.searchBottom div.searchBottomLink p.planBt a{
+	display:block;
+	text-indent:-9999px;
+	width:165px;
+	height:27px;
+	background:url(../image/home_search_bt006.gif) no-repeat 0 0;
+}
+body.home div.searchBottom div.searchBottomLink p.planBt a:hover{
+	background:url(../image/home_search_bt006.gif) no-repeat 0 -27px;
+}
+body.home div.searchBottom div.searchBottomLink p.editBt,
+body.home div.searchBottom div.searchBottomLink p.editBt a{
+	display:block;
+	text-indent:-9999px;
+	width:165px;
+	height:27px;
+	background:url(../image/home_search_bt007.gif) no-repeat 0 0;
+}
+body.home div.searchBottom div.searchBottomLink p.editBt a:hover{
+	background:url(../image/home_search_bt007.gif) no-repeat 0 -27px;
+}
+
+body.home select#start_month,
+body.home select#end_month,
+body.home select#start_month2,
+body.home select#end_month2{
+	width:100px;
+}
+body.home select#start_day,
+html body.home select#end_day,
+html body.home select#start_day2,
+html body.home select#end_day2{
+	width:58px;
+}
+html body.home div.slPerson select,
+html body.home div.slRooms select,
+html body.home select#guestselect2,
+html body.home select#roomselect2{
+	width:72px;
+}
+
+body.home div.searchInner,
+body.home div.searchBottomInner{
+	font-size:14px;
+}
+
+/* 1.Smartphone link
+-------------------------------------------------------------------------------*/
+a.spLink {
+display: block;
+line-height: 1;
+font-size: 60px;
+font-weight: bold;
+color: white;
+text-align: center;
+text-decoration: none;
+text-shadow: 1px 1px 0 #4d4742;
+margin:10px 10px;
+padding: 74px 0 74px 0;
+border: #4d4742 1px solid;
+background: -webkit-gradient(linear, left top, left bottom, from(#9c8d83), to(#756a61));
+box-shadow: 0 0 5px white inset;
+-webkit-box-shadow: 0 0 5px white inset;
+border-radius: 10px;
+-webkit-border-radius: 10px;
+}

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Reservations;
 use App\Models\Restaurants;
+use App\Staffs;
 use App\Events\SendNotification;
 use Event;
 
@@ -67,6 +68,7 @@ class TableReservationController extends Controller
         $reservation->save();
 
         $restaurant = Restaurants::where('id', $reservation->restaurantid)->first();
+	$staff = Staffs::where('id', $reservation->restaurantid)->first();
 
         $mailToCustomer = [
             'title' => 'Update on your recent booking from '.$restaurant->name,
@@ -75,7 +77,7 @@ class TableReservationController extends Controller
             'restaurantName' => $restaurant->name,
             'body' => 'This is the body of test email.',
             'view' => 'content.updateres',
-            'sms' => 'Congratulations!, your booking has been approved for '.$restaurant->name.' on '.$request->starttime.'. Please arrive on the scheduled time. Thank',
+            'sms' => 'Dear '.$restaurant->name.' your booking for '.$restaurant->name.' on '.date('d M Y, H:i:s', strtotime($request->starttime)).' has been approved, for any update and change please contact '.$staff->name.' ' . $staff->phone . ' Thank you for your booking !!',
 	    'whatsapp' => 'Thank you for booking. We will shortly inform you about the confirmation of your table.',
             'replacements' => array_merge($request->all(), ['restaurantName'=>$restaurant->name, 'sstart'=>$request->starttime, 'send'=>$request->endtime, 'name'=>$reservation->name]),
 	    'type' => ['sms', 'email', 'whatsapp']

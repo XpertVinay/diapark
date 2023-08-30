@@ -359,7 +359,7 @@
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                   <tbody>
                                     <tr>
-                                      <td> <a href="/staff/tablereservation" target="_blank">See Booking</a> </td>
+                                      <td> <a href="{{ url('/staff/tablereservation') }}" target="_blank">See Booking</a> </td>
                                     </tr>
                                   </tbody>
                                 </table>

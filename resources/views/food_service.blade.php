@@ -13,11 +13,11 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link rel="shortcut icon" href="html/favicon.ico">
-<link rel="stylesheet" href="html/common/css/import.css">
-<link rel="stylesheet" href="html/dining/css/style.css">
-<link rel="stylesheet" href="html/common/css/humanity/jquery-ui-1.8.23.custom.css">
-<link rel="stylesheet" href="html/common/css/print.css" media="print" id="printcss">
+<link rel="shortcut icon" href="english/favicon.ico">
+<link rel="stylesheet" href="english/common/css/import.css">
+<link rel="stylesheet" href="english/dining/css/style.css">
+<link rel="stylesheet" href="english/common/css/humanity/jquery-ui-1.8.23.custom.css">
+<link rel="stylesheet" href="english/common/css/print.css" media="print" id="printcss">
 <style>
     .row > .col-xs-3 {
     display:flex;
@@ -103,9 +103,10 @@
     margin: auto;
     min-height: 150px;
   }
+
 </style>
 <!--[if lt IE 9]>
-<script src="html/common/js/html5shiv.js" type="text/javascript"></script>
+<script src="english/common/js/html5shiv.js" type="text/javascript"></script>
 <![endif]--></head>
 
 <body class="dining">
@@ -135,13 +136,13 @@
 </div>
 </div>
 <ul id="gnavi">
-<li id="room"><a href="html/room/index.html">Guest Rooms</a></li>
+<li id="room"><a href="english/room/index.html">Guest Rooms</a></li>
 <li id="meal"><a href="food-service" class="current">Food Services</a></li>
-<li id="service"><a href="html/service/index.html">Services &amp; Facilities</a></li>
-<li id="news"><a href="html/news/index.html">News</a></li>
+<li id="service"><a href="english/service/index.html">Services &amp; Facilities</a></li>
+<li id="news"><a href="english/news/index.html">News</a></li>
 <li id="access"><a href="htmlaccess/index.html">Access</a></li>
 <li id="booking"><a href="https://gc.synxis.com/rez.aspx?Hotel=80472&amp;Chain=22924&amp;locale=en-US">Room Reservations</a></li>
-<li id="contact"><a href="html/contact/index.html">Inquiries</a></li>
+<li id="contact"><a href="english/contact/index.html">Inquiries</a></li>
 </ul>
 </header>
 <!--/siteHeader-->
@@ -152,7 +153,7 @@
 <div class="bgH1" id="diningH1">
 <h1>Food Services</h1>
 </div>
-<p class="breadcrumbs"><span><a href="../index-2.html">HOME</a> &gt; Food Services</span></p>
+<p class="breadcrumbs"><span><a href="../en">HOME</a> &gt; Food Services</span></p>
 </header>
 
 <div class="jumbotron jumbotron-fluid" style="back-groud: white">
@@ -168,22 +169,23 @@
     </ol>
 
     <!-- Wrapper for slides -->
+ <center><h2>RAIFU / RAIHUTEI Restaurant</h2></center><br>
     <div class="carousel-inner" role="listbox" style="height: 150px">
-
+      
       <div class="item active left">
-        <img src="html/dining/image/dining_ph002.jpg" alt="Chania" width="460" height="345">
+             <img src="english/dining/image/dining_ph017.jpg" alt="Chania" width="460" height="345">
       </div>
 
       <div class="item next left">
-        <img src="html/dining/image/dining_ph003.jpg" alt="Chania" width="460" height="345">
+        <img src="english/dining/image/dining_ph008.jpg" alt="Chania" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="html/dining/image/dining_ph002.jpg" alt="Flower" width="460" height="345">
+        <img src="english/dining/image/dining_ph009.jpg" alt="Flower" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="html/dining/image/dining_ph003.jpg" alt="Flower" width="460" height="345">
+        <img src="english/dining/image/dining_ph016.jpg" alt="Flower" width="460" height="345">
         <!-- <div class="carousel-caption">
           <h3>Flowers</h3>
           <p>Beautiful flowers in Kolymbari, Crete.</p>
@@ -192,12 +194,15 @@
 
     </div>
   </div>
-  <center><button class="vtn vtn-link" data-toggle="modal" data-target="#read-more-raifu">Read More ></button></center>
+  <p> <br><center><button class="vtn vtn-link" data-toggle="modal" data-target="#read-more-raifu">Read More ></button></center></p>
     </div>
-    <div class="col-md-6">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      <center><button class="vtn vtn-link" data-toggle="modal" data-target="#read-more">Read More ></button></center>
-    </div>
+    <div class="col-md-6">  
+Experience a realm of culinary excellence, hospitality, and sophistication through our diverse range of services. At RAIFU / RAIHUTEI restaurant, savor authentic Japanese dishes in a harmonious blend of design and warmth. Cafe Honey offers creative flavors filtered through Japanese eyes, spanning Chinese, Indian, Korean, and European cuisine. And when it's time for events, our Banquet Hall ensures a tailored experience for gatherings of all sizes. Immerse yourself in the unique world we offer, where every moment is designed to be cherished.     
+
+<p>
+<br><center><button class="vtn vtn-link" data-toggle="modal" data-target="#read-more">Read More ></button></center>
+   </p> </div>
+
     <div class="col-md-3">
         <div id="myCarouse2" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -209,22 +214,23 @@
     </ol>
 
     <!-- Wrapper for slides -->
+<center> <h2> Cafe Honey </h2></center> <br>
     <div class="carousel-inner" role="listbox" style="height: 150px">
 
       <div class="item active left">
-        <img src="html/dining/image/dining_ph002.jpg" alt="Chania" width="460" height="345">
+        <img src="english/dining/image/dining_ph002.jpg" alt="Chania" width="460" height="345">
       </div>
 
       <div class="item next left">
-        <img src="html/dining/image/dining_ph003.jpg" alt="Chania" width="460" height="345">
+        <img src="english/dining/image/dining_ph003.jpg" alt="Chania" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="html/dining/image/dining_ph002.jpg" alt="Flower" width="460" height="345">
+        <img src="english/dining/image/dining_ph013.jpg" alt="Flower" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="html/dining/image/dining_ph003.jpg" alt="Flower" width="460" height="345">
+        <img src="english/dining/image/dining_ph014.jpg" alt="Flower" width="460" height="345">
         <!-- <div class="carousel-caption">
           <h3>Flowers</h3>
           <p>Beautiful flowers in Kolymbari, Crete.</p>
@@ -233,21 +239,20 @@
 
     </div>
   </div>
-  <center><button class="vtn vtn-link" data-toggle="modal" data-target="#read-more-honey">Read More ></button></center>
+  <p><br><center><button class="vtn vtn-link" data-toggle="modal" data-target="#read-more-honey">Read More ></button></center></p>
     </div>
   </div>
   <div class="modal" id="read-more" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Title</h5>
+        <center> <h5 class="modal-title"> DIA PARK FOOD AND BEVERAGES</h5></center>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      </div>
+        Indulge in a world of culinary excellence, genuine hospitality, and refined elegance as you explore our diverse array of services. Step into RAIFU / RAIHUTEI restaurant and embark on a journey of authentic Japanese flavors. The meticulous craftsmanship of each dish brings out the essence of the ingredients, harmonizing elegance and warmth in its design. Cafe Honey awaits with its innovative menu, a symphony of Chinese, Indian, Korean, and European influences, all finely tuned through the lens of Japanese culinary artistry. Whether it's breakfast, lunch, dinner, or a light snack, every bite is an adventure. And when the occasion calls for gatherings, our Banquet Hall offers sophistication tailored to your event's scale, ensuring an experience that marries Japanese hospitality with your unique preferences. Immerse yourself in a world where each service crafts moments to be treasured, where flavors, ambiance, and service intertwine seamlessly.</div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
@@ -259,14 +264,25 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Title</h5>
+        <center><h2 class="modal-title">RAIFU / RAIHUTEI Restaurant</h2></<center>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      </div>
+       RAIFU / RAIHUTEI restaurant
+Experience "Authentic and Original" Japanese food in Gurgaon.
+Enjoy the delicate flavour sand the dishes where the rich flavours of the ingredients are brought to their fullest expression.
+<br>
+The restaurant interior harmoniously blends elegant design with a warm atmosphere inspired by Japanese aesthetics. It is the perfect setting to enjoy special moments withfamily and friends, catering to various occasions such as romantic dinners or businesslunches. The comforting ambiance unique to Japanese cuisine, coupled with attentiveservice, ensures that all guests have a pleasant and delightful experience.
+
+<br>
+Lunch : 12:00~14:30(Last call: 14:00)
+
+<br>
+Dinner 18:00~22:00(Last call: 21:30)
+
+</div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
@@ -278,14 +294,17 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Title</h5>
+        <center> <h5 class="modal-title">Cafe Honey</h5></center>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      </div>
+        Experience a diverse and creative menu mainly Chinese, Indian, Korean and Europe cuisine,carefully adjusting the spiciness and flavour intensity filtered through Japanese eyes. Frombreakfast to dinner, as well as light snacks and desserts, our restaurant provides a variety ofdishes for you to enjoy throughout the day.
+Enjoy a tranquil and relaxed atmosphere. Perfect for meeting with someone special or acasual gathering.<br>
+Open : 11:00~22:30(Last call: 21:30)
+<br>Breakfast Mon~Sat: 6:30~10:00(Last call: 9:30) 
+<br>Sun: 7:00~10:30(Last call: 10:00) </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
@@ -297,39 +316,19 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Title</h5>
+        <center><h5 class="modal-title">Banquet hall</h5></center>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      </div>
+        Sophisticated and stylish, venues create the right atmosphere for social and businessevents, from conference to celebration. We guarantee to provide customized services withJapanese hospitality tailored to your preferences. Please feel free to contact us for inquiriesand reservations at any time.
+<br>Capacity: 15 to 150 persons</div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
-</div>
-
-<div class="modal" id="read-more" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
 </div>
 
 <div class="row">
@@ -369,26 +368,33 @@
                                     </select>
                                 </div>
                             </div>
+			    <div class="col-md-6">
                             <div class="form-group">
                                 <label for="name2" class="col-3 col-form-label">Name</label>
                                 <div class="col-9">
                                     <input type="text" name="name" class="form-control" id="name2" placeholder="Name" required="true">
                                 </div>
                             </div>
+			    </div>
+			    <div class="col-md-6">
                             <div class="form-group">
                                 <label for="email2" class="col-3 col-form-label">Email</label>
                                 <div class="col-9">
                                     <input type="email" name="email" class="form-control" id="email2" placeholder="Email" required="true">
                                 </div>
                             </div>
+		            </div>
+			    <div class="col-md-6">
                             <div class="form-group">
                                 <label for="phone" class="col-3 col-form-label">Phone</label>
                                 <div class="col-9">
                                     <input type="number" name="phone" class="form-control" id="phone" placeholder="Phone" required="true">
                                 </div>
                             </div>
+			    </div>
+			   <div class="col-md-6">
                             <div class="form-group">
-                                <label for="occasion" class="col-3 col-form-lable">Occasion</label>
+                                <label for="occasion" class="col-3 col-form-lable">Event</label>
                                 <div class="col-9">
                                     <select class="form-control" name="occasion" id="occasion" required="true">
                                         <option>-- Select Option --</option>
@@ -403,18 +409,24 @@
                                     </select>
                                 </div>
                             </div>
+			    </div>
+                            <div class="col-md-6">
                             <div class="form-group">
                                 <label class="col-3 col-form-label">Planned Arival</label>
                                 <div class="col">
                                     <input type="datetime-local" name="starttime" class="form-control" placeholder="On which date" required="true" value="">
                                 </div>
                             </div>
+			    </div>
+			    <div class="col-md-6">
                             <div class="form-group">
                                 <label class="col-3 col-form-label">Planned Departure</label>
                                 <div class="col">
                                     <input type="datetime-local" name="endtime" class="form-control" placeholder="On which date" required="true" value="">
                                 </div>
                             </div>
+			    </div>
+          <div class="col-md-12">
                             <div class="form-group">
                                 <label for="guest" class="col-md-3 col-form-label">No of Guest</label>
                                 <div class="col-md-3">
@@ -427,22 +439,26 @@
                                     <input type="number" name="child" class="form-control" id="child" placeholder="Child Guest">
                                 </div>
                                 </div>
-                            <div class="form-group" style="margin-top: 60px; padding-top: 5px; border-top: solid #B2BEB5;">
-                                <!--<div class="">-->
-                                    <div class="col-md-5">
+        </div>
+	<div class="col-md-12">
+                            <div class="form-group">
+                                    <div class="col-md-5" style="margin-top: 20px;">
                                         <input type="checkbox" name="whatsapp" class="" id="whatsapp">
                                         I agree to be contacted via whatsapp 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
   <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
 </svg>
                                     </div>
-                                <!--</div>-->
-                                <!--<div class="">-->
-                                    <div class="col-9">
+                            </div>
+       </div>
+       <div class="col-md-12">
+                            <div class="form-group">
+                                    <div class="col-md-12">
                                         <center><button type="submit" id="reserve" class="btn btn-info">Book Your Table</button></center>
                                     </div>
-                                <!--</div>-->
                             </div>
+       </div>
+
                             </div>
                             <div class="row mx-md-n5" style="margin-top:10px">
                                 
@@ -453,7 +469,7 @@
             </div>
       </div>
    </div>
- </div>
+ </div><br>
 
 <div id="myCarousel3" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -465,22 +481,25 @@
     </ol>
 
     <!-- Wrapper for slides -->
+
+<center> <h2>Banquet hall</h2> </center> <br>
+
     <div class="carousel-inner" role="listbox" style="height: 100px">
 
       <div class="item active left">
-        <img src="html/image/home_main_img106.jpg" alt="Chania" width="460" height="345">
+        <img src="english/image/home_main_img106.jpg" alt="Chania" width="460" height="345">
       </div>
 
       <div class="item next left">
-        <img src="html/image/home_main_img106.jpg" alt="Chania" width="460" height="345">
+        <img src="english/image/home_main_img106.jpg" alt="Chania" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="html/image/home_main_img106.jpg" alt="Flower" width="460" height="345">
+        <img src="english/image/home_main_img106.jpg" alt="Flower" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="html/image/home_main_img106.jpg" alt="Flower" width="460" height="345">
+        <img src="english/image/home_main_img106.jpg" alt="Flower" width="460" height="345">
         <!-- <div class="carousel-caption">
           <h3>Flowers</h3>
           <p>Beautiful flowers in Kolymbari, Crete.</p>
@@ -490,11 +509,11 @@
     </div>
   </div>
   
-  <center><button class="vtn vtn-link" data-toggle="modal" data-target="#read-more-event">Read More ></button></center>
+  <p><br><center><button class="vtn vtn-link" data-toggle="modal" data-target="#read-more-event">Read More ></button></center></p>
 
 <div class="wrapper">
 <div class="outline">
-<p class="txt">Authentic Japanese dishes are available at the Japanese restaurants Raifu and Raifu-tei(private room).<br>
+Authentic Japanese dishes are available at the Japanese restaurants Raifu and Raifu-tei(private room). <br>
 All of our accomodation packages include Japanese breakfast.</p>
 <dl class="notes">
 <dt>*</dt>
@@ -511,11 +530,11 @@ All of our accomodation packages include Japanese breakfast.</p>
 <div class="diningVer border">
 <div class="imgOut">
 <div class="imgBox">
-<p class="img"><img src="html/dining/image/dining_ph002.jpg" width="280" height="187" alt="Picture：Café &amp; Restaurant Honey"></p>
+<p class="img"><img src="english/dining/image/dining_ph002.jpg" width="280" height="187" alt="Picture：Café &amp; Restaurant Honey"></p>
 <p class="cap">Café &amp; Restaurant Honey</p>
 </div>
 <div class="imgBox">
-<p class="img"><img src="html/dining/image/dining_ph003.jpg" width="280" height="187" alt="Picture：Café &amp; Restaurant Honey"></p>
+<p class="img"><img src="english/dining/image/dining_ph003.jpg" width="280" height="187" alt="Picture：Café &amp; Restaurant Honey"></p>
 <p class="cap">Café &amp; Restaurant Honey</p>
 </div>
 </div>
@@ -535,7 +554,7 @@ Sun:  7:00～10:30（Last call: 10:00）</p>
 </div>
 <!--/txtBox-->
 <div class="imgBox">
-<p class="img"><img src="html/dining/image/dining_ph013.jpg" alt="写真：Breakfast" width="280" height="187"></p>
+<p class="img"><img src="english/dining/image/dining_ph013.jpg" alt="写真：Breakfast" width="280" height="187"></p>
 </div>
 <!--/imgBox-->
 </div>
@@ -567,7 +586,7 @@ Sun:  7:00～10:30（Last call: 10:00）</p>
 </div>
 <!--/txtBox-->
 <div class="imgBox">
-<p class="img"><img src="html/dining/image/dining_ph014.jpg" width="280" height="187" alt="Picture：Lunch"></p>
+<p class="img"><img src="english/dining/image/dining_ph014.jpg" width="280" height="187" alt="Picture：Lunch"></p>
 </div>
 <!--/imgBox-->
 </div>
@@ -582,7 +601,7 @@ Sun:  7:00～10:30（Last call: 10:00）</p>
 </div>
 <!--/txtBox-->
 <div class="imgBox">
-<p class="img"><img src="html/dining/image/dining_ph015.jpg" width="280" height="187" alt="Picture：Dining"></p>
+<p class="img"><img src="english/dining/image/dining_ph015.jpg" width="280" height="187" alt="Picture：Dining"></p>
 </div>
 <!--/imgBox-->
 </div>
@@ -603,15 +622,15 @@ Sun:  7:00～10:30（Last call: 10:00）</p>
 <div class="diningVer border">
 <div class="imgOut">
 <div class="imgBox">
-<p class="img"><img src="html/dining/image/dining_ph017.jpg" width="280" height="187" alt="Picture：Japanese cuisine chefs"></p>
+<p class="img"><img src="english/dining/image/dining_ph017.jpg" width="280" height="187" alt="Picture：Japanese cuisine chefs"></p>
 <p class="cap">Japanese cuisine chefs</p>
 </div>
 <div class="imgBox">
-<p class="img"><img src="html/dining/image/dining_ph008.jpg" alt="Picture：Japanese restaurants &quot;Raifu&quot;"></p>
+<p class="img"><img src="english/dining/image/dining_ph008.jpg" alt="Picture：Japanese restaurants &quot;Raifu&quot;"></p>
 <p class="cap">Japanese restaurants &quot;Raifu&quot;</p>
 </div>
 <div class="imgBox right">
-<p class="img"><img src="html/dining/image/dining_ph009.jpg" width="280" height="187" alt="Picture：Raifu-tei (private room) for 6 persons"></p>
+<p class="img"><img src="english/dining/image/dining_ph009.jpg" width="280" height="187" alt="Picture：Raifu-tei (private room) for 6 persons"></p>
 <p class="cap">Raifu-tei (private room) for 6 persons</p>
 </div>
 </div>
@@ -639,7 +658,7 @@ Sun:  7:00～10:30（Last call: 10:00）</p>
 </div>
 <!--/txtBox-->
 <div class="imgBox">
-<p class="img"><img src="html/dining/image/dining_ph016.jpg" alt="Picture：Lunch"></p>
+<p class="img"><img src="english/dining/image/dining_ph016.jpg" alt="Picture：Lunch"></p>
 </div>
 <!--/imgBox-->
 </div>
@@ -667,7 +686,7 @@ Ramen noodles/Curry and rice with cutlet/Bowl of rice topped with tempura/Soba n
 </div>
 <!--/txtBox-->
 <div class="imgBox">
-<p class="img"><img src="html/dining/image/dining_ph006.jpg" width="280" height="187" alt="Picture：Dining"></p>
+<p class="img"><img src="english/dining/image/dining_ph006.jpg" width="280" height="187" alt="Picture：Dining"></p>
 </div>
 <!--/imgBox-->
 </div>
@@ -693,7 +712,7 @@ Ramen noodles/Curry and rice with cutlet/Bowl of rice topped with tempura/Soba n
 </div>
 <!--/txtBox-->
 <div class="imgBox">
-<p class="img"><img src="html/dining/image/dining_ph018.jpg" alt="Picture：スイーツ"></p>
+<p class="img"><img src="english/dining/image/dining_ph018.jpg" alt="Picture：スイーツ"></p>
 </div>
 <!--/imgBox-->
 </div>
@@ -711,7 +730,7 @@ Ramen noodles/Curry and rice with cutlet/Bowl of rice topped with tempura/Soba n
 </div>
 <!--/txtBox-->
 <div class="imgBox">
-<p class="img"><img src="html/dining/image/dining_ph019.jpg" alt="Picture：パンサービス"></p>
+<p class="img"><img src="english/dining/image/dining_ph019.jpg" alt="Picture：パンサービス"></p>
 </div>
 <!--/imgBox-->
 </div>
@@ -726,6 +745,7 @@ Ramen noodles/Curry and rice with cutlet/Bowl of rice topped with tempura/Soba n
 
 </div>
 <!--/wrapper-->
+</div>
 </div>
 <!--/container-->
 
@@ -746,7 +766,7 @@ Ramen noodles/Curry and rice with cutlet/Bowl of rice topped with tempura/Soba n
 <p class="ftTitle">Airport transfer inquiries</p>
 <p class="ftSubTitle">Travel Desk (SAKURA HOLIDAY)</p>
 <p class="ftTel">+91-124-4604644</p>
-<p class="ftTelInfo">English　24 hours<br>*Please call the number above in case of an emerge</p>
+<p class="ftTelInfo">English 24 hours<br>*Please call the number above in case of an emerge</p>
 </div>
 </div>
 <!--/ftContactLeft-->
@@ -755,12 +775,12 @@ Ramen noodles/Curry and rice with cutlet/Bowl of rice topped with tempura/Soba n
 <div class="ftRaifu">
 <p class="ftTitle">Japanese restaurants "Raifu" and "Raifu-tei"</p>
 <p class="ftTel">+911244566701</p>
-<p class="ftTelInfo">English　12:00–22:00 (India time)<br>TEL +911244604600 (英語対応)</p>
+<p class="ftTelInfo">English 12:00�22:00 (India time)<br>TEL +911244604600 (????)</p>
 </div>
 <div class="ftBody">
 <p class="ftTitle">...</p>
 <p class="ftTel">+91-124-4604677</p>
-<p class="ftTelInfo">Japanese only<br>＜Mon,Wed,Thu＞<br>10:00～21:00(Final acceptance20:00)<br>＜Tue,Fri,Sat,Sun＞<br>10:00～20:00(Final acceptance19:00)</p>
+<p class="ftTelInfo">Japanese only<br><Mon,Wed,Thu><br>10:00~21:00(Final acceptance20:00)<br><Tue,Fri,Sat,Sun><br>10:00~20:00(Final acceptance19:00)</p>
 </div>
 </div>
 <!--/ftContactRight-->
@@ -808,7 +828,7 @@ var google_remarketing_only = true;
 
 <!--/siteFooter-->
 <p id="pageTop"><a href="#siteHeader">Go to Page Top</a></p>
-<script src="html/common/js/functions.js"></script>
+<script src="english/common/js/functions.js"></script>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -880,5 +900,4 @@ var yahoo_retargeting_items = [{item_id: '', category_id: '', price: '', quantit
 
 </body>
 
-<!-- Mirrored from www.diapark.jp/english/dining/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Sep 2022 06:06:58 GMT -->
 </html>

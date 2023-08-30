@@ -1,0 +1,225 @@
+/*
+	style.css
+	----------------------------------------------------------
+	
+
+
+-------------------------------------------------------------------------------*/
+
+
+/* headding
+-------------------------------------------------------------------------------*/
+#contentsHeader #newsH1{
+	background:url(../image/news_h1_bg001.jpg) no-repeat 50% 0;
+}
+#contentsHeader #newsH1 h1{
+	text-indent:-9999px;
+	height:60px;
+	padding:32px 10px 0 10px;
+	background:url(../image/news_h1001.png) no-repeat 10px 32px;
+}
+
+
+/* contents
+-------------------------------------------------------------------------------*/
+body.news div.newsList{
+	width:600px;
+	min-height:300px;
+	height: auto !important;
+	height: 300px;
+	margin:0 auto;
+}
+body.news div.newsList dl:before, body.news div.newsList dl:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+body.news div.newsList dl:after { clear: both; } 
+body.news div.newsList dl { zoom: 1; }
+
+body.news div.newsList dl {
+	padding:10px 0 10px 0;
+	background:url(../../common/image/line002.gif) repeat-x 0 100%;
+}
+body.news div.newsList dl dt{
+	width:8.0em;
+	float:left;
+}
+body.news div.newsList dl dd{
+	display:table;
+}
+* html body.news div.newsList dl dd{
+	float:left;
+}
+*+html body.news div.newsList dl dd{
+	float:left;
+}
+
+
+/* pager
+-------------------------------------------------------------------------------*/
+body.news div.pagerArea{
+padding:30px 0 0 0;
+}
+body.news div.pagerArea ul.pager {
+text-align: center;
+}
+body.news div.pagerArea ul.pager li {
+display: inline;
+line-height: 130%;
+}
+body.news div.pagerArea ul.pager li.current {
+text-align: center;
+padding: 2px 8px 1px 8px;
+border: #908984 1px solid;
+margin: 0 3px 5px 0;
+border-radius: 2px;
+color: white;
+text-decoration: none;
+background-color: #201801;
+border: #201801 1px solid;
+}
+body.news div.pagerArea ul.pager li a {
+text-align: center;
+padding: 2px 4px 1px 4px;
+margin: 0 3px 5px 0;
+border-radius: 2px;
+}
+
+
+/* detail
+-------------------------------------------------------------------------------*/
+
+body.news div.newsContents{
+width: 700px;
+margin: 0 auto;
+}
+body.news div.newsContents table th{
+	white-space:nowrap;
+}
+body.news div.newsContents h2{
+font-size: 153.9%;
+margin:0 0 46px 0;
+padding:0 0 2px 0;
+border-bottom:1px solid #8f8983;
+}
+
+body.news div.innerWrapper:before, body.news div.innerWrapper:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+body.news div.innerWrapper:after { clear: both; } 
+body.news div.innerWrapper { zoom: 1; }
+body.news div.innerWrapper {
+clear: both;
+margin: 0 0 50px 0;
+}
+
+
+body.news div.imgBox{
+	margin:0 0 50px 0;
+}
+body.news div.innerWrapper div.imgBox{
+	margin:0 0 0 0;
+	padding:0 0 0 20px;
+	float:right;
+}
+body.news p.img{
+	line-height:0;
+}
+body.news p.cap{
+	font-size:90%;
+	padding:5px 0 0 0;
+}
+body.news div.innerWrapper div.left{
+	width:320px;
+	padding:0 20px 0 0;
+	float:left;
+}
+body.news div.innerWrapper div.right{
+	width:320px;
+	padding:0 0 0 20px;
+	float:right;
+}
+body.news div.center{
+	text-align:center;
+	clear:both;
+}
+body.news h3{
+	font-size:107%;
+	color:#181201;
+	margin:0 0 12px 0;
+	padding:0 0 4px 0;
+	background:url(../../common/image/line002.gif) repeat-x 0 100%;
+}
+body.news table.base{
+margin: 0 auto 50px auto;
+}
+body.news table.base td{
+padding: 12px 12px 10px 12px;
+}
+body.news div.fileDl {
+margin: 0 0 50px 0;
+}
+body.news div.fileDl ul {
+margin: 0 0 20px 0;
+}
+body.news div.fileDl ul li {
+margin: 0 0 15px 0;
+}
+body.news div.fileDl ul li a {
+background: url(../../common/image/pdficon_large.gif) no-repeat 0 0;
+padding: 8px 0 8px 40px;
+}
+body.news p.relLink{
+clear: both;
+text-align: right;
+padding:0 0 50px 0 ;
+}
+body.news p.relLink a{
+padding:11px 18px 10px 30px;
+background:url(../../common/image/arrow001.gif) no-repeat 18px 50%;
+border: #D6D1C8 1px solid;
+border-radius:6px;
+}
+body.news p.relLink a:link,
+body.news p.relLink a:visited{
+color: #25200F;
+}
+body.news p.relLink a:hover,
+body.news p.relLink a:active{
+color:#ec6800;
+text-decoration: none;
+}
+
+body.news p.newsBt,
+body.news p.newsBt a {
+display: block;
+text-indent: -9999px;
+width: 153px;
+height: 27px;
+margin:0 auto;
+background: url(../image/bt_news001.gif) no-repeat 0 0;
+}
+
+body.news p.newsBt a:hover {
+background: url(../image/bt_news001.gif) no-repeat 0 -27px;
+}
+
+body.news div.newsContents span.bold{
+font-weight:bold;
+}
+body.news div.newsContents span.c001{
+	color:red;
+}
+body.news div.newsContents span.c002{
+	color:#00C;
+}
+body.news div.newsContents span.c003{
+	color:#006600;	
+}
+body.news div.newsContents span.c004{
+	color:#FF6600;
+}
+body.news div.newsContents span.c005{
+	color:#309;
+}
+body.news div.newsContents span.big{
+	font-size:large;	
+}
+body.news div.newsContents span.small{
+	font-size:x-small;
+}

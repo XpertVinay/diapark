@@ -43,6 +43,9 @@ class ReservationController extends Controller
         $reservation = \DB::table('reservations')->insert($data);
         $reservationId = \DB::getPdo()->lastInsertId();
         $staff = Staffs::where('id', '=', $request->restaurantid)->first();
+	if(empty($staff)){ return redirect('/food-service/?success=1')->with('addreservation', 'No manager available for this restaurant.');
+ }
+        // dd($staff);
         $restaurant = Restaurants::where('id', $request->restaurantid)->first();
         // trigger notifications Email, sms, whatsapp etc
         $mailToCustomer = [
@@ -64,8 +67,8 @@ class ReservationController extends Controller
                 'restaurantName' => $restaurant->name,
                 'body' => 'This is the body of test email.',
                 'view' => 'content.staff',
-                'sms' => "Hi $staff->name, New booking request recieved. Please take action on this booking id {$reservationId}",
-                'whatsapp' => 'Hi $staff->name, New booking request recieved. Please take action on this booking id {$reservationId}.',
+                'sms' => "Hi $staff->name, New booking request recieved. Please take action on this booking id {$reservationId} ".url('/food-service').".",
+                'whatsapp' => "Hi $staff->name, New booking request recieved. Please take action on this booking id {$reservationId} ".url('/food-service').".",
                 'replacements' => array_merge($request->all(), ['staff_name' => $staff->name, 'restaurantName' => $restaurant->name]),
                 'type' => ['email', 'whatsapp']
             ];

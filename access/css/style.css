@@ -1,0 +1,102 @@
+/*
+	style.css
+	----------------------------------------------------------
+	
+
+
+-------------------------------------------------------------------------------*/
+
+
+/* headding
+-------------------------------------------------------------------------------*/
+#contentsHeader #accessH1{
+	background:url(../image/access_h1_bg001.jpg) no-repeat 50% 0;
+}
+#contentsHeader #accessH1 h1{
+	text-indent:-9999px;
+	height:60px;
+	padding:30px 10px 0 10px;
+	background:url(../image/access_h1001.png) no-repeat 10px 30px;
+}
+
+
+/* contents
+-------------------------------------------------------------------------------*/
+div.accessOut:before, div.accessOut:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+div.accessOut:after { clear: both; } 
+div.accessOut { zoom: 1; } 
+div.accessOut div.mapBox{
+	width:625px;
+	float:left;
+}
+div.accessOut div.mapBox p.googleMap{
+	width:152px;
+	height:27px;
+	margin:0 0 8px 0;
+	float:right;
+}
+div.accessOut div.mapBox p.googleMap a{
+	display:block;
+	text-indent:-9999px;
+	width:152px;
+	height:27px;
+	background:url(../image/access_bt001.gif) no-repeat 0 0;
+}
+div.accessOut div.mapBox p.googleMap a:hover{
+	background:url(../image/access_bt001.gif) no-repeat 0 -27px;
+}
+div.accessOut div.mapBox p.map{
+	clear:both;
+	line-height:0;
+	border:#d6d1c8 solid 1px;
+}
+div.accessOut div.address{
+	width:290px;
+	padding:3px 0 0 0;
+	float:right;
+}
+div.accessOut h3{
+	text-indent:-9999px;
+	height:16px;
+	padding:0 0 10px 0;
+	margin:0 0 15px 0;
+	border-bottom: #D6D1C8 1px solid;
+}
+div.accessOut #addressH3{
+	background:url(../image/access_h3001.gif) no-repeat 0 0;
+}
+div.accessOut #carH3{
+	background:url(../image/access_h3002.gif) no-repeat 0 0;
+}
+div.accessOut #receivingH3{
+	height:44px;
+	margin-top:-14px;
+	background:url(../image/access_h3003.gif) no-repeat 0 0;
+}
+div.accessOut div.address p.txt{
+	margin:0 0 35px 0;
+}
+div.accessOut div.address div.receiving:before, div.accessOut div.address div.receiving:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+div.accessOut div.address div.receiving:after { clear: both; } 
+div.accessOut div.address div.receiving { zoom: 1; } 
+div.accessOut div.address div.receiving{
+}
+div.accessOut div.address div.receiving p.txt{
+	width:160px;
+	float:left;
+}
+div.accessOut div.address div.receiving p.txt span {
+	display:block;
+	font-size:80%;
+	margin:5px 0 0 0;
+}
+div.accessOut div.address div.receiving p.img{
+	line-height:0;
+	width:114px;
+	margin:20px 0 0 0;
+	padding:1px;
+	border:#d6d1c8 solid 1px;
+	float:right;
+}
+
+

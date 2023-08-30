@@ -1,0 +1,62 @@
+/*
+	style.css
+	----------------------------------------------------------
+	
+
+
+-------------------------------------------------------------------------------*/
+
+
+/* headding
+-------------------------------------------------------------------------------*/
+#contentsHeader #ruleH1 h1{
+	text-indent:-9999px;
+	height:60px;
+	padding:30px 10px 0 10px;
+	background:url(../image/rule_h1001.gif) no-repeat 10px 35px;
+}
+#contentsHeader #ruleH1 h1.policyH1{
+	background:url(../image/policy_h1001.gif) no-repeat 10px 35px;
+}
+
+
+/* contents
+-------------------------------------------------------------------------------*/
+div.ruleArea{
+	padding:0 50px 20px 50px;
+}
+div.ruleArea h2{
+font-size:120%;
+padding: 0 0 6px 0;
+margin: 0 0 13px 0;
+border-bottom: #D6D1C8 1px solid;
+}
+div.ruleArea p.txt{
+	margin:0 0 20px 0;
+}
+div.ruleArea ul.disc,
+div.ruleArea ul.decimal{
+	padding:0 15px;
+	margin:0 0 20px 0;
+}
+div.ruleArea dl.par:before, div.ruleArea dl.par:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+div.ruleArea dl.par:after { clear: both; } 
+div.ruleArea dl.par { zoom: 1; }
+div.ruleArea dl.par{
+	padding:0 15px;
+	margin:0 0 20px 0;
+}
+div.ruleArea dl.par dt {
+clear: both;
+display: table-cell;
+width: 2.0em;
+padding: 0 0 0 3px;
+float: left;
+}
+div.ruleArea dl.par dd {
+display: table-cell;
+padding: 0 0 10px 0;
+}
+div.ruleArea div.ruleBox{
+	padding:0 15px;
+}
