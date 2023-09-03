@@ -7,9 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Staffs;
-use App\Orders;
-use App\Menu;
-use App\Expenses;
+use App\Models\Restaurants;
+use App\Reservations;
 
 class DashboardController extends Controller
 {
