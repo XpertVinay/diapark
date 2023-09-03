@@ -27,13 +27,13 @@
                         </a>
 
                         <ul class="navbar-nav flex-column">
-                            @if(Auth::user())
+                            {{-- @if(Auth::user()) --}}
                             <li class="nav-item current">
                                 <a href="{{auth()->user() ? url('/dashboard') : url('/staff/dashboard')}}" class="nav-link text-white mb-2">
                                     <i class="fas fa-tachometer-alt fa-lg mr-2"></i>Dashboard
                                 </a>
                             </li>
-                            @endif
+                            {{-- @endif --}}
                             @if(Auth::user())
                             <li class="nav-item">
                                 <a href="{{auth()->user() ? url('/staff') : url('/staff/dashboard')}}" class="nav-link text-white mb-2 sidebar-link">
