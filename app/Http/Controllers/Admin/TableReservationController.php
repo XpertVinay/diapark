@@ -19,7 +19,7 @@ class TableReservationController extends Controller
 
 
 
-    public function tablereservation()
+    public function tablereservation(Request $request)
     {
     	$reservations = Reservations::select('reservations.*', 'res.name as restaurantName')
                             ->leftjoin('restaurants as res', function($join)
@@ -27,15 +27,44 @@ class TableReservationController extends Controller
                               $join->on('res.id', '=', 'reservations.restaurantid');
                               $join->where('res.deleted_at', '=', NULL);
 
-                            })
-                            ->orderBy('created_at', 'desc')
-                            ->get();
+                            });
+            if($request->name)  {
+                $reservations->where('reservations.name', $request->name);
+            }
+            if($request->email)  {
+                $reservations->where('reservations.email', $request->email);
+            }
+            if($request->phone)  {
+                $reservations->where('reservations.phone', $request->phone);
+            }
+            if($request->status)  {
+                $reservations->where('reservations.status', $request->status);
+            }
+            if($request->restaurant_name)  {
+                $reservations->where('res.name', $request->restaurant_name);
+            }
+            if($request->start)  {
+                $reservations->where('reservation.stattime', $request->start);
+            }
+    
+            if($request->end)  {
+                $reservations->where('reservation.endtime', $request->endtime);
+            }
+    
+            if($request->start && $request->end) {
+                $reservations->where('reservation.start', '>=', $request->start)
+                            ->where('reservation.end', '<=', $request->end);
+            }
+        
+        $reservations->orderBy('created_at', 'desc')
+                            ->paginate(50);
     	return view('admin.tablereservation', ['reservations'=>$reservations]);
     }
 
     public function approve(Request $request){
         $id = $request->id;
         $name = $request->name;
+
 
 	 // notifications only email
         $reservation = Reservations::where('id', $id)->first();
