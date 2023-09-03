@@ -61,7 +61,8 @@ class StaffController extends Controller
             'email' => $request->email,
             'phone' => $request->phone,
             'address' => $request->address,
-            'salary' => $request->salary
+            'salary' => $request->salary,
+            'password' => Hash::make($request->password)
         );
         Staffs::where('id', $id)->update($data);
         return redirect('/staff')->with("upstaff", "Staff details is succesfully Update.");
