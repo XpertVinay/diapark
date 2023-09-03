@@ -15,7 +15,7 @@ class DashboardController extends Controller
     public function __construct(Request $request)
     {
         try{
-            echo "<pre>"; print_r($request->session()); exit;
+            // echo "<pre>"; print_r($request->session()); exit;
             if(!$request->session()->get('restaurantid')){
                 return redirect('staff/login');
             }
@@ -36,7 +36,7 @@ class DashboardController extends Controller
                 ->select('resr.*', 'rest.name as restName')
                 ->join('restaurants as rest', 'resr.restaurantid', 'rest.id')
                 ->orderBy('resr.id', 'DESC')->limit(5)->get();
-    	return view('staff.dashboard', ['orders' => $orders, 'totalorder' => $totalorder, 'totalitem' => $totalitem, 'staffs' => $staffs]);
+    	return view('staff.dashboard', ['request' => $request, 'orders' => $orders, 'totalorder' => $totalorder, 'totalitem' => $totalitem, 'staffs' => $staffs]);
     }
 
     public function doaddstaff(Request $request)
