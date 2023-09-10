@@ -1,23 +1,27 @@
 
 <!doctype html>
 
-<html lang="en">
-
+<html lang="ja">
+<head>
 <head>
 <meta charset="utf-8">
-<title>Food Services | Dia Park Premier, a four-star business hotel in a suburb of New Delhi, India</title>
-<meta name="keywords" content="India,Hotel,Gurgaon,Delhi,Dia Park Premier,Dia Park,Park Premier,Stay,Reserve,Booking,Business Hotel,Business trip,Japanese food,Japanese,Raifu,Transportation,Avalon Courtyard">
-<meta name="description" content="It takes nearly 20 minutes&#39; drive from Delhi International Airport.If visiting for business trip to India this hotel is perfect. We offer the authentic Japanese cuisine as well as the Japanese style bath and we also offer all the support to our guest to have a luxurious stay in India.">
+<title>お食事｜インドニューデリー近郊のビジネスホテル ダイヤパークプレミア（Dia Park Premier）</title>
+<meta name="keywords" content="インド,ホテル,グルガオン,グルガーオン,デリー,ダイヤパークプレミア,ダイヤパーク,パークプレミア,Dia Park,宿泊,予約,ビジネスホテル,出張,日本食,日本語,来富,送迎,アバロンコートヤード,Avalon Courtyard">
+<meta name="description" content="デリー国際空港から車で約20分。インド出張に最適な清潔感溢れるビジネスホテルです。本格的な日本食のご提供や日本式浴場など、ご宿泊者様のインドステイをサポートいたします。">
 <meta name="author" content="Dia Park Premier">
 <meta name="viewport" content="width=1024">
+<link rel="shortcut icon" href="../favicon.ico">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link rel="shortcut icon" href="english/favicon.ico">
-<link rel="stylesheet" href="english/common/css/import.css">
-<link rel="stylesheet" href="english/dining/css/style.css">
-<link rel="stylesheet" href="english/common/css/humanity/jquery-ui-1.8.23.custom.css">
-<link rel="stylesheet" href="english/common/css/print.css" media="print" id="printcss">
+
+
+
+<link rel="stylesheet" href="../common/css/import.css">
+<link rel="stylesheet" href="/dining/css/style.css">
+<link rel="stylesheet" href="../common/css/humanity/jquery-ui-1.8.23.custom.css">
+<link rel="stylesheet" href="../common/css/print.css" media="print" id="printcss">
 <style>
     .row > .col-xs-3 {
     display:flex;
@@ -114,7 +118,7 @@
 <div class="hdBg">
 <div class="hdInner">
 <div class="hdLogo">
-<p class="tagline">A four-star hotel in a suburb of New Delhi, India</p>
+<p class="tagline">インドニューデリー近郊の4つ星ビジネスホテル</p>
 <p class="logo"><a href="/">Dia Park Premier</a></p>
 </div>
 <div class="hdUtility">
@@ -127,7 +131,7 @@
                     Admin Login
                 </a></li>
 	<li class="myReservation"><a href="https://gc.synxis.com/rez.aspx?hotel=80472&amp;chain=22924&amp;start=searchres&amp;locale=en-US">My Reservation</a></li>
-	<li class="langBt"><a href="/">japanese</a></li>
+	<li class="langBt"><a href="../food-service">english</a></li>
 </ul>
 
 
@@ -136,13 +140,13 @@
 </div>
 </div>
 <ul id="gnavi">
-<li id="room"><a href="english/room/index.html">Guest Rooms</a></li>
-<li id="meal"><a href="food-service" class="current">Food Services</a></li>
-<li id="service"><a href="english/service/index.html">Services &amp; Facilities</a></li>
-<li id="news"><a href="english/news/index.html">News</a></li>
-<li id="access"><a href="htmlaccess/index.html">Access</a></li>
-<li id="booking"><a href="https://gc.synxis.com/rez.aspx?Hotel=80472&amp;Chain=22924&amp;locale=en-US">Room Reservations</a></li>
-<li id="contact"><a href="english/contact/index.html">Inquiries</a></li>
+<li id="room"><a href="room/index.html">客室・プラン</a></li>
+<li id="meal"><a href="food-service" class="current">お食事</a></li>
+<li id="service"><a href="service/index.html">サービス・施設</a></li>
+<li id="news"><a href="news/index.html">ニュース</a></li>
+<li id="access"><a href="access/index.html">アクセス</a></li>
+<li id="booking"><a href="https://gc.synxis.com/rez.aspx?Hotel=80472&amp;Chain=22924&amp;locale=en-US">宿泊予約</a></li>
+<li id="contact"><a href="contact/index.html">お問い合わせ</a></li>
 </ul>
 </header>
 <!--/siteHeader-->
@@ -151,9 +155,9 @@
 
 <header id="contentsHeader">
 <div class="bgH1" id="diningH1">
-<h1>Food Services</h1>
+<h1>お食事</h1>
 </div>
-<p class="breadcrumbs"><span><a href="../en">HOME</a> &gt; Food Services</span></p>
+<p class="breadcrumbs"><span><a href="../en">ホーム</a> &gt; お食事</span></p>
 </header>
 
 <div class="jumbotron jumbotron-fluid" style="back-groud: white">
@@ -169,7 +173,7 @@
     </ol>
 
     <!-- Wrapper for slides -->
- <center><h2>RAIFU / RAIHUTEI Restaurant</h2></center><br>
+ <center><h2>ライフ / ライフテイ レストラン </h2></center><br>
     <div class="carousel-inner" role="listbox" style="height: 150px">
       
       <div class="item active left">
@@ -194,12 +198,11 @@
 
     </div>
   </div>
-  <p> <br><center><button class="vtn vtn-link" data-toggle="modal" data-target="#read-more-raifu">Read More ></button></center></p>
+  <p> <br><center><button class="vtn vtn-link" data-toggle="modal" data-target="#read-more-raifu"> もっと読む  ></button></center></p>
     </div>
     <div class="col-md-6">  
-多様なサービスを通じて、料理の卓越性、おもてなし、洗練さをご体験ください。RAIFU / RAIHUTEI レストランで、デザインと温かさが調和する中で本格的な日本料理をご堪能いただけます。Café Honey は、中国、インド、韓国、ヨーロッパの料理を日本の視点で独自にアレンジした創造的なフレーバーを提供します。そして、イベントの場面では、バンケットホールがさまざまな規模の集まりに合わせた体験を提供します。私たちが提供するユニークな世界に没入し、すべての瞬間を大切にするデザインされた空間をご堪能ください。
-<p>
-<br><center><button class="vtn vtn-link" data-toggle="modal" data-target="#read-more">Read More ></button></center>
+ダイヤパークの各種サービスを通じて、洗練されたお料理、日本のおもてなしをご体験ください。来富＆来富亭では、温かく落ち着いた店内で、本格的な日本料理をご堪能いただけます。Café Honey では、日本人の嗜好にマッチした中華、インド、コンチネンタル料理をご提供しており、通常の日本料理に飽きた方にもご満足いただけます。当ホテルのバンケットホールは、各種イベントから会議等のビジネスシーンまでフレキシブルに対応可能な設備となっております。皆様の記憶に残る大切なひとときをサポート致します。<p>
+<br><center><button class="vtn vtn-link" data-toggle="modal" data-target="#read-more"> もっと読む  ></button></center>
    </p> </div>
 
     <div class="col-md-3">
@@ -213,7 +216,7 @@
     </ol>
 
     <!-- Wrapper for slides -->
-<center> <h2> Cafe Honey </h2></center> <br>
+<center> <h2> カフェ ハニー </h2></center> <br>
     <div class="carousel-inner" role="listbox" style="height: 150px">
 
       <div class="item active left">
@@ -238,7 +241,7 @@
 
     </div>
   </div>
-  <p><br><center><button class="vtn vtn-link" data-toggle="modal" data-target="#read-more-honey">Read More ></button></center></p>
+  <p><br><center><button class="vtn vtn-link" data-toggle="modal" data-target="#read-more-honey"> もっと読む ></button></center></p>
     </div>
   </div>
   <div class="modal" id="read-more" tabindex="-1" role="dialog">
@@ -251,7 +254,7 @@
         </button>
       </div>
       <div class="modal-body">
-        多様なサービスを通じて、料理の卓越性、真心のおもてなし、洗練されたエレガンスを存分に味わっていただけます。RAIFU / RAIHUTEI レストランに足を踏み入れ、本場の日本の風味の旅に出かけてください。一つ一つの料理の繊細な仕上げが食材の本質を引き出し、デザインに温かさと優雅さを調和させています。Café Honey は斬新なメニューでお待ちしており、中国、インド、韓国、ヨーロッパの影響が絶妙に日本の料理技術で調和します。朝食、ランチ、ディナー、軽食、どの瞬間も冒険の旅となります。そして、大切な集まりの場面では、バンケットホールがあなたのイベントに合わせた上品さを提供し、日本のおもてなしとあなたの独自の好みを融合させた体験をお約束します。各サービスが大切な瞬間を彩り、味わい、雰囲気、サービスがシームレスに交差する世界にどうぞご浸りください。</div>
+        ダイヤパークの各種サービスを通じて、洗練されたお料理、日本のおもてなしをご体験ください。来富＆来富亭では、温かく落ち着いた店内で、本格的な日本料理をご堪能いただけます。Café Honey では、日本人の嗜好にマッチした中華、インド、コンチネンタル料理をご提供しており、通常の日本料理に飽きた方にもご満足いただけます。当ホテルのバンケットホールは、各種イベントから会議等のビジネスシーンまでフレキシブルに対応可能な設備となっております。皆様の記憶に残る大切なひとときをサポート致します。</div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
@@ -263,24 +266,13 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <center><h2 class="modal-title">RAIFU / RAIHUTEI Restaurant</h2></<center>
+        <center><h2 class="modal-title">ライフ / ライフテイ レストラン</h2></<center>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-       RAIFU / RAIHUTEI restaurant
-Experience "Authentic and Original" Japanese food in Gurgaon.
-Enjoy the delicate flavour sand the dishes where the rich flavours of the ingredients are brought to their fullest expression.
-<br>
-The restaurant interior harmoniously blends elegant design with a warm atmosphere inspired by Japanese aesthetics. It is the perfect setting to enjoy special moments withfamily and friends, catering to various occasions such as romantic dinners or businesslunches. The comforting ambiance unique to Japanese cuisine, coupled with attentiveservice, ensures that all guests have a pleasant and delightful experience.
-
-<br>
-Lunch : 12:00~14:30(Last call: 14:00)
-
-<br>
-Dinner 18:00~22:00(Last call: 21:30)
-
+      ダイヤパークの来富 ＆ 来富亭では本格的な日本料理をご提供しております。厳選された素材本来の旨味、香り、鮮度を生かした和食は、温かく落ち着いた雰囲気の店内で、特別な時をご家族やご友人と楽しむのにぴったりです。ランチ：12:00～14:30、ディナー：18:00～22:30。
 </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -293,17 +285,15 @@ Dinner 18:00~22:00(Last call: 21:30)
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <center> <h5 class="modal-title">Cafe Honey</h5></center>
+        <center> <h5 class="modal-title"> カフェ ハニー </h5></center>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Experience a diverse and creative menu mainly Chinese, Indian, Korean and Europe cuisine,carefully adjusting the spiciness and flavour intensity filtered through Japanese eyes. Frombreakfast to dinner, as well as light snacks and desserts, our restaurant provides a variety ofdishes for you to enjoy throughout the day.
-Enjoy a tranquil and relaxed atmosphere. Perfect for meeting with someone special or acasual gathering.<br>
-Open : 11:00~22:30(Last call: 21:30)
-<br>Breakfast Mon~Sat: 6:30~10:00(Last call: 9:30) 
-<br>Sun: 7:00~10:30(Last call: 10:00) </div>
+        Café Honey:  Café Honey では、老若男女問わず皆様にご満足頂けるバラエティーに富んだお料理をご用意してお待ちしております。グルガオンではめずらしい、日本人の好みに合わせた中華、インド、コンチネンタル料理で、通常の日本料理を食べ飽きた方にもご満足いただけます。ホテルグランドフロアの広々とした空間で、いつもより少し優雅なご朝食、ご友人とのひとときが楽しくなるカフェタイム、ゴルフ後の飲み会と様々なシーンでご利用頂けます。
+
+営業時間：11:00～22:30（ラストオーダー：21:30）、朝食 月～土：6:30～22:00（ラストオーダー：21:30）、日：7:00～22:30（ラストオーダー：22:00）。 </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
@@ -315,14 +305,13 @@ Open : 11:00~22:30(Last call: 21:30)
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <center><h5 class="modal-title">Banquet hall</h5></center>
+        <center><h5 class="modal-title"> バンケットホール </h5></center>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Sophisticated and stylish, venues create the right atmosphere for social and businessevents, from conference to celebration. We guarantee to provide customized services withJapanese hospitality tailored to your preferences. Please feel free to contact us for inquiriesand reservations at any time.
-<br>Capacity: 15 to 150 persons</div>
+        上品な趣のあるバンケットホールは、各種イベントや会議にご利用頂けます。15～150名様でのご利用に対応可能な設備となっており、日本のきめ細やかなホスピタリティーとダイヤパーク自慢のお料理をご提供致します。お気軽にご予約・お問合せ下さいませ。</div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
@@ -331,7 +320,7 @@ Open : 11:00~22:30(Last call: 21:30)
 </div>
 
 <div class="row">
-    <center> <button class="btn btn-warning btn-lg blink" id="bookingRes" data-toggle="modal" data-target="#reservationBooking">Book a Table</button> </center>
+    <center> <button class="btn btn-warning btn-lg blink" id="bookingRes" data-toggle="modal" data-target="#reservationBooking"> テーブルを予約する </button> </center>
 </div>
 
 <!-- Modal -->
@@ -481,24 +470,24 @@ Open : 11:00~22:30(Last call: 21:30)
 
     <!-- Wrapper for slides -->
 
-<center> <h2>Banquet hall</h2> </center> <br>
+<center> <h2> バンケットホール </h2> </center> <br>
 
-    <div class="carousel-inner" role="listbox" style="height: 100px">
+    <div class="carousel-inner" role="listbox" style="height: 250px">
 
       <div class="item active left">
-        <img src="english/image/home_main_img106.jpg" alt="Chania" width="460" height="345">
+        <img src="english/dining/image/BQT_ph002.jpg" alt="Chania" width="250" height="auto">
       </div>
 
       <div class="item next left">
-        <img src="english/image/home_main_img106.jpg" alt="Chania" width="460" height="345">
+        <img src="english/dining/image/BQT_ph003.jpg" alt="Chania" width="250" height="auto">
       </div>
 
       <div class="item">
-        <img src="english/image/home_main_img106.jpg" alt="Flower" width="460" height="345">
+        <img src="english/dining/image/BQT_ph013.jpg" alt="Flower" width="250" height="auto">
       </div>
 
       <div class="item">
-        <img src="english/image/home_main_img106.jpg" alt="Flower" width="460" height="345">
+        <img src="english/dining/image/BQT_ph014.jpg" alt="Flower" width="250" height="auto">
         <!-- <div class="carousel-caption">
           <h3>Flowers</h3>
           <p>Beautiful flowers in Kolymbari, Crete.</p>
@@ -508,7 +497,7 @@ Open : 11:00~22:30(Last call: 21:30)
     </div>
   </div>
   
-  <p><br><center><button class="vtn vtn-link" data-toggle="modal" data-target="#read-more-event">Read More ></button></center></p>
+  <p><br><center><button class="vtn vtn-link" data-toggle="modal" data-target="#read-more-event">もっと読む ></button></center></p>
 
 <div class="outline">
 >日本料理「来富」、「来富亭」で、本格的な日本料理をご提供いたします。<br>
@@ -554,7 +543,7 @@ Open : 11:00~22:30(Last call: 21:30)
 </div>
 <!--/txtBox-->
 <div class="imgBox">
-<p class="img"><img src="english/dining/image/dining_ph013.jpg" alt="写真：朝食"></p>
+<p class="img"><img src="dining/image/dining_ph013.jpg" alt="写真：朝食"></p>
 </div>
 <!--/imgBox-->
 </div>
@@ -622,11 +611,11 @@ Open : 11:00~22:30(Last call: 21:30)
 <div class="diningVer border">
 <div class="imgOut">
 <div class="imgBox">
-<p class="img"><img src="english/dining/image/dining_ph017.jpg" width="280" height="187" alt="写真：日本料理 料理人 "></p>
+<p class="img"><img src="dining/image/dining_ph017.jpg" width="280" height="187" alt="写真：日本料理 料理人 "></p>
 <p class="cap">日本料理 料理人 </p>
 </div>
 <div class="imgBox">
-<p class="img"><img src="image/dining_ph008.jpg" alt="写真：日本料理「来富」"></p>
+<p class="img"><img src="dining/image/dining_ph008.jpg" alt="写真：日本料理「来富」"></p>
 <p class="cap">日本料理「来富」</p>
 </div>
 <div class="imgBox right">
@@ -687,7 +676,7 @@ Open : 11:00~22:30(Last call: 21:30)
 </div>
 <!--/txtBox-->
 <div class="imgBox">
-<p class="img"><img src="image/dining_ph006.jpg" width="280" height="187" alt="写真：夕食"></p>
+<p class="img"><img src="dining/image/dining_ph006.jpg" width="280" height="187" alt="写真：夕食"></p>
 </div>
 <!--/imgBox-->
 </div>
@@ -714,7 +703,7 @@ Open : 11:00~22:30(Last call: 21:30)
 </div>
 <!--/txtBox-->
 <div class="imgBox">
-<p class="img"><img src="image/dining_ph018.jpg" alt="写真：スイーツ"></p>
+<p class="img"><img src="dining/image/dining_ph018.jpg" alt="写真：スイーツ"></p>
 </div>
 <!--/imgBox-->
 </div>
@@ -732,7 +721,7 @@ Open : 11:00~22:30(Last call: 21:30)
 </div>
 <!--/txtBox-->
 <div class="imgBox">
-<p class="img"><img src="image/dining_ph019.jpg" alt="写真：パンサービス"></p>
+<p class="img"><img src="dining/image/dining_ph019.jpg" alt="写真：パンサービス"></p>
 </div>
 <!--/imgBox-->
 </div>

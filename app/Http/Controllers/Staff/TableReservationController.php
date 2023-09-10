@@ -39,8 +39,35 @@ class TableReservationController extends Controller
                               $join->on('staff.restaurantid', '=', 'res.id');
                             })
                             ->where('staff.restaurantid', '=', $request->session()->get('restaurantid'))
-                            ->orderBy('created_at', 'desc')
-                            ->get();
+			    ->where(function($query) use ($request) {
+				if($request->name)  {
+                $query->where('reservations.name', 'LIKE', '%'.$request->name.'%');
+            }
+            if($request->email)  {
+                $query->where('reservations.email', $request->email);
+            }
+            if($request->phone)  {
+                $query->where('reservations.phone', $request->phone);
+            }
+            if($request->status)  {
+                $query->where('reservations.status', $request->status);
+            }
+            if($request->restaurant_name)  {
+                $query->where('res.name', 'LIKE', '%'.$request->restaurant_name.'%');
+            }
+            if($request->start && !$request->end)  {
+                $query->where('reservations.starttime', $request->start);
+            }else if($request->end && !$request->start)  {
+                $query->where('reservations.endtime', $request->endtime);
+            }else if($request->start && $request->end) {
+                $query->where('reservations.starttime', '>=', $request->start);
+                $query->where('reservations.endtime', '<=', $request->end);
+            }
+			    })
+                            ->orderBy('reservations.created_at', 'desc')
+                             // ->toSql();
+                            ->paginate(5);
+                            // ->get();
     	return view('staff.tablereservation', ['reservations'=>$reservations, 'request' => $request]);
     }
 
@@ -69,8 +96,8 @@ class TableReservationController extends Controller
             'restaurantName' => $restaurant->name,
             'body' => 'This is the body of test email.',
             'view' => 'content.updateres',
-            'sms' => "Dear ".$reservation->name .",\n Your booking ( ref if - ".$reservation->id.") for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been approved, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
-            'whatsapp' => "Dear ".$reservation->name .",\n Your booking ( ref if - ".$reservation->id.") for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been approved, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
+            'sms' => "Dear ".$reservation->name .",\n Your booking {ref id - ".$reservation->id."} for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been confirmed, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
+            'whatsapp' => "Dear ".$reservation->name .",\n Your booking {ref if - ".$reservation->id."} for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been confimed, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
             'replacements' => array_merge($request->all(), ['restaurantName'=>$restaurant->name, 'sstart'=>$request->starttime, 'send'=>$request->endtime, 'name'=>$reservation->name]),
 	        'type' => ['sms', 'email', 'whatsapp']
         ];

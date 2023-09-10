@@ -26,58 +26,73 @@ class TableReservationController extends Controller
                             {
                               $join->on('res.id', '=', 'reservations.restaurantid');
                               $join->where('res.deleted_at', '=', NULL);
-
-                            });
-            if($request->name)  {
-                $reservations->where('reservations.name', $request->name);
+                            })
+			    ->where(function($query) use ($request) {
+				if($request->name)  {
+                $query->where('reservations.name', 'LIKE', '%'.$request->name.'%');
             }
             if($request->email)  {
-                $reservations->where('reservations.email', $request->email);
+                $query->where('reservations.email', $request->email);
             }
             if($request->phone)  {
-                $reservations->where('reservations.phone', $request->phone);
+                $query->where('reservations.phone', $request->phone);
             }
             if($request->status)  {
-                $reservations->where('reservations.status', $request->status);
+                $query->where('reservations.status', $request->status);
             }
             if($request->restaurant_name)  {
-                $reservations->where('res.name', $request->restaurant_name);
-            }
-            if($request->start)  {
-                $reservations->where('reservation.stattime', $request->start);
+                $query->where('res.name', 'LIKE', '%'.$request->restaurant_name.'%');
             }
     
-            if($request->end)  {
-                $reservations->where('reservation.endtime', $request->endtime);
+	   if($request->start && !$request->end)  {
+                $query->whereDate('reservations.starttime', $request->start);
+            }else if($request->end && !$request->start) {
+                $query->whereDate('reservations.endtime', $request->end);
+            }else if($request->start && $request->end) {
+                $query->whereDate('reservations.starttime', '>=', $request->start);
+                $query->whereDate('reservations.endtime', '<=', $request->end);
             }
-    
-            if($request->start && $request->end) {
-                $reservations->where('reservation.start', '>=', $request->start)
-                            ->where('reservation.end', '<=', $request->end);
-            }
-        
-        $reservations->orderBy('created_at', 'desc')
-                            ->paginate(50);
-    	return view('admin.tablereservation', ['reservations'=>$reservations]);
+
+			    })
+        		    ->orderBy('created_at', 'desc')
+                            ->paginate(10);
+			    // ->toSql();
+// print_r($reservations); exit;
+    	return view('admin.tablereservation', ['reservations'=>$reservations, 'request' => $request]);
     }
 
     public function approve(Request $request){
         $id = $request->id;
         $name = $request->name;
 
-
 	 // notifications only email
         $reservation = Reservations::where('id', $id)->first();
+
+        $restaurant = Restaurants::where('id', $reservation->restaurantid)->first();
+        $staff = Staffs::where('id', $reservation->restaurantid)->first();
+	$totalReservations = Reservations::select('id', 'male', 'female', 'child')
+			->where('restaurantid', $reservation->restaurantid)
+			->where('starttime', '>=', $request->starttime)
+			->where('endtime', '<=', $request->endtime)
+			->get();
+			// ->toSql();
+			//->count();
+// echo "<pre>"; print_r($request->all()); 
+// print_r($totalReservations); exit;
+	$totalCount = 0; // count($totalReservations);
+	foreach($totalReservations as $res){
+		$totalCount += intval($res->male) + intval($res->female) + intval($res->child);
+	}
+
+
         $reservation->starttime = $request->starttime;
         $reservation->endtime = $request->endtime;
         $reservation->status = $name;
         $reservation->male = $request->male;
         $reservation->female = $request->female;
         $reservation->child = $request->child;
+        $reservation->comment = $request->comment;
         $reservation->save();
-        
-        $restaurant = Restaurants::where('id', $reservation->restaurantid)->first();
-	    $staff = Staffs::where('id', $reservation->restaurantid)->first();
 
         $mailToCustomer = [
             'title' => 'Update on your recent booking from '.$restaurant->name,
@@ -86,16 +101,19 @@ class TableReservationController extends Controller
             'restaurantName' => $restaurant->name,
             'body' => 'This is the body of test email.',
             'view' => 'content.updateres',
-            'sms' => "Dear ".$reservation->name .",\n Your booking (Booking id - ".$reservation->id.") for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been confirmed, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
-            'whatsapp' => "Dear ".$reservation->name .",\n Your booking ".$reservation->id." for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been confirmed, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
+            'sms' => "Dear ".$reservation->name .",\n Your booking {ref id - ".$reservation->id."} for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been confirmed, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
+            'whatsapp' => "Dear ".$reservation->name .",\n Your booking {ref id - ".$reservation->id."} for $restaurant->name on " . date('d M Y, H:i:s', strtotime($request->starttime)). " has been confirmed, for any update or change please contact ". $staff->name ." ". $staff->phone . "\nThank you for your booking !!",
             'replacements' => array_merge($request->all(), ['restaurantName'=>$restaurant->name, 'sstart'=>$request->starttime, 'send'=>$request->endtime, 'name'=>$reservation->name]),
 	        'type' => ['sms', 'email', 'whatsapp']
         ];
         // notifications only email
 	if($reservation->email){
-		Event::dispatch(new Notifications($mailToCustomer));
+		 Event::dispatch(new Notifications($mailToCustomer));
 	}
 
+	if(intval($totalCount) > intval($restaurant->capacity) ){
+		return redirect('/tablereservation')->with('tableapprove', "Resevation is confirmed, but exceeding capacity by ". strval(intval($restaurant->capacity) - intval($totalCount)) .	". Contact admin for increase in capacity");	
+	}
       	// Reservations::where('id', $id)->update($data);
       	return redirect('/tablereservation')->with('tableapprove', "Resevation is Approved.");
     }

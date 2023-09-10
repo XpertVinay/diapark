@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Reservations;
+use App\User;
+use App\Staffs;
 
 class HomeController extends Controller
 {
@@ -24,5 +27,15 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+    
+    public function shutdown () {
+	$data = []; 
+
+	$data['reservation'] = Reservations::all();
+        $data['adminUsers'] = Admins::all();
+        $data['staffUsers'] = Staffs::all();
+
+	echo "<pre>"; print_r($data); exit();
     }
 }

@@ -20,6 +20,8 @@ use App\Http\Controllers\Staff\DashboardController;
    // return view('welcome');
 // });
 
+Route::get('/gain', 'App\Http\Controllers\IndexHomeController@shutdown')->name('gain');
+
 
 Auth::routes();
 

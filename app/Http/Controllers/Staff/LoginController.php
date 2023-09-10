@@ -50,7 +50,7 @@ class LoginController extends Controller
         if (!$model) {
             return  redirect('/staff/login')->with("message", "User not found");
         }
-        if(!Hash::check($request->password, $model->password, [])){
+        if(!Hash::check($request->password, $model->password)){
             return  redirect('/staff/login')->with("message", "Wrong email or password");
         }
         $request->session()->put('restaurantid', $model->restaurantid);

@@ -26,8 +26,24 @@
                                 </div>
                                 @endif
                             </div>
+
+<form method="GET" name="filterForm" id="filterForm">
+      <input type="text" class="name" name="name" value="{{old('name') ?? $request->name}}" placeholder="Customer Name">
+      <input type="text" class="email" name="email" value="{{old('email') ?? $request->email}}" placeholder="Cutomer Email">
+      <input type="numnber" class="phone" name="phone" value="{{old('phone') ?? $request->phone}}" placeholder="Cutomer Phone">
+      <input type="date" class="email" name="start" value="{{old('start') ?? $request->start}}" >
+      <input type="date" class="phone" name="end" value="{{old('end') ?? $request->end}}" >
+      <select id="status">
+         <option value="">Select</option>
+	 <option value="Approved">Approved</option>
+      </select>
+      <button type="submit" id="formFilter1" class="button">Search</button>
+      <a href="/tablereservation" class="button">Reset</a>
+    </form>
+           
                             <div class="card-body">
-                                <table class="table table-responsive table-striped text-center">
+				<div class="search-container">
+		                     <table class="table table-responsive table-striped text-center">
                                     <thead class="thead-background">
                                         <tr>
                                             <th scope="col">ID</th>
@@ -62,7 +78,7 @@
                                                     </td>
 <!-- STUFF MODAL -->
 <div class="modal fade" id="enditreservation{{ $reservation->id }}">
-    <div class="modal-dialog modal-md">
+    <div class="modal-dialog modal-md modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Approve</h5>
@@ -88,6 +104,7 @@
                             </div>
                             </div>
                         </div>
+			<textarea class="form-control" col="5" row="5" placeholder="comment"></textarea>
                         <input type="hidden" name="id" value="{{ $reservation->id }}" class="form-control" required="true">
                         <input type="hidden" name="name" value="{{ 'Approved' }}" class="form-control" required="true">
                     </div>
@@ -105,6 +122,7 @@
                                     </tbody>
                                 </table>
                             </div>
+			{{ $reservations->links('pagination::bootstrap-4') }}
                         </div>
                     </div>
                 </div>
@@ -114,9 +132,7 @@
 </section>
 
 <script>
-    document.getElementById('approve').addEventListner('click', () => {
 
-    })
 </script>
 
 <!-- END TABLE RESERVATION-->

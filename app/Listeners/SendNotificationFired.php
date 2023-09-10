@@ -43,7 +43,7 @@ class SendNotificationFired extends Notification implements ShouldQueue
             // print_r('print2');
 	    return;
         } catch (\Exception $e) {
-             dd($e->getMessage());
+             // dd($e->getMessage());
             return;
         }
     }

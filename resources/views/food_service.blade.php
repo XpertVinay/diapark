@@ -173,7 +173,7 @@
     <div class="carousel-inner" role="listbox" style="height: 150px">
       
       <div class="item active left">
-             <img src="english/dining/image/dining_ph017.jpg" alt="Chania" width="460" height="345">
+             <img src="/dining/image/dining_ph017.jpg" alt="Chania" width="460" height="345">
       </div>
 
       <div class="item next left">
@@ -226,7 +226,7 @@ Experience a realm of culinary excellence, hospitality, and sophistication throu
       </div>
 
       <div class="item">
-        <img src="english/dining/image/dining_ph013.jpg" alt="Flower" width="460" height="345">
+        <img src="dining/image/dining_ph013.jpg" alt="Flower" width="460" height="345">
       </div>
 
       <div class="item">
@@ -484,22 +484,22 @@ Open : 11:00~22:30(Last call: 21:30)
 
 <center> <h2>Banquet hall</h2> </center> <br>
 
-    <div class="carousel-inner" role="listbox" style="height: 100px">
+    <div class="carousel-inner" role="listbox" style="height: 300px">
 
       <div class="item active left">
-        <img src="english/image/home_main_img106.jpg" alt="Chania" width="460" height="345">
+        <img src="english/dining/image/BQT_ph002.jpg" alt="Chania" width="460" height="345">
       </div>
 
       <div class="item next left">
-        <img src="english/image/home_main_img106.jpg" alt="Chania" width="460" height="345">
+        <img src="english/dining/image/BQT_ph003.jpg" alt="Chania" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="english/image/home_main_img106.jpg" alt="Flower" width="460" height="345">
+        <img src="english/dining/image/BQT_ph013.jpg" alt="Flower" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="english/image/home_main_img106.jpg" alt="Flower" width="460" height="345">
+        <img src="english/dining/image/BQT_ph014.jpg" alt="Flower" width="460" height="345">
         <!-- <div class="carousel-caption">
           <h3>Flowers</h3>
           <p>Beautiful flowers in Kolymbari, Crete.</p>
@@ -554,7 +554,7 @@ Sun:  7:00～10:30（Last call: 10:00）</p>
 </div>
 <!--/txtBox-->
 <div class="imgBox">
-<p class="img"><img src="english/dining/image/dining_ph013.jpg" alt="写真：Breakfast" width="280" height="187"></p>
+<p class="img"><img src="dining/image/dining_ph013.jpg" alt="写真：Breakfast" width="280" height="187"></p>
 </div>
 <!--/imgBox-->
 </div>
@@ -622,11 +622,11 @@ Sun:  7:00～10:30（Last call: 10:00）</p>
 <div class="diningVer border">
 <div class="imgOut">
 <div class="imgBox">
-<p class="img"><img src="english/dining/image/dining_ph017.jpg" width="280" height="187" alt="Picture：Japanese cuisine chefs"></p>
+<p class="img"><img src="dining/image/dining_ph017.jpg" width="280" height="187" alt="Picture：Japanese cuisine chefs"></p>
 <p class="cap">Japanese cuisine chefs</p>
 </div>
 <div class="imgBox">
-<p class="img"><img src="english/dining/image/dining_ph008.jpg" alt="Picture：Japanese restaurants &quot;Raifu&quot;"></p>
+<p class="img"><img src="dining/image/dining_ph008.jpg" alt="Picture：Japanese restaurants &quot;Raifu&quot;"></p>
 <p class="cap">Japanese restaurants &quot;Raifu&quot;</p>
 </div>
 <div class="imgBox right">
