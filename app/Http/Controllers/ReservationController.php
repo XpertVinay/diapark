@@ -24,14 +24,15 @@ class ReservationController extends Controller
 
     public function doreservation(Request $request)
     {
+	$request->phone = '91'.$request->phone;
     	$data = array(
     		'name' => $request->name,
     		'email' => $request->email,
     		'phone' => $request->phone,
     		'restaurantid' => $request->restaurantid,
     		'occasion' => $request->occasion,
-    		'starttime' => $request->starttime,
-    		'endtime' => $request->endtime,
+    		'starttime' => date('Y-m-d H:i:s', strtotime($request->starttime)),
+    		'endtime' => date('Y-m-d H:i:s', strtotime('+'.$request->endtime.'hour', strtotime(date('Y-m-d H:i:s', strtotime($request->starttime))))),
     		'male' => $request->male,
     		'female' => $request->female,
     		'child' => $request->child,
@@ -39,7 +40,7 @@ class ReservationController extends Controller
             'created_at' => date('Y:m:d h:i:s'),
             'updated_at' => date('Y:m:d h:i:s')
     	);
-	// print_r($data); exit;
+	// echo "<pre>"; print_r($data); exit;
         $reservation = \DB::table('reservations')->insert($data);
         $reservationId = \DB::getPdo()->lastInsertId();
         $staff = Staffs::where('id', '=', $request->restaurantid)->first();

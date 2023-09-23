@@ -9,6 +9,7 @@ use App\Models\Restaurants;
 use App\Staffs;
 use App\Notification\Notifications;
 use Event;
+use Maatwebsite\Excel\Facades\Excel;
 
 class TableReservationController extends Controller
 {
@@ -54,7 +55,7 @@ class TableReservationController extends Controller
             }
 
 			    })
-        		    ->orderBy('created_at', 'desc')
+        		    ->orderBy('id', 'desc')
                             ->paginate(10);
 			    // ->toSql();
 // print_r($reservations); exit;
@@ -64,6 +65,8 @@ class TableReservationController extends Controller
     public function approve(Request $request){
         $id = $request->id;
         $name = $request->name;
+
+	// echo "<pre>"; print_r($request->all()); exit();
 
 	 // notifications only email
         $reservation = Reservations::where('id', $id)->first();
@@ -77,11 +80,15 @@ class TableReservationController extends Controller
 			->get();
 			// ->toSql();
 			//->count();
-// echo "<pre>"; print_r($request->all()); 
-// print_r($totalReservations); exit;
+
+	// print_r($totalReservations); exit;
 	$totalCount = 0; // count($totalReservations);
 	foreach($totalReservations as $res){
 		$totalCount += intval($res->male) + intval($res->female) + intval($res->child);
+	}
+
+	if(intval($totalCount) > intval($restaurant->capacity) ){
+		return redirect('/tablereservation')->with('tableapprove', "Exceeding capacity by ". strval(intval($restaurant->capacity) - intval($totalCount)) .	". Contact admin for increase in capacity");
 	}
 
 
@@ -93,6 +100,7 @@ class TableReservationController extends Controller
         $reservation->child = $request->child;
         $reservation->comment = $request->comment;
         $reservation->save();
+	
 
         $mailToCustomer = [
             'title' => 'Update on your recent booking from '.$restaurant->name,
@@ -111,9 +119,6 @@ class TableReservationController extends Controller
 		 Event::dispatch(new Notifications($mailToCustomer));
 	}
 
-	if(intval($totalCount) > intval($restaurant->capacity) ){
-		return redirect('/tablereservation')->with('tableapprove', "Resevation is confirmed, but exceeding capacity by ". strval(intval($restaurant->capacity) - intval($totalCount)) .	". Contact admin for increase in capacity");	
-	}
       	// Reservations::where('id', $id)->update($data);
       	return redirect('/tablereservation')->with('tableapprove', "Resevation is Approved.");
     }
@@ -122,4 +127,77 @@ class TableReservationController extends Controller
       	Reservations::where('id', $id)->delete();
         return redirect('/tablereservation')->with("deletereservationtable", "Resevation is successfully Removed");
     }
+
+    public function reservationCsv (Request $request) {
+try{
+   	$reservations = Reservations::select('reservations.*', 'res.name as restaurantName')
+                            ->leftjoin('restaurants as res', function($join)
+                            {
+                              $join->on('res.id', '=', 'reservations.restaurantid');
+                              $join->where('res.deleted_at', '=', NULL);
+                            })
+			    ->where(function($query) use ($request) {
+				if($request->name)  {
+                $query->where('reservations.name', 'LIKE', '%'.$request->name.'%');
+            }
+            if($request->email)  {
+                $query->where('reservations.email', $request->email);
+            }
+            if($request->phone)  {
+                $query->where('reservations.phone', $request->phone);
+            }
+            if($request->status)  {
+                $query->where('reservations.status', $request->status);
+            }
+            if($request->restaurant_name)  {
+                $query->where('res.name', 'LIKE', '%'.$request->restaurant_name.'%');
+            }
+    
+	   if($request->start && !$request->end)  {
+                $query->whereDate('reservations.starttime', $request->start);
+            }else if($request->end && !$request->start) {
+                $query->whereDate('reservations.endtime', $request->end);
+            }else if($request->start && $request->end) {
+                $query->whereDate('reservations.starttime', '>=', $request->start);
+                $query->whereDate('reservations.endtime', '<=', $request->end);
+            }
+
+			    })
+        		    ->orderBy('created_at', 'desc')
+			    ->get();
+	$fileName = 'reservation-'.time().'.csv';
+	$headers = array(
+            "Content-type"        => "text/csv",
+            "Content-Disposition" => "attachment; filename=$fileName",
+            "Pragma"              => "no-cache",
+            "Cache-Control"       => "must-revalidate, post-check=0, pre-check=0",
+            "Expires"             => "0"
+        );
+	$columns = array('Name', 'Email', 'Phone', 'Start Time', 'End Time', 'Guest No', 'Reserved For', 'Status', 'Comment');
+	$callback = function() use($reservations, $columns) {
+            $file = fopen('php://output', 'w');
+            fputcsv($file, $columns);
+
+            foreach ($reservations as $task) {
+                $row['Name']  = $task->name;
+                $row['Email']    = $task->email;
+                $row['Phone']    = $task->phone;
+                $row['Start Time']  = $task->starttime;
+                $row['End Time']  = $task->endtime;
+                $row['Guest No']  = intval($task->male) + intval($task->child);
+                $row['Reserved For']  = $task->restaurantName;
+                $row['Status']  = $task->status;
+                $row['Comment']  = $task->comment;
+
+                fputcsv($file, array($row['Name'], $row['Email'], $row['Phone'], $row['Start Time'], $row['End Time'], $row['Guest No'], $row['Reserved For'], $row['Status'], $row['Comment']));
+            }
+
+            fclose($file);
+        };
+        return response()->stream($callback, 200, $headers);
+	// return \Response::download($callback, 'reservation'.time().'.csv', $headers);
+}catch(\Exception $e){
+		print_r($e->getMessage());
+}
+        }
 }

@@ -59,6 +59,7 @@
                                             <th scope="col">Guest No</th>
                                             <th scope="col">Reserved For</th>
                                             <th scope="col">Status</th>
+                                            <th scope="col">Comment</th>
                                             <th scope="col">Action</th>
                                         </tr>
                                     </thead>
@@ -108,7 +109,7 @@
                             </div>
                             </div>
                         </div>
-			<textarea class="form-control" col="5" row="5" placeholder="comment"></textarea>
+			<textarea class="form-control" name="comment" col="5" row="5" placeholder="comment"></textarea>
                         <input type="hidden" name="id" value="{{ $reservation->id }}" class="form-control" required="true">
                         <input type="hidden" name="name" value="{{ 'Approved' }}" class="form-control" required="true">
                     </div>

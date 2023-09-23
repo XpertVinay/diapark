@@ -351,7 +351,7 @@
                       <td>
                         <p>Hi {{$staff_name}},</p>
                         <p>A customer name {{$name}}, wants to reserve a table for {{$restaurantName}}, from {{date('d M, Y H:i:s', strtotime($starttime))}} to {{date('d, M, Y, H:i:s', strtotime($endtime))}} 
-                        for {{$male}} male(s), {{$female}} female(s) and {{$child}} child(s) on the occasion of {{$occasion}}.</p>
+                        for {{$male}} male(s), {{$child}} child(s) on the occasion of {{$occasion}}.</p>
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                           <tbody>
                             <tr>

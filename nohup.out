@@ -30,3 +30,8 @@
 {"resp":"{\"status\":\"success\",\"message\":{\"key\":{\"remoteJid\":\"919205070834@c.us\",\"fromMe\":true,\"id\":\"BAE5DD93F2C7686A\"},\"message\":{\"extendedTextMessage\":{\"text\":\"Thank you for booking with ref id - 133. We will shortly inform you about the confirmation of your table.\"}},\"messageTimestamp\":\"1693558163\"}}","error":""}  2023-09-01 08:49:23 App\Listeners\SendNotificationFired .... 4,327.01ms DONE
   2023-09-01 08:49:23 App\Listeners\SendNotificationFired ............ RUNNING
   2023-09-01 08:50:25 App\Listeners\SendNotificationFired ... 62,218.45ms FAIL
+
+   INFO  No scheduled tasks have been defined.  
+
+  2023-09-16 06:54:26 App\Listeners\SendNotificationFired ............ RUNNING
+Undefined variable $female (View: /var/www/html/diapark/resources/views/content/staff.blade.php){"resp":"{\"status\":\"success\",\"message\":{\"key\":{\"remoteJid\":\"919999477551@c.us\",\"fromMe\":true,\"id\":\"BAE577E99E0CBEA6\"},\"message\":{\"extendedTextMessage\":{\"text\":\"Hi F & B Team, New booking request recieved with ref id - 147 . Please take action on this booking id 147 http:\\\/\\\/narayan.rudras.in\\\/staff\\\/login.\"}},\"messageTimestamp\":\"1694847267\"}}","error":""}  2023-09-16 06:54:28 App\Listeners\SendNotificationFired .... 1,457.62ms DONE

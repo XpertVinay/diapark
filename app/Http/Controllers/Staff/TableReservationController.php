@@ -78,6 +78,27 @@ class TableReservationController extends Controller
 
 	 // notifications only email
         $reservation = Reservations::where('id', $id)->first();
+
+        $restaurant = Restaurants::where('id', $reservation->restaurantid)->first();
+	$staff = Staffs::where('id', $reservation->restaurantid)->first();
+	$totalReservations = Reservations::select('id', 'male', 'female', 'child')
+			->where('restaurantid', $id)
+			->where('starttime', '>=', $request->starttime)
+			->where('endtime', '<=', $request->endtime)
+			->get();
+			// ->toSql();
+			//->count();
+	// print_r($totalReservations); exit;
+	$totalCount = 0; // count($totalReservations);
+	foreach($totalReservations as $res){
+		$totalCount += intval($res->male) + intval($res->female) + intval($res->child);
+	}
+
+	if(intval($totalCount) > intval($restaurant->capacity) ){
+		return redirect('/tablereservation')->with('tableapprove', "Exceeding capacity by ". strval(intval($restaurant->capacity) - intval($totalCount)) .	". Contact admin for increase in capacity");
+	}
+
+
         $reservation->starttime = $request->starttime;
         $reservation->endtime = $request->endtime;
         $reservation->status = $name;
@@ -86,8 +107,6 @@ class TableReservationController extends Controller
         $reservation->child = $request->child;
         $reservation->save();
 
-        $restaurant = Restaurants::where('id', $reservation->restaurantid)->first();
-	    $staff = Staffs::where('id', $reservation->restaurantid)->first();
 
         $mailToCustomer = [
             'title' => 'Update on your recent booking from '.$restaurant->name,

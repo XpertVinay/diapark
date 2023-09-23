@@ -84,9 +84,16 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-3 col-form-label">Planned Departure</label>
+                                <label class="col-3 col-form-label">Acquisition time</label>
                                 <div class="col">
-                                    <input type="datetime-local" name="endtime" class="form-control" placeholder="On which date" required="true" value="">
+                                    <!-- <input type="datetime-local" name="endtime" class="form-control" placeholder="On which date" required="true" value=""> -->
+					<select name='endtime' class='form-control'>
+						<option value='1'>1</option>
+						<option value='2'>2</option>
+						<option value='3'>3</option>
+						<option value='4'>4</option>
+						<option value='5'>5</option>
+					</select>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -94,9 +101,9 @@
                                 <div class="col-3">
                                     <input type="number" name="male" class="form-control" id="male" placeholder="Male Guest">
                                 </div>
-                                <div class="col-3">
+                                <!-- <div class="col-3">
                                     <input type="number" name="female" class="form-control" id="female" placeholder="Female Guest">
-                                </div>
+                                </div> -->
                                 <div class="col-3">
                                     <input type="number" name="child" class="form-control" id="child" placeholder="Child Guest">
                                 </div>

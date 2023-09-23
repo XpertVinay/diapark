@@ -29,7 +29,7 @@ class SendSMS extends Notification implements ShouldQueue
             $username = 'Adminrudras';
             $apikey = 'BF39D-5BAE2';
             $uri = 'http://powerstext.in/sms-panel/api/http/index.php?username=Adminrudras&apikey=BF39D-5BAE2&apirequest=Text&sender='.$sender_id.'&mobile='.$this->content['phone'].'&message='.$this->content['sms'].'&route=TRANS&TemplateID='.$template_id.'&format=JSON';
-//	echo "<br>".$uri."</br>";
+// echo "<br>".$uri."</br>";
 	// return 0;
         // create curl resource
 
@@ -47,6 +47,7 @@ class SendSMS extends Notification implements ShouldQueue
         // close curl resource to free up system resources
         curl_close($ch);
 //	echo $output;
+// dd(output);
 	// json_encode(compact('resp', 'error'));
         } catch (\Exception $e) {
             dd($e);

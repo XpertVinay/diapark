@@ -40,6 +40,20 @@
       <button type="submit" id="formFilter1" class="button">Search</button>
       <a href="/tablereservation" class="button">Reset</a>
     </form>
+
+<form method="POST" action="/csv-reservation" name="csvForm" id="filterForm">
+	@csrf()
+      <input type="hidden" class="name" name="name" value="{{old('name') ?? $request->name}}" placeholder="Customer Name">
+      <input type="hidden" class="email" name="email" value="{{old('email') ?? $request->email}}" placeholder="Cutomer Email">
+      <input type="hidden" class="phone" name="phone" value="{{old('phone') ?? $request->phone}}" placeholder="Cutomer Phone">
+      <input type="hidden" class="date" name="start" value="{{old('start') ?? $request->start}}" >
+      <input type="hidden" class="date" name="end" value="{{old('end') ?? $request->end}}" >
+      <select id="status" style="display: none">
+         <option value="">Select</option>
+	 <option value="Approved">Approved</option>
+      </select>
+      <button type="submit" id="csvForm" class="button">CSV</button>
+    </form>
            
                             <div class="card-body">
 				<div class="search-container">
@@ -55,6 +69,7 @@
                                             <th scope="col">Guest No</th>
                                             <th scope="col">Reserved For</th>
                                             <th scope="col">Status</th>
+                                            <th scope="col">Comment</th>
                                             <th scope="col">Action</th>
                                         </tr>
                                     </thead>
@@ -71,6 +86,7 @@
                                                     <td>{{ 'Male-'.intval($reservation->male).' | '.'Female-'.intval($reservation->female).' | '.'Child-'.intval($reservation->child) }}</td>
                                                     <td>{{ $reservation->restaurantName }}</td>
                                                     <td>{{ $reservation->status }}</td>
+                                                    <td>{{ $reservation->comment }}</td>
                                                     <td>
                                                         <a id="approve"  class="btn btn-info" data-toggle="modal" data-target="#enditreservation{{ $reservation->id }}">Approve</a>
                                                         {{-- <a href='{{url("/approve/{$reservation->id}/Approved")}}' class="btn btn-success m-1">Approve</a> --}}
@@ -104,7 +120,7 @@
                             </div>
                             </div>
                         </div>
-			<textarea class="form-control" col="5" row="5" placeholder="comment"></textarea>
+			<textarea class="form-control" name="comment" col="5" row="5" placeholder="comment">{{ $reservation->comment }}</textarea>
                         <input type="hidden" name="id" value="{{ $reservation->id }}" class="form-control" required="true">
                         <input type="hidden" name="name" value="{{ 'Approved' }}" class="form-control" required="true">
                     </div>

@@ -67,6 +67,7 @@ Route::get('/dashorder', 'App\Http\Controllers\Admin\DashOrderController@dashord
 Route::get('/revenue', 'App\Http\Controllers\Admin\RevenueController@revenue');
 Route::get('/staff', 'App\Http\Controllers\Admin\StaffController@staff');
 Route::get('/tablereservation', 'App\Http\Controllers\Admin\TableReservationController@tablereservation');
+Route::post('/csv-reservation', 'App\Http\Controllers\Admin\TableReservationController@reservationCsv');
 Route::get('/restaurants', 'App\Http\Controllers\Admin\RestaurantController@index');
 
 
