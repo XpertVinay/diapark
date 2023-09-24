@@ -225,3 +225,7 @@ label {
     top: 50% !important;
     transform: translate(-50%, -50%) !important;
 }
+
+.form-control {
+   margin: 9px;
+}

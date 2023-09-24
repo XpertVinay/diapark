@@ -27,33 +27,40 @@
                                 @endif
                             </div>
 
-<form method="GET" name="filterForm" id="filterForm">
-      <input type="text" class="name" name="name" value="{{old('name') ?? $request->name}}" placeholder="Customer Name">
-      <input type="text" class="email" name="email" value="{{old('email') ?? $request->email}}" placeholder="Cutomer Email">
-      <input type="numnber" class="phone" name="phone" value="{{old('phone') ?? $request->phone}}" placeholder="Cutomer Phone">
-      <input type="date" class="email" name="start" value="{{old('start') ?? $request->start}}" >
-      <input type="date" class="phone" name="end" value="{{old('end') ?? $request->end}}" >
-      <select id="status">
-         <option value="">Select</option>
-	 <option value="Approved">Approved</option>
-      </select>
-      <button type="submit" id="formFilter1" class="button">Search</button>
-      <a href="/tablereservation" class="button">Reset</a>
-    </form>
-
 <form method="POST" action="/csv-reservation" name="csvForm" id="filterForm">
 	@csrf()
-      <input type="hidden" class="name" name="name" value="{{old('name') ?? $request->name}}" placeholder="Customer Name">
-      <input type="hidden" class="email" name="email" value="{{old('email') ?? $request->email}}" placeholder="Cutomer Email">
-      <input type="hidden" class="phone" name="phone" value="{{old('phone') ?? $request->phone}}" placeholder="Cutomer Phone">
-      <input type="hidden" class="date" name="start" value="{{old('start') ?? $request->start}}" >
-      <input type="hidden" class="date" name="end" value="{{old('end') ?? $request->end}}" >
+      <input type="hidden" class="form-control" name="name" value="{{old('name') ?? $request->name}}" placeholder="Customer Name">
+      <input type="hidden" class="form-control" name="email" value="{{old('email') ?? $request->email}}" placeholder="Cutomer Email">
+      <input type="hidden" class="form-control" name="phone" value="{{old('phone') ?? $request->phone}}" placeholder="Cutomer Phone">
+      <input type="hidden" class="form-control" name="start" value="{{old('start') ?? $request->start}}" >
+      <input type="hidden" class="form-control" name="end" value="{{old('end') ?? $request->end}}" >
       <select id="status" style="display: none">
          <option value="">Select</option>
 	 <option value="Approved">Approved</option>
       </select>
-      <button type="submit" id="csvForm" class="button">CSV</button>
+      <button type="submit" id="csvForm" class="btn btn-success">CSV</button>
     </form>
+
+<form method="GET" name="filterForm" id="filterForm">
+   <div class="col-md-12 row">
+      <div class="col-md-3"><input type="text" class="form-control" name="name" value="{{old('name') ?? $request->name}}" placeholder="Customer Name"></div>
+      <div class="col-md-3"><input type="text" class="form-control" name="email" value="{{old('email') ?? $request->email}}" placeholder="Cutomer Email"></div>
+      <div class="col-md-3"><input type="numnber" class="form-control" name="phone" value="{{old('phone') ?? $request->phone}}" placeholder="Cutomer Phone"></div>
+      <div class="col-md-3"><input type="date" class="form-control" name="start" value="{{old('start') ?? $request->start}}" ></div>
+      <div class="col-md-3"><input type="date" class="form-control" name="end" value="{{old('end') ?? $request->end}}" ></div>
+      <div class="col-md-3">
+      <select class="form-control" id="status">
+         <option value="">Select</option>
+	 <option value="Approved">Approved</option>
+      </select>
+      </div>
+  </div>
+  <div class="col-md-12">
+      <button type="submit" id="formFilter1" class="btn btn-primary">Search</button>
+      <a href="/tablereservation" class="btn btn-info">Reset</a>
+   </div>
+</form>
+
            
                             <div class="card-body">
 				<div class="search-container">
@@ -69,6 +76,7 @@
                                             <th scope="col">Guest No</th>
                                             <th scope="col">Reserved For</th>
                                             <th scope="col">Status</th>
+                                            <th scope="col">Customer Comment</th>
                                             <th scope="col">Comment</th>
                                             <th scope="col">Action</th>
                                         </tr>
@@ -86,6 +94,7 @@
                                                     <td>{{ 'Male-'.intval($reservation->male).' | '.'Female-'.intval($reservation->female).' | '.'Child-'.intval($reservation->child) }}</td>
                                                     <td>{{ $reservation->restaurantName }}</td>
                                                     <td>{{ $reservation->status }}</td>
+                                                    <td>{{ $reservation->customer_comment }}</td>
                                                     <td>{{ $reservation->comment }}</td>
                                                     <td>
                                                         <a id="approve"  class="btn btn-info" data-toggle="modal" data-target="#enditreservation{{ $reservation->id }}">Approve</a>
@@ -138,7 +147,7 @@
                                     </tbody>
                                 </table>
                             </div>
-			{{ $reservations->links('pagination::bootstrap-4') }}
+			{{ $reservations->appends($_GET)->links('pagination::bootstrap-4') }}
                         </div>
                     </div>
                 </div>

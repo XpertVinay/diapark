@@ -144,6 +144,7 @@ Route::get('/dashboard', [App\Http\Controllers\Admin\DashbaordController::class,
     Route::get('staff/tablereservation', 'App\Http\Controllers\Staff\TableReservationController@tablereservation');
     // Route::get('staff/approve/{id}/{name}', 'App\Http\Controllers\Staff\TableReservationController@approve');
     Route::post('staff/approve/', 'App\Http\Controllers\Staff\TableReservationController@approve');
+    Route::post('/staff/csv-reservation', 'App\Http\Controllers\Staff\TableReservationController@reservationCsv');
 
     Route::get('staff/deletereservation/{id}', 'App\Http\Controllers\Staff\TableReservationController@deletereservation');
 // });

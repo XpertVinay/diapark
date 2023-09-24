@@ -37,6 +37,7 @@ class ReservationController extends Controller
     		'female' => $request->female,
     		'child' => $request->child,
     		'status' => 'Pending',
+		'customer_comment' => $request->customer_comment,
             'created_at' => date('Y:m:d h:i:s'),
             'updated_at' => date('Y:m:d h:i:s')
     	);
