@@ -62,7 +62,7 @@ class StaffController extends Controller
         $data = array(
             'name' => $request->name,
             'restaurantid' => $request->restaurantid,
-            // 'email' => $request->email,
+            'email' => $request->email,
             'phone' => $request->phone,
             'address' => $request->address,
             'salary' => $request->salary,

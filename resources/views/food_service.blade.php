@@ -157,7 +157,7 @@
 </header>
 
 <div class="row">
-    <center> <button class="btn btn-warning btn-lg blink" id="bookingRes" data-toggle="modal" data-target="#reservationBooking">Book a Table</button> </center>
+    <center> <button class="btn btn-warning btn-lg blink" id="bookingRes" data-toggle="modal" data-target="#reservationBooking">Book a Table</button></center>
 </div>
 
 
@@ -286,7 +286,7 @@ The restaurant interior harmoniously blends elegant design with a warm atmospher
 Lunch : 12:00~14:30(Last call: 14:00)
 
 <br>
-Dinner 18:00~22:00(Last call: 21:30)
+Dinner 18:00~22:30(Last call: 22:00)
 
 </div>
       <div class="modal-footer">
@@ -308,7 +308,7 @@ Dinner 18:00~22:00(Last call: 21:30)
       <div class="modal-body">
         Experience a diverse and creative menu mainly Chinese, Indian, Korean and Europe cuisine,carefully adjusting the spiciness and flavour intensity filtered through Japanese eyes. Frombreakfast to dinner, as well as light snacks and desserts, our restaurant provides a variety ofdishes for you to enjoy throughout the day.
 Enjoy a tranquil and relaxed atmosphere. Perfect for meeting with someone special or acasual gathering.<br>
-Open : 11:00~22:30(Last call: 21:30)
+Open : 11:00~22:30(Last call: 22:00)
 <br>Breakfast Mon~Sat: 6:30~10:00(Last call: 9:30) 
 <br>Sun: 7:00~10:30(Last call: 10:00) </div>
       <div class="modal-footer">
@@ -379,9 +379,9 @@ Open : 11:00~22:30(Last call: 21:30)
                             </div>
 			    <div class="col-md-6">
                             <div class="form-group">
-                                <label for="name2" class="col-3 col-form-label">Name</label>
+                                <label for="name2" class="col-3 col-form-label">Name-Company Name</label>
                                 <div class="col-9">
-                                    <input type="text" name="name" class="form-control" id="name2" placeholder="Name" required="true">
+                                    <input type="text" name="name" class="form-control" id="name2" placeholder="Name-Company Name" required="true">
                                 </div>
                             </div>
 			    </div>
@@ -395,9 +395,9 @@ Open : 11:00~22:30(Last call: 21:30)
 		            </div>
 			    <div class="col-md-6">
                             <div class="form-group">
-                                <label for="phone" class="col-3 col-form-label">Phone</label>
+                                <label for="phone" class="col-3 col-form-label">Phone (Country code not required)</label>
                                 <div class="col-9">
-                                    <input type="number" name="phone" class="form-control" id="phone" placeholder="Phone" required="true">
+                                    <input type="number" name="phone" class="form-control" id="phone" placeholder="Mobile Number without Country code" required="true">
                                 </div>
                             </div>
 			    </div>
@@ -409,7 +409,7 @@ Open : 11:00~22:30(Last call: 21:30)
                                         <option>-- Select Option --</option>
                                         <option value="Corporate Party">Event</option>
                                         <option value="Kitty Party">Birthday</option>
-                                        <option value="Bachelor Party">Family Gatherning</option>
+                                        <option value="Bachelor Party">Family Gathering </option>
                                         <option value="Birthday">Company Meeting</option>
                                         <option value="Anniversary">Welcome Party</option>
                                         <option value="Sympathy">Farewell Party</option>
@@ -457,6 +457,7 @@ Open : 11:00~22:30(Last call: 21:30)
                                 </div>
                                 </div>
         </div>
+                            <input type="hidden" name="admin" class="form-control" id="admin" value="{{@$_GET['admin']}}"> 
 
 	<div class="col-md-12">
 		<div class="form-group">
@@ -621,7 +622,7 @@ Sun:  7:00～10:30（Last call: 10:00）</p>
 <div class="txtBox">
 <div class="open noline">
 <h3><span class="h3In">Hours Open</span></h3>
-<p class="openTxt">18:00～23:00（Last call: 22:30）</p>
+<p class="openTxt">18:00～22:30（Last call: 22:00）</p>
 </div>
 </div>
 <!--/txtBox-->
@@ -706,7 +707,7 @@ Ramen noodles/Curry and rice with cutlet/Bowl of rice topped with tempura/Soba n
 </div>
 <div class="open noline">
 <h3><span class="h3In">Hours Open</span></h3>
-<p class="openTxt">18:00～23:00（Last call: 22:30）</p>
+<p class="openTxt">18:00～22:30（Last call: 22:00）</p>
 </div>
 </div>
 <!--/txtBox-->
@@ -896,13 +897,18 @@ var yahoo_retargeting_items = [{item_id: '', category_id: '', price: '', quantit
 <script>
     $(document).ready(() => {
         const showSuccessPopUp = '{{ @$_GET['success'] }}';
+        const showAdminPopUp = '{{ @$_GET['admin'] }}';
         const showReservePopup = '{{ @$_GET['book'] }}';
-        if (parseInt(showSuccessPopUp) == 1) {
+        if (parseInt(showSuccessPopUp) == 1 || parseInt(showAdminPopUp) == 1) {
             $('#bookingRes').click();
             // setTimeout(() => {
             //     document.location.href = '/food-service';
             // }, 5000)
         }
+	if (parseInt(showSuccessPopUp) == 1 && parseInt(showAdminPopUp) == 1) {
+		window.close();
+        }
+
         
         if (parseInt(showReservePopup) == 1) {
             $('#bookingRes').click();

@@ -181,7 +181,7 @@
     </ol>
 
     <!-- Wrapper for slides -->
- <center><h2>ライフ / ライフテイ レストラン </h2></center><br>
+ <center><h2>来富/来富亭 </h2></center><br>
     <div class="carousel-inner" role="listbox" style="height: 150px">
       
       <div class="item active left">
@@ -274,7 +274,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <center><h2 class="modal-title">ライフ / ライフテイ レストラン</h2></<center>
+        <center><h2 class="modal-title">来富/来富亭</h2></<center>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -301,7 +301,7 @@
       <div class="modal-body">
         Café Honey:  Café Honey では、老若男女問わず皆様にご満足頂けるバラエティーに富んだお料理をご用意してお待ちしております。グルガオンではめずらしい、日本人の好みに合わせた中華、インド、コンチネンタル料理で、通常の日本料理を食べ飽きた方にもご満足いただけます。ホテルグランドフロアの広々とした空間で、いつもより少し優雅なご朝食、ご友人とのひとときが楽しくなるカフェタイム、ゴルフ後の飲み会と様々なシーンでご利用頂けます。
 
-営業時間：11:00～22:30（ラストオーダー：21:30）、朝食 月～土：6:30～22:00（ラストオーダー：21:30）、日：7:00～22:30（ラストオーダー：22:00）。 </div>
+営業時間：11:00～22:30（ラストオーダー：22:00）、朝食 月～土：6:30～22:30（ラストオーダー：22:00）、日：7:00～22:30（ラストオーダー：22:00）。 </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
@@ -352,10 +352,10 @@
                         <form action="{{route('doreservation.submit')}}" method="POST" id="reservationForm">
                             @csrf
                             <div class="form-group" id="siteHeader" style="position: relative !important;">
-                                <center><label for="restaurantid" class="col-3 col-form-lable" style="font-size: 2.0em; color: white">RESERVE FOR</label></center>
+                                <center><label for="restaurantid" class="col-3 col-form-lable" style="font-size: 2.0em; color: white" trasletion="RESERVE FOR"> 予約用" </label></center>
                                 <div class="col-9">
                                     <select class="form-control" name="restaurantid" id="restaurantid" required="true" style="text-align: center; font-size: 2.0em; height: 56px;">
-                                        <option value="">-- Choose Restaurant --</option>
+                                        <option value="" trasletion= "Choose Restaurant">-- レストランを選ぶ --</option>
                                         @if(!empty($restaurants))
                                             @foreach($restaurants as $restaurant)
                                                 <option value="{{$restaurant->id}}">{{$restaurant->name}}</option>
@@ -366,15 +366,15 @@
                             </div>
 			    <div class="col-md-6">
                             <div class="form-group">
-                                <label for="name2" class="col-3 col-form-label">Name</label>
+                                <label for="name2" class="col-3 col-form-label" trasletion="Name">名前-会社名</label>
                                 <div class="col-9">
-                                    <input type="text" name="name" class="form-control" id="name2" placeholder="Name" required="true">
+                                    <input type="text" name="name" class="form-control" id="name2" placeholder="Name-Company Name" required="true">
                                 </div>
                             </div>
 			    </div>
 			    <div class="col-md-6">
                             <div class="form-group">
-                                <label for="email2" class="col-3 col-form-label">Email</label>
+                                <label for="email2" class="col-3 col-form-label" trasletion="Email">メール</label>
                                 <div class="col-9">
                                     <input type="email" name="email" class="form-control" id="email2" placeholder="Email" required="true">
                                 </div>
@@ -382,26 +382,26 @@
 		            </div>
 			    <div class="col-md-6">
                             <div class="form-group">
-                                <label for="phone" class="col-3 col-form-label">Phone</label>
+                                <label for="phone" class="col-3 col-form-label" trasletion="Phone">電話 (国コードは不要)</label>
                                 <div class="col-9">
-                                    <input type="number" name="phone" class="form-control" id="phone" placeholder="Phone" required="true">
+                                    <input type="number" name="phone" class="form-control" id="phone" placeholder="Mobile Number without country code" required="true">
                                 </div>
                             </div>
 			    </div>
 			   <div class="col-md-6">
                             <div class="form-group">
-                                <label for="occasion" class="col-3 col-form-lable">Event</label>
+                                <label for="occasion" class="col-3 col-form-lable"trasletion="Event">イベント </label>
                                 <div class="col-9">
                                     <select class="form-control" name="occasion" id="occasion" required="true">
-                                        <option>-- Select Option --</option>
-                                        <option value="Corporate Party">Event</option>
-                                        <option value="Kitty Party">Birthday</option>
-                                        <option value="Bachelor Party">Family Gatherning</option>
-                                        <option value="Birthday">Company Meeting</option>
-                                        <option value="Anniversary">Welcome Party</option>
-                                        <option value="Sympathy">Farewell Party</option>
-                                        <option value="Christmas">After Golf</option>
-                                        <option value="New Baby">Anniversary</option>
+                                        <option>-- オプションを選択 --</option>
+                                        <option value="Corporate Party">イベント </option>
+                                        <option value="Kitty Party">誕生日</option>
+                                        <option value="Bachelor Party">家族の集まり</option>
+                                        <option value="Birthday">会社の会議</option>
+                                        <option value="Anniversary">歓迎会</option>
+                                        <option value="Sympathy">送別会</option>
+                                        <option value="Christmas">ゴルフの後 </option>
+                                        <option value="New Baby">記念日</option>
                                     </select>
 
                                 </div>
@@ -409,7 +409,7 @@
 			    </div>
 <div class="col-md-6">
                             <div class="form-group">
-                                <label class="col-3 col-form-label">Time of Arrival</label>
+                                <label class="col-3 col-form-label" trasletion= "Time of Arrival">到着時刻 </label>
                                 <div class="col">
                                     <input type="datetime-local" name="starttime" class="form-control" placeholder="On which date" required="true" value="">
                                 </div>
@@ -418,7 +418,7 @@
 
                              <div class="col-md-6">
                             <div class="form-group">
-                                <label class="col-3 col-form-label">Reserved Time</label>
+                                <label class="col-3 col-form-label" trasletion="Reserved Time">予約時間 </label>
                                 <div class="col">
                                     <!-- <input type="datetime-local" name="endtime" class="form-control" placeholder="On which date" required="true" value=""> -->
 					<select name='endtime' class='form-control'>
@@ -434,7 +434,7 @@
 			    </div>
            <div class="col-md-12">
                             <div class="form-group">
-                                <label for="guest" class="col-md-3 col-form-label">No of Guest</label>
+                                <label for="guest" class="col-md-3 col-form-label"trasletion="No of Guest">ゲスト数 </label>
                                 <div class="col-md-3">
                                     <input type="number" name="male" class="form-control" id="male" placeholder="Guest" onclick="addRequiredForField()">
                                 </div>
@@ -446,11 +446,20 @@
                                 </div>
                                 </div>
         </div>
+                            <input type="hidden" name="admin" class="form-control" id="admin" value="{{@$_GET['admin']}}"> 
+<div class="col-md-12">
+		<div class="form-group">
+                        <label for="guest" class="col-md-3 col-form-label" trasletion ="Comment" >コメント</label>
+			<textarea class="form-control" name="customer_comment" placeholder="comment"></textarea>
+                 </div>
+
+	</div>
+
 	<div class="col-md-12">
                             <div class="form-group">
                                     <div class="col-md-5" style="margin-top: 20px;">
-                                        <input type="checkbox" name="whatsapp" class="" id="whatsapp">
-                                        I agree to be contacted via whatsapp 
+                                        <input type="checkbox" name="whatsapp" class="" id="whatsapp" trasletion="I agree to be contacted via whatsapp ">
+                                        whatsapp経由での連絡を承諾します 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-whatsapp" viewBox="0 0 16 16">
   <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
 </svg>
@@ -460,7 +469,7 @@
        <div class="col-md-12">
                             <div class="form-group">
                                     <div class="col-md-12">
-                                        <center><button type="submit" id="reserve" class="btn btn-info">Book Your Table</button></center>
+                                        <center><button type="submit" id="reserve" class="btn btn-info" trasletion="Book Your Table" >テーブルを予約する</button></center>
                                     </div>
                             </div>
        </div>
@@ -603,7 +612,7 @@
 <div class="txtBox">
 <div class="open noline">
 <h3><span class="h3In">ご利用時間</span></h3>
-<p class="openTxt">18:00～23:00（ラストオーダー 22:30）</p>
+<p class="openTxt">18:00～22:30（ラストオーダー 22:00）</p>
 </div>
 </div>
 <!--/txtBox-->
@@ -689,7 +698,7 @@
 </div>
 <div class="open noline">
 <h3><span class="h3In">ご利用時間</span></h3>
-<p class="openTxt">18:00～23:00（ラストオーダー 22:30）</p>
+<p class="openTxt">18:00～22:30（ラストオーダー 22:00）</p>
 </div>
 </div>
 <!--/txtBox-->

@@ -27,10 +27,9 @@ class SendNotificationFired extends Notification implements ShouldQueue
 
     private function sendMail ($data) {
         try{
-            Mail::to($data['email'])->send(new SendMail($data)); 
-            // print_r('print1'); 
+            Mail::to($data['email'])->send(new SendMail($data));
         } catch (\Exception $e) {
-            print_r($e->getMessage());
+            // print_r($e->getMessage());
             return;
         }
     }
@@ -55,7 +54,7 @@ class SendNotificationFired extends Notification implements ShouldQueue
             $whatsApp->sendWhatsAppInfo();
             // print_r('print3');
         } catch (\Exception $e) {
-  	    print_r($e->getMessage());
+  	    print_r('sendWhatsApp> ', $e->getMessage());
             return;
         }
     }
@@ -74,15 +73,12 @@ class SendNotificationFired extends Notification implements ShouldQueue
             switch ($type) {
                 case 'email':
                     $this->sendMail($event->data);
-                    // echo "\nEMAIL\n";
                     break;
                 case 'sms':
                     $this->sendSMS($event->data);
-                    // echo "\nSMS\n";
                     break;
                 case 'whatsapp':
                     $this->sendWhatsApp($event->data);
-                    // echo "\nWHATSAPP\n";
                     break;
                 default:
                     break;

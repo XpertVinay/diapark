@@ -333,7 +333,7 @@
     </style>
   </head>
   <body>
-    <span class="preheader">Hi {{$name}}, Thank you for your booking.</span>
+    <span class="preheader">Dear {{$name}}, Thank you for your booking.</span>
     <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
       <tr>
         <td>&nbsp;</td>
@@ -349,7 +349,7 @@
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td>
-                        <p>Hi {{$name}},</p>
+                        <p>Dear {{$name}},</p> 
                         <p>Thank you for your booking. You will get an update after restaurant manager updates the status of your booking.</p>
                       </td>
                     </tr>

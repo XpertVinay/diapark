@@ -211,6 +211,12 @@
 </div>
 <div class="newsInner">
 
+<dl>
+<dt>2023. 11. 06</dt>
+<dd><a href="page/detail/342.html" > 
+【全館】空気清浄機設置のお知らせ</a></dd>
+</dl>
+
 
 <dl>
 <dt>2023. 06. 22</dt>

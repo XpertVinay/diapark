@@ -88,6 +88,10 @@ class ReservationController extends Controller
         // dd('print');
 
     	// Reservations::create($data);
-    	return redirect('/food-service/?success=1')->with('addreservation', 'Thank you for your booking. Please wait for approval and check your Email for confirmation');
+	$admin = "";
+	if($request->admin == '1'){
+		$admin = "&admin=1";
+	}
+    	return redirect('/food-service/?success=1'.$admin)->with('addreservation', 'Thank you for your booking. Please wait for approval and check your Email for confirmation');
     }
 }

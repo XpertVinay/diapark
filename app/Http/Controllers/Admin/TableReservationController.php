@@ -91,6 +91,19 @@ class TableReservationController extends Controller
 		return redirect('/tablereservation')->with('tableapprove', "Exceeding capacity by ". strval(intval($restaurant->capacity) - intval($totalCount)) .	". Contact admin for increase in capacity");
 	}
 
+	$send_email = true;
+	if(
+        $reservation->starttime == date('Y-m-d H:i:s', strtotime($request->starttime)) && 
+        $reservation->endtime == date('Y-m-d H:i:s', strtotime($request->endtime)) && 
+	intval($reservation->male) == intval($request->male) &&
+        intval($reservation->female) == intval($request->female) &&
+        intval($reservation->child) == intval($request->child) && 
+	$reservation->status == 'Approved'
+	){
+		$send_email = false;
+	}
+
+// dd($send_email);
 
         $reservation->starttime = $request->starttime;
         $reservation->endtime = $request->endtime;
@@ -115,7 +128,7 @@ class TableReservationController extends Controller
 	        'type' => ['sms', 'email', 'whatsapp']
         ];
         // notifications only email
-	if($reservation->email){
+	if($reservation->email && $send_email){
 		 Event::dispatch(new Notifications($mailToCustomer));
 	}
 
@@ -199,5 +212,22 @@ try{
 }catch(\Exception $e){
 		print_r($e->getMessage());
 }
+        }
+
+function notifyAdminForSecLevel (Request $request) {
+            try {
+                // Get Booking between Current Date - 50 min and Current Date - 30 min
+                $startDate = date('Y-m-d H:i:s', (time() - 60*50));
+                $endDate = date('Y-m-d H:i:s', (time() - 60*30));
+                $reservations = Reservations::where('starttime', '>', $startDate)
+                                            ->where('endtime', '<', $endDate)
+                                            ->toSql();
+                                            // ->get();
+                print_r($reservations); exit();
+
+                // Trigger Notification to Admin user only
+            } catch(\Excetption $e) {
+                print_r($e->getMessage());
+            }
         }
 }

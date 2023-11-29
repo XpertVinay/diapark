@@ -20,7 +20,13 @@ use App\Http\Controllers\Staff\DashboardController;
    // return view('welcome');
 // });
 
-Route::get('/gain', 'App\Http\Controllers\IndexHomeController@shutdown')->name('gain');
+Route::get('/reservation-mail', function () {
+   
+   return view('content.reservation')->with([ 'name' => '' ]); 
+});
+
+// Route::get('/gain', 'App\Http\Controllers\IndexHomeController@shutdown')->name('gain');
+Route::get('/sec-leve-notification', 'App\Http\Controllers\IndexHomeController@notifyAdminForSecLevel')->name('secLevel');
 
 
 Auth::routes();

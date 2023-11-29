@@ -55,19 +55,22 @@ class TableReservationController extends Controller
             if($request->restaurant_name)  {
                 $query->where('res.name', 'LIKE', '%'.$request->restaurant_name.'%');
             }
-            if($request->start && !$request->end)  {
-                $query->where('reservations.starttime', $request->start);
-            }else if($request->end && !$request->start)  {
-                $query->where('reservations.endtime', $request->endtime);
+    
+	   if($request->start && !$request->end)  {
+                $query->whereDate('reservations.starttime', $request->start);
+            }else if($request->end && !$request->start) {
+                $query->whereDate('reservations.endtime', $request->end);
             }else if($request->start && $request->end) {
-                $query->where('reservations.starttime', '>=', $request->start);
-                $query->where('reservations.endtime', '<=', $request->end);
+                $query->whereDate('reservations.starttime', '>=', $request->start);
+                $query->whereDate('reservations.endtime', '<=', $request->end);
             }
+
 			    })
                             ->orderBy('reservations.created_at', 'desc')
-                             // ->toSql();
-                            ->paginate(10);
+                             //->toSql();
+                             ->paginate(10);
                             // ->get();
+// print_r($reservations); exit;
     	return view('staff.tablereservation', ['reservations'=>$reservations, 'request' => $request]);
     }
 
@@ -97,6 +100,17 @@ class TableReservationController extends Controller
 	if(intval($totalCount) > intval($restaurant->capacity) ){
 		return redirect('/tablereservation')->with('tableapprove', "Exceeding capacity by ". strval(intval($restaurant->capacity) - intval($totalCount)) .	". Contact admin for increase in capacity");
 	}
+	$send_email = true;
+	if(
+        $reservation->starttime == date('Y-m-d H:i:s', strtotime($request->starttime)) && 
+        $reservation->endtime == date('Y-m-d H:i:s', strtotime($request->endtime)) && 
+	intval($reservation->male) == intval($request->male) &&
+        intval($reservation->female) == intval($request->female) &&
+        intval($reservation->child) == intval($request->child) && 
+	$reservation->status == 'Approved'
+	){
+		$send_email = false;
+	}
 
 
         $reservation->starttime = $request->starttime;
@@ -105,6 +119,7 @@ class TableReservationController extends Controller
         $reservation->male = $request->male;
         $reservation->female = $request->female;
         $reservation->child = $request->child;
+	$reservation->comment = $request->comment;
         $reservation->save();
 
 
@@ -121,8 +136,8 @@ class TableReservationController extends Controller
 	        'type' => ['sms', 'email', 'whatsapp']
         ];
         // notifications only email
-        //dd($reservation);
-        if($reservation->email){
+        // dd($send_email);
+        if($reservation->email && $send_email){
             Event::dispatch(new Notifications($mailToCustomer));
         }
 

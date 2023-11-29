@@ -333,7 +333,7 @@
     </style>
   </head>
   <body>
-    <span class="preheader">Hi {{$name}}, Congratulations, Your booking has been approved.</span>
+    <span class="preheader">Dear {{$name}}, Congratulations, Your booking has been confirmed.</span>
     <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
       <tr>
         <td>&nbsp;</td>
@@ -349,8 +349,8 @@
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td>
-                        <p>Hi {{$name}},</p>
-                        <p>Congratulations, your booking has been approved from {{$restaurantName}} on {{date('d M Y, H:i:s', strtotime($sstart))}} to {{date('d M Y, H:i:s', strtotime($send))}}</p>
+                        <p>Dear {{$name}},</p>
+                        <p>Congratulations, your booking has been confirmed from {{$restaurantName}} on {{date('d M Y, H:i:s', strtotime($sstart))}} to {{date('d M Y, H:i:s', strtotime($send))}}</p>
                       </td>
                     </tr>
                   </table>

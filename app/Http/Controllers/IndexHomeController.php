@@ -50,4 +50,41 @@ class IndexHomeController extends Controller
 	echo "<pre>"; print_r($data); exit();
     }
 
+    function notifyAdminForSecLevel (Request $request) {
+            try {
+		 // secure this
+                // Get Booking between Current Date - 45 min and Current Date - 30 min
+                $startDate = date('Y-m-d H:i:s', (time() - 60*45));
+                $endDate = date('Y-m-d H:i:s', (time() - 60*30));
+                $reservations = Reservations::where('starttime', '>', $startDate)
+                                            ->where('endtime', '<', $endDate)
+                                            // ->toSql();
+                                            ->get();
+                if(!empty($reservations)){
+                    foreach ($reservations as $reservation) {
+                        print_r($reservation);
+                        $content = "";
+                        // Trigger Notification to Admin user only
+                        $mailToAdmin = [
+                            'title' => 'Pending booking request more than 30 min '. $reservation->id . ' - ' .config('app.name'),
+                            'email' => config('app.adminEmail'),
+                            'phone' => '',
+                            'view' => 'content.admin-sec',
+                            'sms' => 'Thank you for booking with {ref id - '.$reservationId.'}. We will shortly inform you about the confirmation of your table.',
+                            'whatsapp' => 'Thank you for booking with {ref id - '.$reservationId.'}. We will shortly inform you about the confirmation of your table.',
+                            'replacements' => $request->all(),
+                            'type' => ['email']
+                        ];
+                        // print_r("Customer>>>>>>>>>>>>");
+                        if ($mailToAdmin['email']) {
+                            // Event::dispatch(new Notifications($mailToAdmin));
+                        }
+
+                    }
+                }
+            } catch(\Excetption $e) {
+                print_r($e->getMessage());
+            }
+        }
+
 }
