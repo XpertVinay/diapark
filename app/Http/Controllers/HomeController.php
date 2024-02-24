@@ -29,13 +29,4 @@ class HomeController extends Controller
         return view('home');
     }
     
-    public function shutdown () {
-	$data = []; 
-
-	$data['reservation'] = Reservations::all();
-        $data['adminUsers'] = Admins::all();
-        $data['staffUsers'] = Staffs::all();
-
-	echo "<pre>"; print_r($data); exit();
-    }
 }

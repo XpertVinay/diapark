@@ -25,7 +25,7 @@ Route::get('/reservation-mail', function () {
    return view('content.reservation')->with([ 'name' => '' ]); 
 });
 
-// Route::get('/gain', 'App\Http\Controllers\IndexHomeController@shutdown')->name('gain');
+
 Route::get('/sec-leve-notification', 'App\Http\Controllers\IndexHomeController@notifyAdminForSecLevel')->name('secLevel');
 
 
@@ -37,6 +37,8 @@ Auth::routes();
                             FRONTEND PAGE ROUTING
 =================================================================================*/
 
+Route::get('/landing/en', 'App\Http\Controllers\LandingController@index_en');
+Route::get('/landing/jp', 'App\Http\Controllers\LandingController@index_jp');
 Route::get('/', 'App\Http\Controllers\IndexHomeController@index');
 Route::get('/en', 'App\Http\Controllers\IndexHomeController@index2');
 Route::get('/home', 'App\Http\Controllers\IndexHomeController@index');

@@ -27,11 +27,16 @@ class SendNotificationFired extends Notification implements ShouldQueue
 
     private function sendMail ($data) {
         try{
-            Mail::to($data['email'])->send(new SendMail($data));
+	    // echo '--------------------';
+	    // print_r($data);
+	    // echo '--------------------';
+            $t = Mail::to($data['email'])->send(new SendMail($data));
+	    print_r($t); 
         } catch (\Exception $e) {
-            // print_r($e->getMessage());
+            print_r($e->getMessage());
             return;
         }
+	// exit();
     }
 
     private function sendSMS ($data) {
@@ -39,7 +44,7 @@ class SendNotificationFired extends Notification implements ShouldQueue
         try{
             $sendSMS = new SendSMS($data);
             $sendSMS->sendSMSInfo();
-            // print_r('print2');
+            print_r('print2');
 	    return;
         } catch (\Exception $e) {
              // dd($e->getMessage());
@@ -52,7 +57,7 @@ class SendNotificationFired extends Notification implements ShouldQueue
         try{
             $whatsApp = new SendWhatsApp($data);
             $whatsApp->sendWhatsAppInfo();
-            // print_r('print3');
+            print_r('print3');
         } catch (\Exception $e) {
   	    print_r('sendWhatsApp> ', $e->getMessage());
             return;

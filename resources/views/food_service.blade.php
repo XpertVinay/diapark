@@ -107,7 +107,8 @@
 </style>
 <!--[if lt IE 9]>
 <script src="english/common/js/html5shiv.js" type="text/javascript"></script>
-<![endif]--></head>
+<![endif]-->
+</head>
 
 <body class="dining">
 <header id="siteHeader">
@@ -896,7 +897,7 @@ var yahoo_retargeting_items = [{item_id: '', category_id: '', price: '', quantit
 <script type="text/javascript" language="javascript" src="http://b92.yahoo.co.jp/js/s_retargeting.js"></script>
 <script>
     $(document).ready(() => {
-        const showSuccessPopUp = '{{ @$_GET['success'] }}';
+        const showSuccessPopUp = '{{ @$_GET['success']}}';
         const showAdminPopUp = '{{ @$_GET['admin'] }}';
         const showReservePopup = '{{ @$_GET['book'] }}';
         if (parseInt(showSuccessPopUp) == 1 || parseInt(showAdminPopUp) == 1) {
@@ -929,6 +930,10 @@ var yahoo_retargeting_items = [{item_id: '', category_id: '', price: '', quantit
     }
 </script>
 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPMLJX9V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 </body>
 
 </html>

@@ -68,7 +68,8 @@ class IndexHomeController extends Controller
                         $mailToAdmin = [
                             'title' => 'Pending booking request more than 30 min '. $reservation->id . ' - ' .config('app.name'),
                             'email' => config('app.adminEmail'),
-                            'phone' => '',
+                            'phone' => '919958595898',
+			    'isAdmin' => 1,
                             'view' => 'content.admin-sec',
                             'sms' => 'Thank you for booking with {ref id - '.$reservationId.'}. We will shortly inform you about the confirmation of your table.',
                             'whatsapp' => 'Thank you for booking with {ref id - '.$reservationId.'}. We will shortly inform you about the confirmation of your table.',
@@ -76,10 +77,9 @@ class IndexHomeController extends Controller
                             'type' => ['email']
                         ];
                         // print_r("Customer>>>>>>>>>>>>");
-                        if ($mailToAdmin['email']) {
-                            // Event::dispatch(new Notifications($mailToAdmin));
-                        }
-
+			if ($mailToAdmin['email']) {
+            			Event::dispatch(new Notifications($mailToAdmin));
+        		}
                     }
                 }
             } catch(\Excetption $e) {

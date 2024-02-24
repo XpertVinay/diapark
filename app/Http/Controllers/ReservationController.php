@@ -92,6 +92,7 @@ class ReservationController extends Controller
 	if($request->admin == '1'){
 		$admin = "&admin=1";
 	}
+	// return \Redirect::back()->with(['success' => '1', 'addreservation', 'Thank you for your booking. Please wait for approval and check your Email for confirmation']);
     	return redirect('/food-service/?success=1'.$admin)->with('addreservation', 'Thank you for your booking. Please wait for approval and check your Email for confirmation');
     }
 }

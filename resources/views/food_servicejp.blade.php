@@ -111,7 +111,9 @@
 </style>
 <!--[if lt IE 9]>
 <script src="english/common/js/html5shiv.js" type="text/javascript"></script>
-<![endif]--></head>
+<![endif]-->
+
+</head>
 
 <body class="dining">
 <header id="siteHeader">
@@ -148,6 +150,9 @@
 <li id="booking"><a href="https://gc.synxis.com/rez.aspx?Hotel=80472&amp;Chain=22924&amp;locale=en-US">宿泊予約</a></li>
 <li id="contact"><a href="contact/index.html">お問い合わせ</a></li>
 </ul>
+
+
+
 </header>
 <!--/siteHeader-->
 
@@ -159,6 +164,8 @@
 </div>
 <p class="breadcrumbs"><span><a href="../en">ホーム</a> &gt; お食事</span></p>
 </header>
+
+
 
 
 <div class="row">
@@ -886,6 +893,11 @@ var yahoo_retargeting_items = [{item_id: '', category_id: '', price: '', quantit
 /* ]]> */
 </script>
 <script type="text/javascript" language="javascript" src="http://b92.yahoo.co.jp/js/s_retargeting.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPMLJX9V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 </body>
 </html>
