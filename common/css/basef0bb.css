@@ -265,6 +265,7 @@ a:active { color:#ec6800;text-decoration:none; }
 div.container{
 	padding:0 0 105px 0;
 	background:url(../image/container_bg002.png) no-repeat 50% 100%;
+	width: 100vw;
 }
 
 

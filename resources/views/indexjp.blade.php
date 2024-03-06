@@ -37,7 +37,6 @@
 <div class="hdLink">
 <ul>
 	<li class="myReservation"><a href="https://gc.synxis.com/rez.aspx?hotel=80472&amp;chain=22924&amp;start=searchres&amp;locale=ja-JP">予約確認・変更・キャンセル</a></li>
-	<li class="myReservation"><a href="common/pdf/help.pdf" target="_blank" onclick="window.open('common/pdf/help.pdf', '', 'width=800,height=1000'); return false;">Q&amp;A</a></li>		
     <li class="langBt"><a href="english/index.html">english</a></li>
 </ul>
 <form action="https://gc.synxis.com/rez.aspx" method="get" id="to_synxis">
@@ -125,8 +124,6 @@
 <!--/search-->
 </form>
 
-
-
 </div>
 </div>
 </div>
@@ -189,7 +186,8 @@
 <div class="wrapper">
 
 <div class="outlineArea">
-
+<br>
+<br>
 <!--================================= outline ===================================-->
 <div class="outline">
 <ul>
@@ -357,9 +355,10 @@ Japanese help desk 設置のお知らせ</a></dd>
 <dd>写真は大会議室（169m&sup2;,50～60名程度）です。</dd>
 </dl>
 <p class="serviceBt"><a href="service/index.html#banquetH2">詳しくはこちら</a></p>
-</li>
 </ul>
+</li>
 
+<!--================================= service close- desk start ===================================-->
 <ul class="serviceListBottom">
 <li class="traveldesk">
 <h3 id="traveldeskH3">トラベルデスク（SAKURA HOLIDAYS）</h3>
@@ -367,47 +366,65 @@ Japanese help desk 設置のお知らせ</a></dd>
 <p class="txt">空港お迎えに、プラカードを持ってお待ちしております。 </p>
 <p class="serviceBt"><a href="service/index.html#TravelDesk">詳しくはこちら</a></p>
 </li>
-</ul>
-
+<li class="traveldesk">
+<h2 id="DiagolfH3"><span class="bgH2"><span class="bgH2In"> <strong> ダイア・ゴルフ・ウェルネス・クラブ <!--(DIA GOLF WELLNESS CLUB)/--> </strong></span></span></h2>
+<p class="img"><a href="service/index.html#DiagolfH2"><img src="image/Diaclub01.png" width="286" height="118" alt="-"></a></p>
+<p class="txt">ダイア・ゴルフ・ウェルネス・クラブ </p> <p>DIA GOLF WELLNESS CLUB</p>
+<p class="serviceBt"><a href="service/index.html#DiagolfH2">詳しくはこちら</a></p>
+</li>
+<li class="banquet">
+<h2 id="FAQH3"><span class="bgH2"><span class="bgH2In"> <strong>よくある質問 </strong></span></span></h2>
+<p class="img"><a href="news/index.html#FAQH2"><img src="image/diafaq01.png" width="286" height="118" alt="-"></a></p>
+<p class="txt">ダイパークプレミアQ&Aコレクション </p> <p>(DAI PARK PREMIER Q&A Collection)</p>
+<p class="serviceBt"><a href="news/index.html#FAQH2">詳しくはこちら</a></p>
+</li>
+<!--/Service Desk-->
+<!--Daigolf-->
+<div class="contentList">
+<h2 id="GolfSimulatorH3"><span class="bgH2"><span class="bgH2In"><strong>ゴルフシミュレーター Golf Simulator </strong></span></span></h2>
+<div class="contentBox">
+<div class="contentBoxIn serviceVer">
+<div class="imgOut">
+<div class="imgBox">
+<p class="img"><a href="service/index.html#GolfSimulatorH2"><img src="image/home_service_ph020.png" width="960" height="460"alt=""></a></p>
+<p class="cap">ゴルフシミュレーター  Golf Simulator</a></p>
 </div>
-<!--/service-->
-
+</div>
+<!--/imgOut-->
+<div class="txtBox">
+最新鋭のシミュレーターを使用した専門家によるバーチャルフェアウェイレッスンでスキルを向上させましょう。 <br>
+これにより、世界的に有名なリアルワールドのコースでのラウンドを体験し、快適な環境で行われる没入型のゴルフ練習体験が可能となり、あなたのフルポテンシャルを引き出すことが保証されます。 <br>
+<p class="serviceBt"><a href="service/index.html#GolfSimulatorH2">詳しくはこちら</a></p> </div>
+<!--/txtBox-->
+</div>
+<!--/contentBoxIn-->
+</div>
+<!--/contentBox-->
+</div>
+<!--Daigolf-->
 <!--==================== youtube & google indoor view ======================-->
 <div class="youtube_etc">
+    <h3>Indoor view</h3>
     <div class="indoor_view">
     	<h3>Google インドアビュー</h3>
         <iframe src="https://www.google.com/maps/embed?pb=!4v1526867023624!6m8!1m7!1sCAoSLEFGMVFpcFBoZ0pZTnBWS0Y0WjlJYkZ3LWJuNXZOT3hkcDVEWlpfdnBkZUlk!2m2!1d28.462680929864!2d77.067914864322!3f93.24!4f14.709999999999994!5f0.7820865974627469" width="460" height="259" frameborder="0" style="border:0" allowfullscreen></iframe>
-	</div>
+	</div> </div>
+</ul>
 </div>
 <!--/youtube-->
-
 <!--================================= ad ===================================-->
-<div class="ad">
+<!--div class="ad">
 <ul>
 <li>
 <p class="title">バナー広告</p>
-<p class="banner"><a href="http://www.jtb-india.com/" target="_blank" rel="nofollow"><img src="image/ad_bn_jtb_130701.gif" width="234" height="60" alt="インドで安心の日本語ガイド付きツアー MyBus インド発着 観光・グルメ・ショッピング"></a></p>
-</li>
-<li>
-<p class="title">バナー広告</p>
-<p class="banner"><img src="image/ad_bn_comming.gif" width="234" height="60" alt="Comming Soon"></p>
-</li>
-<li>
-<p class="title">バナー広告</p>
-<p class="banner"><img src="image/ad_bn_comming.gif" width="234" height="60" alt="Comming Soon"></p>
-</li>
-<li class="last">
-<p class="title">バナー広告</p>
-<p class="banner"><img src="image/ad_bn_comming.gif" width="234" height="60" alt="Comming Soon"></p>
+<p class="banner"><a href="http://www.jtb-india.com/" target="_blank" rel="nofollow"><img src="image/Diaclub.jpg" width="460" height="259" alt="インドで安心の日本語ガイド付きツアー MyBus インド発着 観光・グルメ・ショッピング"></a></p>
 </li>
 </ul>
-</div>
-<!--/ad-->
+</div-->
 
 <div id="ie6Top">
 <p><a href="#siteHeader" class="ipg">ページの先頭へ戻る</a></p>
 </div>
-
 </div>
 <!--/wrapper-->
 </div>
@@ -470,79 +487,6 @@ Japanese help desk 設置のお知らせ</a></dd>
 </div>
 </div>
 
-<!-- Google Code for DPP&#12469;&#12452;&#12488; &#35370;&#21839;&#32773; -->
-<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 983003513;
-var google_conversion_label = "69_7CKe3lwgQ-eLd1AM";
-var google_custom_params = window.google_tag_params;
-var google_remarketing_only = true;
-/* ]]> */
-</script>
-<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/983003513/?value=0&amp;label=69_7CKe3lwgQ-eLd1AM&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>
-
 </footer>
 <p class="copyright">Copyright &copy; Dia Park Premier. All Rights Reserved.</p>
 
-<!--/siteFooter-->
-<p id="pageTop"><a href="#siteHeader">このページの先頭へ</a></p>
-<script src="common/js/functions2b4a.js?170110"></script>
-<script src="common/js/checkcalendar1bf33.js?180427"></script>
-<script src="common/js/dropkick.js"></script>
-<script type="text/javascript">
-$(function() {
-	$('.selectdate').dropkick();
-
-});
-</script>
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-1465963-28']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 873242776;
-var google_custom_params = window.google_tag_params;
-var google_remarketing_only = true;
-/* ]]> */
-</script>
-<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/873242776/?value=0&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>
-
-<!-- Yahoo Code for your Target List -->
-<script type="text/javascript" language="javascript">
-/* <![CDATA[ */
-var yahoo_retargeting_id = 'K99LF93HXD';
-var yahoo_retargeting_label = '';
-var yahoo_retargeting_page_type = '';
-var yahoo_retargeting_items = [{item_id: '', category_id: '', price: '', quantity: ''}];
-/* ]]> */
-</script>
-<script type="text/javascript" language="javascript" src="http://b92.yahoo.co.jp/js/s_retargeting.js"></script>
-</body>
-
-<!-- Mirrored from www.diapark.jp/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Sep 2022 06:00:00 GMT -->
-<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'bom1plzcpnl493926'},{'dcenter':'bom1'},{'cp_id':'8986797'},{'cp_cache':''},{'cp_cl':'6'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/traffic-assets/js/tccl.min.js'></script></html>

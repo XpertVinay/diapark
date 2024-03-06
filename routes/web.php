@@ -37,8 +37,8 @@ Auth::routes();
                             FRONTEND PAGE ROUTING
 =================================================================================*/
 
-Route::get('/landing/en', 'App\Http\Controllers\LandingController@index_en');
-Route::get('/landing/jp', 'App\Http\Controllers\LandingController@index_jp');
+Route::get('/len', 'App\Http\Controllers\LandingController@index_en');
+Route::get('/ljp', 'App\Http\Controllers\LandingController@index_jp');
 Route::get('/', 'App\Http\Controllers\IndexHomeController@index');
 Route::get('/en', 'App\Http\Controllers\IndexHomeController@index2');
 Route::get('/home', 'App\Http\Controllers\IndexHomeController@index');

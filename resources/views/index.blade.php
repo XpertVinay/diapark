@@ -9,9 +9,11 @@
 <meta name="author" content="Dia Park Premier">
 <meta name="viewport" content="width=1024">
 <link rel="shortcut icon" href="english/favicon.ico">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <link rel="stylesheet" href="english/common/css/import7fa1.css?up=170911">
 <link rel="stylesheet" href="english/css/dropkick.css">
 <link rel="stylesheet" href="english/css/style7fa1.css?up=170911">
@@ -274,9 +276,8 @@ New Year Special Package</a></dd>
 <li class="dinner">
 <h3 id="dinnerH3">Tasty Japanese Dishes</h3>
 <p class="img"><a href="dining/index.html"><img src="english/image/home_service_ph016.jpg" width="286" height="118" alt="Image&#65533; Tasty Japanese Dishes"></a></p>
-<p class="txt">Authentic Japanese dishes are available at the Japanese restaurants Raifu and Raifu-tei c&#65533;(private room) c&#65533;. Our accommodation packages include the option of a Japanese breakfast.</p>
+<p class="txt">Authentic Japanese dishes are available at the Japanese restaurants Raifu and Raifu-tei ;(private room) . Our accommodation packages include the option of a Japanese breakfast.</p>
 <dl class="note txtSmall">
-<dt> T</dt>
 <dd>The breakfast will be served at the Cafe &amp; Restaurant Honey on the ground floor.</dd>
 </dl>
 <p class="serviceBt"><a href="dining/index.html">More</a></p>
@@ -295,11 +296,8 @@ New Year Special Package</a></dd>
 <p class="txt">Our Japanese-style hospitality and services are also reflected in our clean, secure, comfortable guest rooms, which offer the optimal relaxation. Rooms range from Deluxe Rooms with reasonable room rates to the best Executive Rooms (with bathtubs).  <br>
 Fully installed Air purifiers, Washlet and hand showers in all the guest rooms will present you the further relaxation.</p>
 <dl class="note txtSmall">
-<dt> T</dt>
-<dd>Photo: Executive Room</dd>
-<dt> T</dt>
-<dd>&ldquo;Washlet&rdquo; is a registered trademark of TOTO.
-</dd>
+<h5>Photo utive Room</h5>
+<h5>Washlet&rdquo; is a registered trademark of TOTO.</h5>
 </dl>
 <p class="serviceBt"><a href="room/index.html">More</a></p>
 </li>
@@ -328,14 +326,13 @@ which are preferred by Japanese people.
 <p class="img"><a href="service/index.html#banquetH2"><img src="english/image/home_service_ph014.jpg" width="286" height="118" alt="Image&#65533; Banquet Rooms (Conferences and Events)"></a></p>
 <p class="txt">The hotel has a variety of banquet rooms, which can accommodate 20 &#65533;150 people. These are ideal venues for business meetings and conferences, etc.</p>
 <dl class="note txtSmall">
-<dt> T</dt>
-<dd>Photo: A large conference room
-(Area:169m&sup2;/Capacity:50-60people)</dd>
+<h5>Photo: A large conference room
+(Area:169m&sup2;/Capacity:50-60people)</h5>
 </dl>
-</li>
 <p class="serviceBt"><a href="service/index.html#banquetH2">More</a></p>
+</li>
 </ul>
-
+<!--================================= service close- desk start ===================================-->
 <ul class="serviceListBottom">
 <li class="traveldesk">
 <h3 id="traveldeskH3">Travel Desk (Sakura Holidays)</h3>
@@ -343,21 +340,65 @@ which are preferred by Japanese people.
 <p class="txt">We are waiting with a placard to pick you up at the airport.</p>
 <p class="serviceBt"><a href="service/index.html#loungeH2">More</a></p>
 </li>
-</ul>
-
+<li class="traveldesk">
+<h2 id="DiagolfH3"><span class="bgH2"><span class="bgH2In"> <strong>DIA GOLF WELLNESS CLUB </strong></span></span></h2>
+<p class="img"><a href="service/index.html#DiagolfH2"><img src="image/Diaclub01.png" width="286" height="118" alt="-"></a></p>
+<p class="txt">DIA GOLF WELLNESS CLUB</p>
+<p class="serviceBt"><a href="english/service/index.html#DiagolfH2">More</a></p>
+</li>
+<li class="banquet">
+<h2 id="FAQH3"><span class="bgH2"><span class="bgH2In"> <strong>FAQ</strong></span></span></h2>
+<p class="img"><a href="news/index.html#FAQH2"><img src="image/diafaq01.png" width="286" height="118" alt="-"></a></p>
+<p class="txt">DAI PARK PREMIER Q&A Collection</p>
+<p class="serviceBt"><a href="english/news/index.html#FAQH2">More</a></p>
+</li>
+<!--/Service Desk-->
+<!--Daigolf-->
+<div class="contentList">
+<h2 id="GolfSimulatorH3"><span class="bgH2"><span class="bgH2In"><strong> Golf Simulator </strong></span></span></h2>
+<div class="contentBox">
+<div class="contentBoxIn serviceVer">
+<div class="imgOut">
+<div class="imgBox">
+<p class="img"><a href="english/service/index.html#GolfSimulatorH2"><img src="image/home_service_ph020.png" width="960" height="460"alt=""></p>
+<p class="cap">Golf Simulator</a></p>
 </div>
-
+</div>
+<!--/imgOut-->
+<div class="txtBox">
+Elevate your skills with virtual fairway lessons from experts using state-of-the-art simulators. <br>
+This enables you to experience rounds on world-renowned real-world courses, and an immersive golf practice experience, set in a comfortable environment, is guaranteed to unlock your full potential. <br>
+<p class="serviceBt"><a href="english/service/index.html#GolfSimulatorH2">詳しくはこちら</a></p> </div>
+<!--/txtBox-->
+</div>
+<!--/contentBoxIn-->
+</div>
+<!--/contentBox-->
+</div>
+<!--Daigolf-->
+<!--==================== youtube & google indoor view ======================-->
 <div class="youtube_etc">
     <div class="indoor_view">
     	<h3>Indoor view</h3>
         <iframe src="https://www.google.com/maps/embed?pb=!4v1526867023624!6m8!1m7!1sCAoSLEFGMVFpcFBoZ0pZTnBWS0Y0WjlJYkZ3LWJuNXZOT3hkcDVEWlpfdnBkZUlk!2m2!1d28.462680929864!2d77.067914864322!3f93.24!4f14.709999999999994!5f0.7820865974627469" width="460" height="259" frameborder="0" style="border:0" allowfullscreen></iframe>
 	</div>
 </div>
+<!--/youtube-->
+</ul>
+</div>
+<!--================================= ad ===================================-->
+
+<div class="ad">
+<ul>
+<li>
+<!--p class="title">バナー広告</p>
+<p class="banner"><a href="http://www.jtb-india.com/" target="_blank" rel="nofollow"><img src="image/Diaclub.jpg" width="460" height="259" alt="インドで安心の日本語ガイド付きツアー MyBus インド発着 観光・グルメ・ショッピング"></a></p>
+</li>
+<!--/ad-->
 
 <div id="ie6Top">
 <p><a href="#siteHeader" class="ipg">Go to Page Top</a></p>
 </div>
-
 </div>
 <!--/wrapper-->
 </div>
@@ -411,10 +452,10 @@ which are preferred by Japanese people.
 <h5>Payment Methods</h5>
 <p>Please pay at the front desk when you check out. You can pay by cash or credit card (Visa, MasterCard, American Express, or JCB).</p>
 <ul>
-<li><img src="english/plan/image/card_logo_visa_s.gif" alt="visa" /></li>
-<li><img src="english/plan/image/card_logo_master_s.gif" alt="master" /></li>
-<li><img src="english/plan/image/card_logo_amcexp_s.gif" alt="American Express" /></li>
-<li><img src="english/plan/image/card_logo_jcb_s.gif" alt="JCB" /></li>
+<li><img src="/plan/image/card_logo_visa_s.gif" alt="visa" /></li>
+<li><img src="/plan/image/card_logo_master_s.gif" alt="master" /></li>
+<li><img src="/plan/image/card_logo_amcexp_s.gif" alt="American Express" /></li>
+<li><img src="/plan/image/card_logo_jcb_s.gif" alt="JCB" /></li>
 </ul>
 </div>
 </div>
@@ -440,58 +481,6 @@ var google_remarketing_only = true;
 </footer>
 <p class="copyright">Copyright &copy; Dia Park Premier. All Rights Reserved.</p>
 
-<!--/siteFooter-->
-<p id="pageTop"><a href="#siteHeader">Go to Page Top</a></p>
-<script src="english/common/js/functions.js"></script>
-<script src="english/common/js/checkcalendar1bf33.js?180427"></script>
-<script src="english/common/js/dropkick.js"></script>
-<script type="text/javascript">
-$(function() {
-	$('.selectdate').dropkick();
-});
-</script>
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-1465963-28']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 873242776;
-var google_custom_params = window.google_tag_params;
-var google_remarketing_only = true;
-/* ]]> */
-</script>
-<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/873242776/?value=0&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>
-
-<!-- Yahoo Code for your Target List -->
-<script type="text/javascript" language="javascript">
-/* <![CDATA[ */
-var yahoo_retargeting_id = 'K99LF93HXD';
-var yahoo_retargeting_label = '';
-var yahoo_retargeting_page_type = '';
-var yahoo_retargeting_items = [{item_id: '', category_id: '', price: '', quantity: ''}];
-/* ]]> */
-</script>
-<script type="text/javascript" language="javascript" src="http://b92.yahoo.co.jp/js/s_retargeting.js"></script>
-</body>
 
 
-<!-- Mirrored from www.diapark.jp/english/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Sep 2022 06:01:50 GMT -->
-</html>
+

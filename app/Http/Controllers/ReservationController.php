@@ -24,7 +24,9 @@ class ReservationController extends Controller
 
     public function doreservation(Request $request)
     {
-	$request->phone = '91'.$request->phone;
+	// $request->phone = '91'.$request->phone;
+	$request->phone = $request->countryCode.$request->phone;
+	$refererUrl = request()->headers->get('referer');
     	$data = array(
     		'name' => $request->name,
     		'email' => $request->email,
@@ -39,14 +41,15 @@ class ReservationController extends Controller
     		'status' => 'Pending',
 		'customer_comment' => $request->customer_comment,
             'created_at' => date('Y:m:d h:i:s'),
-            'updated_at' => date('Y:m:d h:i:s')
+            'updated_at' => date('Y:m:d h:i:s'),
+	    'referrer' => $refererUrl
     	);
 	// echo "<pre>"; print_r($data); exit;
         $reservation = \DB::table('reservations')->insert($data);
         $reservationId = \DB::getPdo()->lastInsertId();
         $staff = Staffs::where('id', '=', $request->restaurantid)->first();
 
-	if(empty($staff)){ return redirect('/food-service/?success=1')->with('addreservation', 'No manager available for this restaurant.');
+	if(empty($staff)){ return redirect($refererUrl.'?success=1')->with('addreservation', 'No manager available for this restaurant.');
  }
         // dd($staff);
         $restaurant = Restaurants::where('id', $request->restaurantid)->first();
@@ -93,6 +96,6 @@ class ReservationController extends Controller
 		$admin = "&admin=1";
 	}
 	// return \Redirect::back()->with(['success' => '1', 'addreservation', 'Thank you for your booking. Please wait for approval and check your Email for confirmation']);
-    	return redirect('/food-service/?success=1'.$admin)->with('addreservation', 'Thank you for your booking. Please wait for approval and check your Email for confirmation');
+    	return redirect($refererUrl.'/?success=1'.$admin)->with('addreservation', 'Thank you for your booking. Please wait for approval and check your Email for confirmation');
     }
 }
