@@ -26,343 +26,47 @@
   <link href="/landing/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="/landing/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="/landing/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/landing/css/custom.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="/landing/css/style.css" rel="stylesheet">
-  <style>
-    body {
-      background: url(/english/common/image/container_bg001.gif);
-    }
-    .navbar ul li {
-        color: white;
-    }
-    .siteHeader {
-      background: url(/english/common/image/header_bg001.gif);
-      padding: 15px;
-    }
 
-    .logo {
-      display: block;
-      text-indent: -9999px;
-      width: 251px;
-      height: 34px;
-      background: url(/image/logo.gif) no-repeat 0 0;
-    }
-    .tagline {
-      color: wheat;
-      font-size: 12px;
-    }
-    #header {
-      padding: 0px !important;
-    }
-    #footer{
-        padding: 28px 0 28px 0;
-        background-color: #201801;
-    }
-    #footer .footer-top .footer-links ul {
-      flex-direction: row;
-    }
-    #footer .footer-top .footer-links ul li {
-        padding: 10px 5px;
-        display: flex;
-        align-items: center;
-    }
-    #footer .footer-top .footer-contact p {
-      color: #fff !important;
-    }
-    #footer p {
-      color: white;
-    }
-    #footer a a:hover a:active {
-      color: white;
-    }
-    .footer-top {
-      background-color: #201801 !important;
-    }
-    a a:hover a:active{
-      color: #544638;
-    }
-    .scrolling-wrapper{
-      overflow-x: auto;
-    }
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1746769665832745');
+    fbq('track', 'PageView');
+  </script>
 
-    body{
-      background-color: black;
-      color: #fff;
-      font-family: 'system-ui';
-    }
-
-    h1{
-      font-weight: 700;
-      font-size: 3.4em;
-    }
-
-    .subtitle{
-      font-size: 1.25em;
-      opacity: 0.65;
-    }
-
-    .card-block{
-      height: 300px;
-      background-color: #fff;
-      border: none;
-      background-position: center;
-      background-size: cover;
-      transition: all 0.2s ease-in-out !important;
-      border-radius: 24px;
-      &:hover{
-        transform: translateY(-5px);
-        box-shadow: none;
-        opacity: 0.9;
-      }
-    }
-
-    .payment ul {
-      display: flex;
-      flex-direction: column;
-    }
-    .payment ul li {
-      padding: 0px 10px;
-    }
-    .copyright {
-      color: #fff !important;
-    }
-
-    .btn-get-started {
-        font-family: "Raleway", sans-serif;
-        position: absolute;
-        font-weight: 500;
-        font-size: 15px;
-        letter-spacing: 1px;
-        display: inline-block;
-        padding: 10px 35px;
-        border-radius: 50px;
-        transition: 0.5s;
-        margin: 50px 0px;
-        border: 2px solid #fff;
-        color: #fff;
-        top: 22%;
-        left: 43.5%;
-    }
-
-    @media only screen and (min-width: 840px) {
-      /* .btn-get-started {
-        left: 39.5%;
-        top: 37%;
-        font-size: 12px;
-      } */
-    }
-
-    @media only screen and (max-width: 769px) {
-      .banner {
-          margin-top: 94px;
-      }
-      .btn-get-started {
-        left: 42%;
-        top: 22%;
-        font-size: 12px;
-      }
-    }
-
-    @media only screen and (max-width: 500px) {
-      .btn-get-started {
-        left: 38%;
-        font-size: 12px;
-        padding: 0px;
-        border: 0px;
-      }
-    }
-
-    .card-1{
-      background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    }
-
-    .card-2{
-      background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-    }
-
-    .card-3{
-      background-color: #00DBDE;
-    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
-    }
-
-    .card-4{
-      background-color: #FBAB7E;
-    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
-    }
-
-    .card-5{
-      background-color: #85FFBD;
-    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
-    }
-
-    .card-6{
-      background-color: #FA8BFF;
-    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
-    }
-
-    .card-7{
-      background-color: #FA8BFF;
-    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
-    }
-
-    .card-8{
-      background-color: #FBDA61;
-    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
-    }
-
-    .card-9{
-      background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    }
-
-    .card-10{
-      background-color: #FF3CAC;
-    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
-
-    }
-    
-    #bookTable {
-      color: #000;
-    }
-
-    /* 2.footer
--------------------------------------------------------------------------------*/
-#footer{
-padding:28px 0 28px 0;
-background-color:#201801;
-}
-#footer div.ftInner:before, #footer div.ftInner:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
-#footer div.ftInner:after { clear: both; } 
-#footer div.ftInner { zoom: 1; } 
-#footer div.ftInner{
-  color:#b7b1a8;
-  width:960px;
-  margin:0 auto;
-  padding:0 10px;
-}
-#footer div.ftContactLeft,
-#footer div.ftContactRight{
-  font-family:"Times New Roman" , Garamond ,  serif;
-  float:left;
-}
-#footer div.ftContactLeft{
-padding-right:40px;
-}
-#footer div.ftContactRight{
-}
-#footer div.ftStay,
-#footer div.ftRaifu{
-  padding-bottom:28px;
-}
-#footer div.ftTransfer,
-#footer div.ftBody{
-  border-top:1px solid #6b6455;
-  padding-top:28px;
-}
-#footer p.ftTitle{
-  font-size:21px;
-  line-height:1.3;
-  margin-bottom:8px;
-  color: #d3cfc8;
-}
-#footer p.ftTel{
-  font-size:26px;
-  background:url(../../../common/image/icon_tel_ft.png) no-repeat 0 50%;
-  padding-left:20px;
-}
-#footer p.ftSubTitle{
-font-size:17px;
-line-height:1;
-border-left:3px solid #989286;
-padding-left:7px;
-margin:20px 0 3px;
-}
-#footer p.ftTelInfo{
-font-size:13px;
-line-height:1.6;
-}
-
-#footer div.ftUtility{
-width:192px;
-}
-#footer div.ftUtility ul{
-margin:0 0 27px 0;
-}
-#footer div.ftUtility ul li{
-font-size:80%;
-color:#bdbab3;
-margin:0 0 6px 0;
-}
-#footer div.ftUtility ul li a:link{
-color:#bdbab3;
-}
-#footer div.ftUtility ul li a:visited{
-color:#bdbab3;
-}
-#footer div.ftUtility ul li a:hover,
-#footer div.ftUtility ul li a:active{
-color:#fff;
-}
-#footer div.ftUtility div.ftSsl:before, #footer div.ftUtility div.ftSsl:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
-#footer div.ftUtility div.ftSsl:after { clear: both; } 
-#footer div.ftUtility div.ftSsl { zoom: 1; } 
-#footer div.ftUtility div.ftSsl{
-margin:0 0 20px 0;
-}
-#footer div.ftUtility div.ftSsl p.txt{
-font-size:75%;
-color:#bdbab3;
-float:left;
-}
-#footer div.ftUtility div.ftSsl p.seal{
-width:100px;
-height:72px;
-}
-#footer div.ftUtility .payment{
-width:100%;
-float:left;
-margin-top:27px;
-}
-#footer div.ftUtility .payment p{
-margin-top:5px;
-margin-bottom:10px;
-font-size:75%;
-}
-#footer div.ftUtility .payment ul li{
-display:inline-block;
-padding-right:5px;
-}
-p.copyright{
-clear:both;
-font-size:11px;
-font-family:Verdana, sans-serif;
-color:#181201;
-text-align:center;
-padding:10px 0;
-}
-p.copyright{
-clear:both;
-font-size:11px;
-font-family:Verdana, sans-serif;
-color:#181201;
-text-align:center;
-padding:10px 0;
-}
-
-.promo-banner {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
-
-  </style>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NPMLJX9V');
+  </script>
+  <!-- End Google Tag Manager -->
+  
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1746769665832745&ev=PageView&noscript=1"
+  /></noscript>
 </head>
 
 <body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPMLJX9V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
@@ -431,6 +135,12 @@ padding:10px 0;
         <div class="carousel-item">
           <img src="/landing/img/ban-3.jpg" class="d-block w-100" alt="raifu banner 3">
         </div>
+		<div class="carousel-item">
+          <img src="/landing/img/ban-4.jpg" class="d-block w-100" alt="raifu banner 3">
+        </div>
+		<div class="carousel-item">
+          <img src="/landing/img/ban-5.jpg" class="d-block w-100" alt="raifu banner 3">
+        </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -448,11 +158,11 @@ padding:10px 0;
 </section>
 
 <!-- Promo Banner -->
-<section>
-  <div class="container promo-banner">
-    <img class="image-responsive" src="/landing/img/raifu.jpg" alt="raifu promo banner" />
+<!-- <section class="promo">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <img class="image-fluid" src="/landing/img/raifu.jpg" alt="raifu promo banner" />
   </div>
-</section>
+</section> -->
 <!-- /Promo Banner -->
   <!-- ======= About Section ======= -->
   <section id="bookTable" class="about">
@@ -466,14 +176,14 @@ padding:10px 0;
             </div>
             @endif
 
-            <div class="row">
-          <div class="col-sm-6 bg-white rounded p-5">
+            <div class="row d-flex justify-content-center align-items-center h-100" id="formDiv">
+          <div class="col-sm-12-offset-3 bg-white rounded p-5">
             <form action="{{route('doreservation.submit')}}" method="POST" id="reservationForm">
                 @csrf
                 <div class="form-group" id="siteHeader1" style="position: relative !important;">
                     <center><label for="restaurantid" class="col-form-lable" style="font-size: 2.0em;">RESERVE FOR</label>
                     <div class="col-9">
-                        <select class="form-control" name="restaurantid" id="restaurantid" required="true" style="text-align: center; font-size: 2.0em; height: 56px;">
+                        <select class="form-select" name="restaurantid" id="restaurantid" required="true" style="text-align: center; font-size: 2.0em; height: 56px;">
                             <option value="">-- Choose Restaurant --</option>
                             @if(!empty($restaurants))
                                 @foreach($restaurants as $restaurant)
@@ -488,9 +198,9 @@ padding:10px 0;
 <div class="row">
 <div class="col">
                 <div class="form-group">
-                    <label for="name2" class="col-form-label">Name-Company Name</label>
+                    <label for="name2" class="col-form-label">Name-Company</label>
                     <div class="col">
-                        <input type="text" name="name" class="form-control" id="name2" placeholder="Name-Company Name" required="true">
+                        <input type="text" name="name" class="form-control" id="name2" placeholder=" " required="true">
                     </div>
                 </div>
 </div>
@@ -498,7 +208,7 @@ padding:10px 0;
                 <div class="form-group">
                     <label for="email2" class="col-form-label">Email</label>
                     <div class="col">
-                        <input type="email" name="email" class="form-control" id="email2" placeholder="Email" required="true">
+                        <input type="email" name="email" class="form-control" id="email2" placeholder=" " required="true">
                     </div>
                 </div>
     </div>
@@ -506,10 +216,10 @@ padding:10px 0;
 <div class="row">
 <div class="col">
                 <div class="form-group">
-                    <label for="phone" class="col-form-label">Phone</label>
+                    <label for="phone" class="col-form-label">Mobile Number </label>
                     <div class="row">
                       <div class="col-3">
-                        <select name="countryCode" class="form-control" id="contryCode">
+                        <select name="countryCode" class="form-select" id="contryCode">
                           <option data-countryCode="DZ" value="213">Algeria (+213)</option>
                             <option data-countryCode="AD" value="376">Andorra (+376)</option>
                             <option data-countryCode="AO" value="244">Angola (+244)</option>
@@ -728,7 +438,7 @@ padding:10px 0;
                         </select>
                       </div>
                       <div class="col-9">
-                        <input type="number" name="phone" class="form-control" id="phone" placeholder="Mobile Number without Country code" required="true">
+                        <input type="number" name="phone" class="form-control" id="phone" placeholder="Mobile Number" required="true">
                       </div>
                   </div>
                     
@@ -740,7 +450,7 @@ padding:10px 0;
                 <div class="form-group">
                     <label for="occasion" class="col-form-label">Event</label>
                     <div class="col">
-                        <select class="form-control" name="occasion" id="occasion" required="true">
+                        <select class="form-select" name="occasion" id="occasion" required="true">
                             <option>-- Select Option --</option>
                             <option value="Corporate Party">Event</option>
                             <option value="Kitty Party">Birthday</option>
@@ -768,7 +478,7 @@ padding:10px 0;
                     <label class="col-form-label">Reserved Time</label>
                     <div class="col">
                         <!-- <input type="datetime-local" name="endtime" class="form-control" placeholder="On which date" required="true" value=""> -->
-<select name='endtime' class='form-control'>
+<select name='endtime' class='form-select'>
 <option value='1'>1 Hour</option>
 <option value='2'>2 Hour</option>
 <option value='3'>3 Hour</option>
@@ -781,13 +491,13 @@ padding:10px 0;
 </div>
 <div class="col-12">
                 <div class="form-group">
-                    <label for="guest" class="col-form-label">No of Guest</label>
+                    <label for="guest" class="col-form-label">Guest</label>
                     <div class="row">
                     <div class="col">
-                        <input type="number" name="male" class="form-control" id="male" placeholder="Guest" onclick="addRequiredForField()">
+                        <input type="number" name="male" class="form-control" id="male" placeholder="Guest 18+ " onclick="addRequiredForField()">
                     </div>
                     <div class="col">
-                        <input type="number" name="child" class="form-control" id="child" placeholder="Child Under 7 Year">
+                        <input type="number" name="child" class="form-control" id="child" placeholder="Under -7">
                     </div>
                   </div>
                     </div>
@@ -823,9 +533,6 @@ padding:10px 0;
 
 </form>
                 </div>
-            <div class="col-sm-6">
-              <img class="img-responsive" src="/landing/img/ban-3.jpg" style="max-height: 500px;" />
-            </div>
           </div>
         </div>
         </div>
@@ -838,43 +545,51 @@ padding:10px 0;
     <div class="container-fluid">
         <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2">
           
-          <div class="col-5">
-            <div class="card card-block card-1"></div>
+          <div class="col-3">
+            <div class="card card-block"><img class="img-fluid" src="/landing/img/gallery/1.png" /></div>
           </div>
-          <div class="col-5">
-            <div class="card card-block card-2"></div>
+          <div class="col-3">
+            <div class="card card-block"><img class="img-fluid" src="/landing/img/gallery/2.png" /></div>
           </div>
-          <div class="col-5">
-            <div class="card card-block card-3"></div>
+          <div class="col-3">
+            <div class="card card-block"><img class="img-fluid" src="/landing/img/gallery/3.png" /></div>
           </div>
-          <div class="col-5">
-            <div class="card card-block card-4"></div>
+          <div class="col-3">
+            <div class="card card-block"><img class="img-fluid" src="/landing/img/gallery/4.png" /></div>
           </div>
-          <div class="col-5">
-            <div class="card card-block card-5"></div>
+          <div class="col-3">
+            <div class="card card-block"><img class="img-fluid" src="/landing/img/gallery/5.png" /></div>
           </div>
-          <div class="col-5">
-            <div class="card card-block card-6"></div>
+          <div class="col-3">
+            <div class="card card-block"><img class="img-fluid" src="/landing/img/gallery/6.png" /></div>
           </div>
-          <div class="col-5">
-            <div class="card card-block card-7"></div>
+          <div class="col-3">
+            <div class="card card-block"><img class="img-fluid" src="/landing/img/gallery/7.png" /></div>
           </div>
-          <div class="col-5">
-            <div class="card card-block card-8"></div>
+          <div class="col-3">
+            <div class="card card-block"><img class="img-fluid" src="/landing/img/gallery/2.png" /></div>
           </div>
-          <div class="col-5">
-            <div class="card card-block card-9"></div>
+          <div class="col-3">
+            <div class="card card-block"><img class="img-fluid" src="/landing/img/gallery/3.png" /></div>
           </div>
-          <div class="col-5">
-            <div class="card card-block card-10"></div>
+          <div class="col-3">
+            <div class="card card-block"><img class="img-fluid" src="/landing/img/gallery/4.png" /></div>
           </div>
         </div>
     </div>
   </section>
   <!-- /Gallery Section-->
 
+  <!-- Promo Banner -->
+<!--section class="promo">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <img class="img-fluid" src="/landing/img/raifu.jpg" alt="raifu promo banner" />
+  </div>
+</section>
+<!-- /Promo Banner -->
+
   <!-- FAQ -->
-  <section class="faq">
+  <section class="faq" style="display: none;">
     <div class="container">
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
@@ -928,40 +643,35 @@ padding:10px 0;
 
           <div class="col-lg-4 col-md-7 footer-contact">
             <div class="ftContactLeft">
-              <div class="ftStay">
-              <p class="ftTitle">Accommodation inquiries</p>
-              <p class="ftSubTitle">Front Desk</p>
-              <p class="ftTel">+91-124-4604600</p>
-              <p class="ftTelInfo">English only 24 hours</p>
-              <p class="ftSubTitle">Japan Concierge</p>
-              <p class="ftTel">+91-124-4566700</p>
-              <p class="ftTelInfo">Japanese<br><Mon–Fri>7:30–17:00 (India time)<br><Sat,Sun>Regular holiday</p>
+              <div class="ftRaifu">
+                <p class="ftTitle">Japanese restaurants "Raifu" and "Raifu-tei"</p>
+                <p class="ftTel">+911244566701</p>
+                <p class="ftTelInfo">English 12:00 22:00 (India time)<br>TEL +911244604600</p>
               </div>
-              <div class="ftTransfer">
-              <p class="ftTitle">Airport transfer inquiries</p>
-              <p class="ftSubTitle">Travel Desk (SAKURA HOLIDAY)</p>
-              <p class="ftTel">+91-124-4604644</p>
-              <p class="ftTelInfo">English 24 hours<br>*Please call the number above in case of an emerge</p>
+              <div class="ftBody">
+                <p class="ftTitle">...</p>
+                <p class="ftTel">+91-124-4604677</p>
+                <p class="ftTelInfo">Japanese only<br><mon,wed,thu><br>10:00~21:00(Final acceptance20:00)<br><tue,fri,sat,sun><br>10:00~20:00(Final acceptance19:00)</tue,fri,sat,sun></mon,wed,thu></p>
               </div>
-              </div>
+            </div>
           </div>
 
-          <div class="col-lg-3 col-md-7 footer-links">
+          <div class="col-lg-4 col-md-7 footer-links">
             <div class="ftContactLeft">
               <div class="ftStay">
-              <p class="ftTitle">Accommodation inquiries</p>
-              <p class="ftSubTitle">Front Desk</p>
-              <p class="ftTel">+91-124-4604600</p>
-              <p class="ftTelInfo">English only 24 hours</p>
-              <p class="ftSubTitle">Japan Concierge</p>
-              <p class="ftTel">+91-124-4566700</p>
-              <p class="ftTelInfo">Japanese<br><Mon–Fri>7:30–17:00 (India time)<br><Sat,Sun>Regular holiday</p>
+                <p class="ftTitle">Accommodation inquiries</p>
+                <p class="ftSubTitle">Front Desk</p>
+                <p class="ftTel">+91-124-4604600</p>
+                <p class="ftTelInfo">English only 24 hours</p>
+                <p class="ftSubTitle">Japan Concierge</p>
+                <p class="ftTel">+91-124-4566700</p>
+                <p class="ftTelInfo">Japanese<br><Mon–Fri>7:30–17:00 (India time)<br><Sat,Sun>Regular holiday</p>
               </div>
               <div class="ftTransfer">
-              <p class="ftTitle">Airport transfer inquiries</p>
-              <p class="ftSubTitle">Travel Desk (SAKURA HOLIDAY)</p>
-              <p class="ftTel">+91-124-4604644</p>
-              <p class="ftTelInfo">English 24 hours<br>*Please call the number above in case of an emerge</p>
+                <p class="ftTitle">Airport transfer inquiries</p>
+                <p class="ftSubTitle">Travel Desk (SAKURA HOLIDAY)</p>
+                <p class="ftTel">+91-124-4604644</p>
+                <p class="ftTelInfo">English 24 hours<br>*Please call the number above in case of an emerge</p>
               </div>
               </div>
           </div>
@@ -992,16 +702,10 @@ padding:10px 0;
         </div>
       </div>
     </div>
-
-    <div class="container d-md-flex py-4">
-
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          Copyright &copy; <strong>Dia Park Premier</strong> All Rights Reserved.
-        </div>
-      </div>
-    </div>
   </footer>
+  <div class="copyright">
+    Copyright &copy; <strong>Dia Park Premier</strong> All Rights Reserved.
+  </div>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

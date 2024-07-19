@@ -477,7 +477,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-/*  padding: 60px 0; */
+  padding: 20px 0;
   overflow: hidden;
 }
 
@@ -1422,7 +1422,7 @@ section {
 }
 
 #footer .footer-top .footer-contact p {
-  font-size: 14px;
+  /* font-size: 14px; */
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Raleway", sans-serif;

@@ -46,12 +46,12 @@ class SendSMS extends Notification implements ShouldQueue
 
         // close curl resource to free up system resources
         curl_close($ch);
-	echo $output;
+	// echo $output;
 	// dd(output);
 	// json_encode(compact('resp', 'error'));
         } catch (\Exception $e) {
             // dd($e);
-	    print_r($e->getMessage());
+	    // print_r($e->getMessage());
         }
     }
 }

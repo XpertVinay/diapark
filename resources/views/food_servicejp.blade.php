@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
 <title>お食事｜インドニューデリー近郊のビジネスホテル ダイヤパークプレミア（Dia Park Premier）</title>
-<meta name="keywords" content="インド,ホテル,グルガオン,グルガーオン,デリー,ダイヤパークプレミア,ダイヤパーク,パークプレミア,Dia Park,宿泊,予約,ビジネスホテル,出張,日本食,日本語,来富,送迎,アバロンコートヤード,Avalon Courtyard">
+<meta name="keywords" content="インド,ホテル,グルガオン,グルガーオン,デリー,ダイヤパークプレミア,ダイヤパーク,パークプレミア,Dia Park,宿泊,予約,ビジネスホテル,出張,日本食,日本語,来富,送迎,アバロンコートヤード,Avalon Courtyard, デリーNCRの日本食ホテル, グルガオンの日本食ホテル,インドの日本食ホテル, インドでの日本食, インドの温泉, インドの日本風スパ, インドのサウナ, 最高の日本の朝食, 最高の寿司, 最高の刺身,ラーメン,ウォシュレット">
 <meta name="description" content="デリー国際空港から車で約20分。インド出張に最適な清潔感溢れるビジネスホテルです。本格的な日本食のご提供や日本式浴場など、ご宿泊者様のインドステイをサポートいたします。">
 <meta name="author" content="Dia Park Premier">
 <meta name="viewport" content="width=1024">
@@ -379,7 +379,237 @@
                                 </div>
                             </div>
 			    </div>
-			    <div class="col-md-6">
+			    
+                <div class="col-md-6">
+                <div class="form-group">
+                    <label for="phone" class="col-form-label">電話</label>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <select name="countryCode" class="form-control" id="countryCode">
+						    <option data-countryCode="IN" value="91" selected>インド (+91)</option>
+						    <option data-countryCode="JP" value="81">日本 (+81)</option>
+    <option data-countryCode="DZ" value="213">アルジェリア (+213)</option>
+    <option data-countryCode="AD" value="376">アンドラ (+376)</option>
+    <option data-countryCode="AO" value="244">アンゴラ (+244)</option>
+    <option data-countryCode="AI" value="1264">アンギラ (+1264)</option>
+    <option data-countryCode="AG" value="1268">アンティグア・バーブーダ (+1268)</option>
+    <option data-countryCode="AR" value="54">アルゼンチン (+54)</option>
+    <option data-countryCode="AM" value="374">アルメニア (+374)</option>
+    <option data-countryCode="AW" value="297">アルバ (+297)</option>
+    <option data-countryCode="AU" value="61">オーストラリア (+61)</option>
+    <option data-countryCode="AT" value="43">オーストリア (+43)</option>
+    <option data-countryCode="AZ" value="994">アゼルバイジャン (+994)</option>
+    <option data-countryCode="BS" value="1242">バハマ (+1242)</option>
+    <option data-countryCode="BH" value="973">バーレーン (+973)</option>
+    <option data-countryCode="BD" value="880">バングラデシュ (+880)</option>
+    <option data-countryCode="BB" value="1246">バルバドス (+1246)</option>
+    <option data-countryCode="BY" value="375">ベラルーシ (+375)</option>
+    <option data-countryCode="BE" value="32">ベルギー (+32)</option>
+    <option data-countryCode="BZ" value="501">ベリーズ (+501)</option>
+    <option data-countryCode="BJ" value="229">ベナン (+229)</option>
+    <option data-countryCode="BM" value="1441">バミューダ (+1441)</option>
+    <option data-countryCode="BT" value="975">ブータン (+975)</option>
+    <option data-countryCode="BO" value="591">ボリビア (+591)</option>
+    <option data-countryCode="BA" value="387">ボスニア・ヘルツェゴビナ (+387)</option>
+    <option data-countryCode="BW" value="267">ボツワナ (+267)</option>
+    <option data-countryCode="BR" value="55">ブラジル (+55)</option>
+    <option data-countryCode="BN" value="673">ブルネイ (+673)</option>
+    <option data-countryCode="BG" value="359">ブルガリア (+359)</option>
+    <option data-countryCode="BF" value="226">ブルキナファソ (+226)</option>
+    <option data-countryCode="BI" value="257">ブルンジ (+257)</option>
+    <option data-countryCode="KH" value="855">カンボジア (+855)</option>
+    <option data-countryCode="CM" value="237">カメルーン (+237)</option>
+    <option data-countryCode="CA" value="1">カナダ (+1)</option>
+    <option data-countryCode="CV" value="238">カーボベルデ (+238)</option>
+    <option data-countryCode="KY" value="1345">ケイマン諸島 (+1345)</option>
+    <option data-countryCode="CF" value="236">中央アフリカ共和国 (+236)</option>
+    <option data-countryCode="CL" value="56">チリ (+56)</option>
+    <option data-countryCode="CN" value="86">中国 (+86)</option>
+    <option data-countryCode="CO" value="57">コロンビア (+57)</option>
+    <option data-countryCode="KM" value="269">コモロ (+269)</option>
+    <option data-countryCode="CG" value="242">コンゴ (+242)</option>
+    <option data-countryCode="CK" value="682">クック諸島 (+682)</option>
+    <option data-countryCode="CR" value="506">コスタリカ (+506)</option>
+    <option data-countryCode="HR" value="385">クロアチア (+385)</option>
+    <option data-countryCode="CU" value="53">キューバ (+53)</option>
+    <option data-countryCode="CY" value="90392">キプロス北部 (+90392)</option>
+    <option data-countryCode="CY" value="357">キプロス南部 (+357)</option>
+    <option data-countryCode="CZ" value="42">チェコ共和国 (+42)</option>
+    <option data-countryCode="DK" value="45">デンマーク (+45)</option>
+    <option data-countryCode="DJ" value="253">ジブチ (+253)</option>
+    <option data-countryCode="DM" value="1809">ドミニカ国 (+1809)</option>
+    <option data-countryCode="DO" value="1809">ドミニカ共和国 (+1809)</option>
+    <option data-countryCode="EC" value="593">エクアドル (+593)</option>
+    <option data-countryCode="EG" value="20">エジプト (+20)</option>
+    <option data-countryCode="SV" value="503">エルサルバドル (+503)</option>
+    <option data-countryCode="GQ" value="240">赤道ギニア (+240)</option>
+    <option data-countryCode="ER" value="291">エリトリア (+291)</option>
+    <option data-countryCode="EE" value="372">エストニア (+372)</option>
+    <option data-countryCode="ET" value="251">エチオピア (+251)</option>
+    <option data-countryCode="FK" value="500">フォークランド諸島 (+500)</option>
+    <option data-countryCode="FO" value="298">フェロー諸島 (+298)</option>
+    <option data-countryCode="FJ" value="679">フィジー (+679)</option>
+    <option data-countryCode="FI" value="358">フィンランド (+358)</option>
+    <option data-countryCode="FR" value="33">フランス (+33)</option>
+    <option data-countryCode="GF" value="594">フランス領ギアナ (+594)</option>
+    <option data-countryCode="PF" value="689">フランス領ポリネシア (+689)</option>
+    <option data-countryCode="GA" value="241">ガボン (+241)</option>
+    <option data-countryCode="GM" value="220">ガンビア (+220)</option>
+    <option data-countryCode="GE" value="7880">ジョージア (+7880)</option>
+    <option data-countryCode="DE" value="49">ドイツ (+49)</option>
+    <option data-countryCode="GH" value="233">ガーナ (+233)</option>
+    <option data-countryCode="GI" value="350">ジブラルタル (+350)</option>
+    <option data-countryCode="GR" value="30">ギリシャ (+30)</option>
+    <option data-countryCode="GL" value="299">グリーンランド (+299)</option>
+    <option data-countryCode="GD" value="1473">グレナダ (+1473)</option>
+    <option data-countryCode="GP" value="590">グアドループ (+590)</option>
+    <option data-countryCode="GU" value="671">グアム (+671)</option>
+    <option data-countryCode="GT" value="502">グアテマラ (+502)</option>
+    <option data-countryCode="GN" value="224">ギニア (+224)</option>
+    <option data-countryCode="GW" value="245">ギニアビサウ (+245)</option>
+    <option data-countryCode="GY" value="592">ガイアナ (+592)</option>
+    <option data-countryCode="HT" value="509">ハイチ (+509)</option>
+    <option data-countryCode="HN" value="504">ホンジュラス (+504)</option>
+    <option data-countryCode="HK" value="852">香港 (+852)</option>
+    <option data-countryCode="HU" value="36">ハンガリー (+36)</option>
+    <option data-countryCode="IS" value="354">アイスランド (+354)</option>
+    <option data-countryCode="ID" value="62">インドネシア (+62)</option>
+    <option data-countryCode="IR" value="98">イラン (+98)</option>
+    <option data-countryCode="IQ" value="964">イラク (+964)</option>
+    <option data-countryCode="IE" value="353">アイルランド (+353)</option>
+    <option data-countryCode="IL" value="972">イスラエル (+972)</option>
+    <option data-countryCode="IT" value="39">イタリア (+39)</option>
+    <option data-countryCode="JM" value="1876">ジャマイカ (+1876)</option>
+    <option data-countryCode="JO" value="962">ヨルダン (+962)</option>
+    <option data-countryCode="KZ" value="7">カザフスタン (+7)</option>
+    <option data-countryCode="KE" value="254">ケニア (+254)</option>
+    <option data-countryCode="KI" value="686">キリバス (+686)</option>
+    <option data-countryCode="KP" value="850">朝鮮北部 (+850)</option>
+    <option data-countryCode="KR" value="82">朝鮮南部 (+82)</option>
+    <option data-countryCode="KW" value="965">クウェート (+965)</option>
+    <option data-countryCode="KG" value="996">キルギス (+996)</option>
+    <option data-countryCode="LA" value="856">ラオス (+856)</option>
+    <option data-countryCode="LV" value="371">ラトビア (+371)</option>
+    <option data-countryCode="LB" value="961">レバノン (+961)</option>
+    <option data-countryCode="LS" value="266">レソト (+266)</option>
+    <option data-countryCode="LR" value="231">リベリア (+231)</option>
+    <option data-countryCode="LY" value="218">リビア (+218)</option>
+    <option data-countryCode="LI" value="417">リヒテンシュタイン (+417)</option>
+    <option data-countryCode="LT" value="370">リトアニア (+370)</option>
+    <option data-countryCode="LU" value="352">ルクセンブルク (+352)</option>
+    <option data-countryCode="MO" value="853">マカオ (+853)</option>
+    <option data-countryCode="MK" value="389">マケドニア (+389)</option>
+    <option data-countryCode="MG" value="261">マダガスカル (+261)</option>
+    <option data-countryCode="MW" value="265">マラウイ (+265)</option>
+    <option data-countryCode="MY" value="60">マレーシア (+60)</option>
+    <option data-countryCode="MV" value="960">モルディブ (+960)</option>
+    <option data-countryCode="ML" value="223">マリ (+223)</option>
+    <option data-countryCode="MT" value="356">マルタ (+356)</option>
+    <option data-countryCode="MH" value="692">マーシャル諸島 (+692)</option>
+    <option data-countryCode="MQ" value="596">マルティニーク (+596)</option>
+    <option data-countryCode="MR" value="222">モーリタニア (+222)</option>
+    <option data-countryCode="YT" value="269">マヨット (+269)</option>
+    <option data-countryCode="MX" value="52">メキシコ (+52)</option>
+    <option data-countryCode="FM" value="691">ミクロネシア連邦 (+691)</option>
+    <option data-countryCode="MD" value="373">モルドバ (+373)</option>
+    <option data-countryCode="MC" value="377">モナコ (+377)</option>
+    <option data-countryCode="MN" value="976">モンゴル (+976)</option>
+    <option data-countryCode="MS" value="1664">モントセラト (+1664)</option>
+    <option data-countryCode="MA" value="212">モロッコ (+212)</option>
+    <option data-countryCode="MZ" value="258">モザンビーク (+258)</option>
+    <option data-countryCode="MN" value="95">ミャンマー (+95)</option>
+    <option data-countryCode="NA" value="264">ナミビア (+264)</option>
+    <option data-countryCode="NR" value="674">ナウル (+674)</option>
+    <option data-countryCode="NP" value="977">ネパール (+977)</option>
+    <option data-countryCode="NL" value="31">オランダ (+31)</option>
+    <option data-countryCode="NC" value="687">ニューカレドニア (+687)</option>
+    <option data-countryCode="NZ" value="64">ニュージーランド (+64)</option>
+    <option data-countryCode="NI" value="505">ニカラグア (+505)</option>
+    <option data-countryCode="NE" value="227">ニジェール (+227)</option>
+    <option data-countryCode="NG" value="234">ナイジェリア (+234)</option>
+    <option data-countryCode="NU" value="683">ニウエ (+683)</option>
+    <option data-countryCode="NF" value="672">ノーフォーク諸島 (+672)</option>
+    <option data-countryCode="NP" value="670">北マリアナ諸島 (+670)</option>
+    <option data-countryCode="NO" value="47">ノルウェー (+47)</option>
+    <option data-countryCode="OM" value="968">オマーン (+968)</option>
+    <option data-countryCode="PW" value="680">パラオ (+680)</option>
+    <option data-countryCode="PA" value="507">パナマ (+507)</option>
+    <option data-countryCode="PG" value="675">パプアニューギニア (+675)</option>
+    <option data-countryCode="PY" value="595">パラグアイ (+595)</option>
+    <option data-countryCode="PE" value="51">ペルー (+51)</option>
+    <option data-countryCode="PH" value="63">フィリピン (+63)</option>
+    <option data-countryCode="PL" value="48">ポーランド (+48)</option>
+    <option data-countryCode="PT" value="351">ポルトガル (+351)</option>
+    <option data-countryCode="PR" value="1787">プエルトリコ (+1787)</option>
+    <option data-countryCode="QA" value="974">カタール (+974)</option>
+    <option data-countryCode="RE" value="262">レユニオン (+262)</option>
+    <option data-countryCode="RO" value="40">ルーマニア (+40)</option>
+    <option data-countryCode="RU" value="7">ロシア (+7)</option>
+    <option data-countryCode="RW" value="250">ルワンダ (+250)</option>
+    <option data-countryCode="SM" value="378">サンマリノ (+378)</option>
+    <option data-countryCode="ST" value="239">サントメ・プリンシペ (+239)</option>
+    <option data-countryCode="SA" value="966">サウジアラビア (+966)</option>
+    <option data-countryCode="SN" value="221">セネガル (+221)</option>
+    <option data-countryCode="CS" value="381">セルビア (+381)</option>
+    <option data-countryCode="SC" value="248">セーシェル (+248)</option>
+    <option data-countryCode="SL" value="232">シエラレオネ (+232)</option>
+    <option data-countryCode="SG" value="65">シンガポール (+65)</option>
+    <option data-countryCode="SK" value="421">スロバキア (+421)</option>
+    <option data-countryCode="SI" value="386">スロベニア (+386)</option>
+    <option data-countryCode="SB" value="677">ソロモン諸島 (+677)</option>
+    <option data-countryCode="SO" value="252">ソマリア (+252)</option>
+    <option data-countryCode="ZA" value="27">南アフリカ (+27)</option>
+    <option data-countryCode="ES" value="34">スペイン (+34)</option>
+    <option data-countryCode="LK" value="94">スリランカ (+94)</option>
+    <option data-countryCode="SH" value="290">セントヘレナ (+290)</option>
+    <option data-countryCode="KN" value="1869">セントクリストファー・ネイビス (+1869)</option>
+    <option data-countryCode="SC" value="1758">セントルシア (+1758)</option>
+    <option data-countryCode="SD" value="249">スーダン (+249)</option>
+    <option data-countryCode="SR" value="597">スリナム (+597)</option>
+    <option data-countryCode="SZ" value="268">スワジランド (+268)</option>
+    <option data-countryCode="SE" value="46">スウェーデン (+46)</option>
+    <option data-countryCode="CH" value="41">スイス (+41)</option>
+    <option data-countryCode="SI" value="963">シリア (+963)</option>
+    <option data-countryCode="TW" value="886">台湾 (+886)</option>
+    <option data-countryCode="TJ" value="7">タジキスタン (+7)</option>
+    <option data-countryCode="TH" value="66">タイ (+66)</option>
+    <option data-countryCode="TG" value="228">トーゴ (+228)</option>
+    <option data-countryCode="TO" value="676">トンガ (+676)</option>
+    <option data-countryCode="TT" value="1868">トリニダード・トバゴ (+1868)</option>
+    <option data-countryCode="TN" value="216">チュニジア (+216)</option>
+    <option data-countryCode="TR" value="90">トルコ (+90)</option>
+    <option data-countryCode="TM" value="7">トルクメニスタン (+7)</option>
+    <option data-countryCode="TM" value="993">トルクメニスタン (+993)</option>
+    <option data-countryCode="TC" value="1649">タークス・カイコス諸島 (+1649)</option>
+    <option data-countryCode="TV" value="688">ツバル (+688)</option>
+    <option data-countryCode="UG" value="256">ウガンダ (+256)</option>
+    <option data-countryCode="GB" value="44">イギリス (+44)</option>
+    <option data-countryCode="UA" value="380">ウクライナ (+380)</option>
+    <option data-countryCode="AE" value="971">アラブ首長国連邦 (+971)</option>
+    <option data-countryCode="UY" value="598">ウルグアイ (+598)</option>
+    <option data-countryCode="UZ" value="7">ウズベキスタン (+7)</option>
+    <option data-countryCode="VU" value="678">バヌアツ (+678)</option>
+    <option data-countryCode="VA" value="379">バチカン市国 (+379)</option>
+    <option data-countryCode="VE" value="58">ベネズエラ (+58)</option>
+    <option data-countryCode="VN" value="84">ベトナム (+84)</option>
+    <option data-countryCode="VG" value="84">イギリス領ヴァージン諸島 (+84)</option>
+    <option data-countryCode="VI" value="84">アメリカ領ヴァージン諸島 (+84)</option>
+    <option data-countryCode="WF" value="681">ウォリス・フツナ (+681)</option>
+    <option data-countryCode="YE" value="969">イエメン (+969)</option>
+    <option data-countryCode="YE" value="967">イエメン (+967)</option>
+    <option data-countryCode="ZM" value="260">ザンビア (+260)</option>
+    <option data-countryCode="ZW" value="263">ジンバブエ (+263)</option>
+</select>
+
+                      </div>
+                      <div class="col-md-8">
+                        <input type="number" name="phone" class="form-control" id="phone" placeholder="Mobile Number without Country code" required="true">
+                      </div>
+                  </div>
+                    
+                </div>
+</div>
+<div class="col-md-6">
                             <div class="form-group">
                                 <label for="email2" class="col-3 col-form-label" trasletion="Email">メール</label>
                                 <div class="col-9">
@@ -387,14 +617,7 @@
                                 </div>
                             </div>
 		            </div>
-			    <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="phone" class="col-3 col-form-label" trasletion="Phone">電話 (国コードは不要)</label>
-                                <div class="col-9">
-                                    <input type="number" name="phone" class="form-control" id="phone" placeholder="Mobile Number without country code" required="true">
-                                </div>
-                            </div>
-			    </div>
+			    
 			   <div class="col-md-6">
                             <div class="form-group">
                                 <label for="occasion" class="col-3 col-form-lable"trasletion="Event">イベント </label>
@@ -798,7 +1021,7 @@
 <div class="ftContactRight">
 <div class="ftRaifu">
 <p class="ftTitle">日本料理「来富」「来富亭」</p>
-<p class="ftTel">+91-9911074523</p>
+<p class="ftTel">+91-1244566701</p>
 <p class="ftTelInfo">英語対応　12：00～22：00（インド時間)<br><br/><font size="4">カフェ&レストラン「ハニー」</font><br/><font size="4">英語対応 +911244566744</font><br/></p>
 </div>
 <div class="ftBody">

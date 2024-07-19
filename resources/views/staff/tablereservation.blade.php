@@ -248,6 +248,7 @@
                                             <th scope="col">Status</th>
                                             <th scope="col">Customer Comment</th>
                                             <th scope="col">Comment</th>
+                                            <th scope="col">Referrer</th>
                                             <th scope="col">Action</th>
                                         </tr>
                                     </thead>
@@ -266,6 +267,7 @@
                                                     <td>{{ $reservation->status }}</td>
                                                     <td>{{ $reservation->customer_comment }}</td>
                                                     <td>{{ $reservation->comment }}</td>
+                                                    <td>{{ $reservation->referrer }}</td>
                                                     <td>
                                                         <a id="approve"  class="btn btn-info" data-toggle="modal" data-target="#enditreservation{{ $reservation->id }}">Approve</a>
                                                         {{-- <a href='{{url("/approve/{$reservation->id}/Approved")}}' class="btn btn-success m-1">Approve</a> --}}

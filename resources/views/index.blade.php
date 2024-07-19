@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <title>Dia Park Premier</title>
-<meta name="keywords" content="India,Hotel,Gurgaon,Delhi,Dia Park Premier,Dia Park,Park Premier,Stay,Reserve,Booking,Business Hotel,Business trip,Japanese food,Japanese,Raifu,Transportation,Avalon Courtyard">
+<meta name="keywords" content="India,Hotel,Gurgaon,Delhi,Dia Park Premier,Dia Park,Park Premier,Stay,Reserve,Booking,Business Hotel,Business trip,Japanese food,Japanese,Raifu,Transportation,Avalon Courtyard,Japanese hotel Delhi NCR, Japanese hotel  Gurugram,  Japanese hotel India, Japanese food in India, Offuro in India,  Japanese SPA in India, Sauna in India, Best Japanese breakfast, Best sushi, Best sashimi, Ramen, Washlet">
 <meta name="description" content="It takes nearly 20 minutes&#39; drive from Delhi International Airport.If visiting for business trip to India this hotel is perfect. We offer the authentic Japanese cuisine as well as the Japanese style bath and we also offer all the support to our guest to have a luxurious stay in India.">
 <meta name="author" content="Dia Park Premier">
 <meta name="viewport" content="width=1024">
@@ -353,29 +353,7 @@ which are preferred by Japanese people.
 <p class="serviceBt"><a href="english/news/index.html#FAQH2">More</a></p>
 </li>
 <!--/Service Desk-->
-<!--Daigolf-->
-<div class="contentList">
-<h2 id="GolfSimulatorH3"><span class="bgH2"><span class="bgH2In"><strong> Golf Simulator </strong></span></span></h2>
-<div class="contentBox">
-<div class="contentBoxIn serviceVer">
-<div class="imgOut">
-<div class="imgBox">
-<p class="img"><a href="english/service/index.html#GolfSimulatorH2"><img src="image/home_service_ph020.png" width="960" height="460"alt=""></p>
-<p class="cap">Golf Simulator</a></p>
-</div>
-</div>
-<!--/imgOut-->
-<div class="txtBox">
-Elevate your skills with virtual fairway lessons from experts using state-of-the-art simulators. <br>
-This enables you to experience rounds on world-renowned real-world courses, and an immersive golf practice experience, set in a comfortable environment, is guaranteed to unlock your full potential. <br>
-<p class="serviceBt"><a href="english/service/index.html#GolfSimulatorH2">詳しくはこちら</a></p> </div>
-<!--/txtBox-->
-</div>
-<!--/contentBoxIn-->
-</div>
-<!--/contentBox-->
-</div>
-<!--Daigolf-->
+
 <!--==================== youtube & google indoor view ======================-->
 <div class="youtube_etc">
     <div class="indoor_view">

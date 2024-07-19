@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <title>インドニューデリー近郊のビジネスホテル ダイヤパークプレミア（Dia Park Premier）インド出張の宿泊予約受付中</title>
-<meta name="keywords" content="インド,ホテル,グルガオン,グルガーオン,デリー,ダイヤパークプレミア,ダイヤパーク,パークプレミア,Dia Park,宿泊,予約,ビジネスホテル,出張,日本食,日本語,来富,送迎,アバロンコートヤード,Avalon Courtyard">
+<meta name="keywords" content="インド,ホテル,グルガオン,グルガーオン,デリー,ダイヤパークプレミア,ダイヤパーク,パークプレミア,Dia Park,宿泊,予約,ビジネスホテル,出張,日本食,日本語,来富,送迎,アバロンコートヤード,Avalon Courtyard, デリーNCRの日本食ホテル, グルガオンの日本食ホテル,インドの日本食ホテル, インドでの日本食, インドの温泉, インドの日本風スパ, インドのサウナ, 最高の日本の朝食, 最高の寿司, 最高の刺身,ラーメン,ウォシュレット">
 <meta name="description" content="デリー国際空港から車で約20分。インド出張に最適な清潔感溢れるビジネスホテルです。本格的な日本食のご提供や日本式浴場など、ご宿泊者様のインドステイをサポートいたします。">
 <meta name="author" content="Dia Park Premier">
 <meta name="viewport" content="width=1024">
@@ -15,13 +15,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" href="common/css/import7fa1.css?up=170911">
-<link rel="stylesheet" href="css/dropkick.css">
-	<link rel="stylesheet" href="css/style7fa1.css?up=170911">
-<link rel="stylesheet" href="common/css/print.css" media="print" id="printcss">
-<link rel="stylesheet" href="common/css/humanity/jquery-ui-1.8.23.custom.css">
+<link rel="stylesheet" href="/common/css/import7fa1.css?up=170911">
+<link rel="stylesheet" href="/css/dropkick.css">
+	<link rel="stylesheet" href="/css/style7fa1.css?up=170911">
+<link rel="stylesheet" href="/common/css/print.css" media="print" id="printcss">
+<link rel="stylesheet" href="/common/css/humanity/jquery-ui-1.8.23.custom.css">
 <!--[if lt IE 9]>
-<script src="common/js/html5shiv.js" type="text/javascript"></script>
+<script src="/common/js/html5shiv.js" type="text/javascript"></script>
 <![endif]-->
 </head>
 
@@ -37,7 +37,7 @@
 <div class="hdLink">
 <ul>
 	<li class="myReservation"><a href="https://gc.synxis.com/rez.aspx?hotel=80472&amp;chain=22924&amp;start=searchres&amp;locale=ja-JP">予約確認・変更・キャンセル</a></li>
-    <li class="langBt"><a href="english/index.html">english</a></li>
+    <li class="langBt"><a href="/english/index.html">english</a></li>
 </ul>
 <form action="https://gc.synxis.com/rez.aspx" method="get" id="to_synxis">
 <input type="hidden" name="Hotel" value="80472" />
@@ -160,19 +160,19 @@
     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
-        <img src="english/image/home_main_img106.jpg" alt="Chania" width="460" height="345">
+        <img src="/english/image/home_main_img106.jpg" alt="Chania" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="english/image/home_01.jpg" alt="Chania" width="460" height="345">
+        <img src="/english/image/home_01.jpg" alt="Chania" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="english/image/home_02.jpg" alt="Flower" width="460" height="345">
+        <img src="/english/image/home_02.jpg" alt="Flower" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="english/image/home_03.jpg" alt="Flower" width="460" height="345">
+        <img src="/english/image/home_03.jpg" alt="Flower" width="460" height="345">
         <!-- <div class="carousel-caption">
           <h3>Flowers</h3>
           <p>Beautiful flowers in Kolymbari, Crete.</p>
@@ -379,29 +379,7 @@ Japanese help desk 設置のお知らせ</a></dd>
 <p class="serviceBt"><a href="news/index.html#FAQH2">詳しくはこちら</a></p>
 </li>
 <!--/Service Desk-->
-<!--Daigolf-->
-<div class="contentList">
-<h2 id="GolfSimulatorH3"><span class="bgH2"><span class="bgH2In"><strong>ゴルフシミュレーター Golf Simulator </strong></span></span></h2>
-<div class="contentBox">
-<div class="contentBoxIn serviceVer">
-<div class="imgOut">
-<div class="imgBox">
-<p class="img"><a href="service/index.html#GolfSimulatorH2"><img src="image/home_service_ph020.png" width="960" height="460"alt=""></a></p>
-<p class="cap">ゴルフシミュレーター  Golf Simulator</a></p>
-</div>
-</div>
-<!--/imgOut-->
-<div class="txtBox">
-最新鋭のシミュレーターを使用した専門家によるバーチャルフェアウェイレッスンでスキルを向上させましょう。 <br>
-これにより、世界的に有名なリアルワールドのコースでのラウンドを体験し、快適な環境で行われる没入型のゴルフ練習体験が可能となり、あなたのフルポテンシャルを引き出すことが保証されます。 <br>
-<p class="serviceBt"><a href="service/index.html#GolfSimulatorH2">詳しくはこちら</a></p> </div>
-<!--/txtBox-->
-</div>
-<!--/contentBoxIn-->
-</div>
-<!--/contentBox-->
-</div>
-<!--Daigolf-->
+
 <!--==================== youtube & google indoor view ======================-->
 <div class="youtube_etc">
     <h3>Indoor view</h3>
@@ -455,7 +433,7 @@ Japanese help desk 設置のお知らせ</a></dd>
 <div class="ftContactRight">
 <div class="ftRaifu">
 <p class="ftTitle">日本料理「来富」「来富亭」</p>
-<p class="ftTel">+91-9911074523</p>
+<p class="ftTel">+91-1244566701</p>
 <p class="ftTelInfo">英語対応　12：00～22：00（インド時間)<br><br/><font size="4">カフェ&レストラン「ハニー」</font><br/><font size="4">英語対応 +911244566744</font><br/></p>
 </div>
 <div class="ftBody">
@@ -467,8 +445,8 @@ Japanese help desk 設置のお知らせ</a></dd>
 <!--/ftContactRight-->
 <div class="ftUtility">
 <ul>
-<li><a href="rule/policy.html">プライバシーポリシー</a></li>
-<li><a href="rule/index.html">利用規約</a></li>
+<li><a href="/rule/policy.html">プライバシーポリシー</a></li>
+<li><a href="/rule/index.html">利用規約</a></li>
 </ul>
 <div class="ftSsl">
 <p class="txt">このサイトへの個人情報送信は、SSL暗号化通信にて安全に行っていただけます。</p>
@@ -478,10 +456,10 @@ Japanese help desk 設置のお知らせ</a></dd>
 <h5>お支払いにつきまして</h5>
 <p>チェックアウト時にホテルフロントにてキャッシュまたはクレジットカードでお支払いください。 ご利用可能なクレジットカードは、VISA・MasterCard・AMEX・JCBです。</p>
 <ul>
-<li><img src="plan/image/card_logo_visa_s.gif" alt="visa" /></li>
-<li><img src="plan/image/card_logo_master_s.gif" alt="master" /></li>
-<li><img src="plan/image/card_logo_amcexp_s.gif" alt="American Express" /></li>
-<li><img src="plan/image/card_logo_jcb_s.gif" alt="JCB" /></li>
+<li><img src="/plan/image/card_logo_visa_s.gif" alt="visa" /></li>
+<li><img src="/plan/image/card_logo_master_s.gif" alt="master" /></li>
+<li><img src="/plan/image/card_logo_amcexp_s.gif" alt="American Express" /></li>
+<li><img src="/plan/image/card_logo_jcb_s.gif" alt="JCB" /></li>
 </ul>
 </div>
 </div>

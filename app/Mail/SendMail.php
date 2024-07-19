@@ -23,7 +23,7 @@ class SendMail extends Mailable
     public function __construct($content)
     {
         $this->content = $content;
-	print_r($this->content);
+	// print_r($this->content);
     }
 
     /**
